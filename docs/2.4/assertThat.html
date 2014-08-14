@@ -1,0 +1,29 @@
+<h2>Assert.That() Method (NUnit 2.4)</h2>
+
+<p>The Assert.That() method is used for all constraint based assertions by
+   accepting the specific constraint object as an argument. In addition, for
+   syntactic convenience, it allows asserting on a boolean condition, in
+   which case it functions as a synonym for IsTrue.
+
+<div class="code" style="width: 36em">
+<pre>Assert.That( object actual, IConstraint constraint )
+Assert.That( object actual, IConstraint constraint, string message )
+Assert.That( object actual, IConstraint constraint, string message, 
+             object[] parms )
+			 
+Assert.That( bool condition );
+Assert.That( bool condition, string message );
+Assert.That( bool condition, string message, object[] parms );</pre>
+</div>
+
+<p>The constraint argument must be a object implementing the
+   <b>IConstraint</b> interface, which supports performing a test
+   on an actual value and generating appropriate messages. This interface
+   is described in more detail under 
+   <?php echo nunit_doc_link( "customConstraints", "Custom Constraints" ) ?>.
+   
+<p>Constraints may be either 
+   <?php echo nunit_doc_link( "constraints", "built-in" ) ?> or 
+   <?php echo nunit_doc_link( "customConstraints", "custom" ) ?>. They may be created
+   directly in the user code using <b>new</b> or through one of the
+   <?php echo nunit_doc_link( "syntaxHelpers", "syntax helpers" ) ?>.

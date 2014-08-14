@@ -1,0 +1,37 @@
+<h2>String Constraints (NUnit 2.4)</h2>
+
+<p>String constraints perform tests that are specific to strings.
+   The following string constraints are provided.
+   
+<table class="constraints">
+<tr><th>Syntax Helpers</th><th>Constructor</th><th>Operation</th></tr>
+<tr><td>Text.Contains( string )<br>Text.DoesNotContain( string )</td><td>SubstringConstraint( string )</td></td><td>tests for a substring</td></tr>
+<tr><td>Text.StartsWith( string )<br>Text.DoesNotStartWith( string )</td><td>StartsWithConstraint( string )</td></td><td>tests for an initial string</td></tr>
+<tr><td>Text.EndsWith( string )<br>Text.DoesNotEndWith( string )</td><td>EndsWithConstraint( string )</td></td><td>tests for an ending string</td></tr>
+<tr><td>Text.Matches( string )<br>Text.DoesNotMatch( string )</td><td>RegexConstraint( string )</td></td><td>tests that a pattern is matched</td></tr>
+</table>
+
+<h4>Examples</h4>
+
+<div class="code" style="width: 36em"><pre>
+string phrase = "Make your tests fail before passing!"
+
+Assert.That( phrase, Text.Contains( "tests fail" ) );
+Assert.That( phrase, Text.Contains( "make" ).IgnoreCase );
+
+Assert.That( phrase, Text.StartsWith( "Make" ) );
+Assert.That( phrase, Text.Not.StartsWith( "Break" ) );
+Assert.That( phrase, Text.DoesNotStartWith( "Break" ) );
+
+Assert.That( phrase, Text.EndsWith( "!" ) );
+Assert.That( phrase, Text.EndsWith( "PASSING!" ).IgnoreCase );
+
+Assert.That( phrase, Text.Matches( "Make.*tests.*pass" ) );
+Assert.That( phrase, Text.Not.Matches( "your.*passing.*tests" ) );
+Assert.That( phrase, Text.DoesNotMatch( "your.*passing.*tests" ) );
+
+// Using Inheritance
+Expect( phrase, Contains( "make" ).IgnoreCase );
+Expect( phrase, EndsWith( "!" ) );
+Expect( phrase, Matches( "Make.*pass" ) );
+</pre></div>

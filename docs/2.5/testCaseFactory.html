@@ -1,0 +1,51 @@
+<script language="JavaScript" src="codeFuncs.js" ></script> <!-- Do it this way for IE -->
+
+<h3>TestCaseFactoryAttribute (NUnit 2.5)</h3>
+
+<div style="text-align: center; margin: 2em 10%; padding: 4px 0; border: 2px solid black">
+  <h4>Preliminary documentation, subject to change.</h4>
+</div>
+
+<p>TestCaseFactoryAttribute may be used to mark a field, property or method that
+is intended for use as a source of test case parameters. It's use is optional
+if the test factory is always referenced by name but required if it is to be
+located automatically by NUnit.
+
+<p>The attribute takes a list of Types as an argument and indicates that the
+field, property or method to which it is applied returns sets of arguments
+of the types specified. NUnit uses this information to determine if the
+test case factory is compatible with any given method.
+
+<h4>Example</h4>
+
+<div class="code">
+<pre>[TestFixture]
+public class MyTests
+{
+  [Test,Factory(typeof(MyFactoryClass)]
+  public void DivideTest(int n, int d, int q)
+  {
+    Assert.AreEqual( q, n / d );
+  }
+	
+  ...
+}
+
+public class MyFactoryClass
+{
+  [TestCaseFactory(typeof(int), typeof(int))]
+  public static IEnumerable TestCases
+  {
+    get
+    {
+      yield return new TestCaseData( 12, 3 ).Returns( 4 );
+      yield return new TestCaseData( 12, 2 ).Returns( 6 );
+      yield return new TestCaseData( 12, 4 ).Returns( 3 );
+      yield return new TestCaseData( 0, 0 )
+        .Throws(typeof(DivideByZeroException))
+        .With.TestName("DivideByZero")
+        .With.Description("An exception is expected");
+    }
+  }  
+}
+</div>

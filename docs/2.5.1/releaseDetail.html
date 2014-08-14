@@ -1,0 +1,110 @@
+<style><!--
+li { padding-bottom: .5em; }
+ul ul li { padding-bottom: 0; }
+dt { font-weight: bold }
+--></style>
+
+<h3>NUnit 2.5.1 - Version 2.5.1.9189 - July 8, 2009</h3>
+
+<h4>Framework</h4>
+
+<ul>
+<li>A new <b>TestResult</b> state has been defined for tests cancelled by the
+    user. Results with <b>ResultState.Cancelled</b> are reported as a type of
+	failure and no longer generate an ApplicationException.
+<li>Parameterized test fixtures with <b>TestCaseSource</b> or <b>ValueSource</b> 
+	data are now constructed using the appropriate parameterized constructor 
+	when test cases are being created. This avoids the need for a default
+	constructor and permits use of member data initialized from
+	the fixture parameters in creating the test data.
+<li>The <b>TestCaseData</b> class now supports use of a string or other
+    array type as the sole argument value, without the need to nest
+	that array in an object array.
+<li>Abstract classes marked with <b>TestFixtureAttribute</b> are no longer
+    reported as ignored or non-runnable.
+	<br><br>
+	<b>Note:</b> This was changed in 2.5 but was omitted from the release notes.
+<li>The methods in the <b>Text</b> class are now marked as obsolete. For string 
+	constraints, use one of the following at the start of an expression:
+	<ul>
+	<li><b>Is.StringContaining</b>
+	<li><b>Is.StringStarting</b>
+	<li><b>Is.StringEnding</b>
+	<li><b>Is.StringMatching</b>
+	</ul>
+	Within an expression (afer Not, Some, All, And, Or, etc.) you may use
+	<ul>
+	<li><b>Contains</b> or <b>ContainsSubstring</b>
+	<li><b>StartsWith</b>
+	<li><b>EndsWith</b>
+	<li><b>Matches</b>	
+	</ul>
+<li><b>ThrowsConstraint</b> now has a constructor taking an <b>ActualValueDelegate</b>
+    in addition to the constructor that takes a <b>TestDelegate</b>. This allows
+	simpler use of Lambda expressions under C# 3.0, but requires users of pre-3.0
+	compilers to disambiguate their delegates by use of an explicit return
+	expression.
+</ul>
+
+<h4>Core</h4>
+
+<ul>
+<li>Individual test cases under a parameterized test are
+    no longer sorted by name within the test group but are
+	run (and shown in the Gui) in the order in which the
+	data is retrieved.
+	<br><br>
+	<b>Note:</b> Since the order of retrieval of custom
+	attributes is not guaranteed by the CLR, the order
+	of test cases will not necessarily match the textual
+	ordering of attributes in the source code. The order
+	of tests will vary across different compilers and
+	CLR versions as well.
+<li>The XML test result file now contains a count of 
+	inconclusive results.
+</ul>
+
+<h4>Gui</h4>
+
+<ul>
+<li>The default icons in the Gui tree have been updated.
+<li>Alternative icons placed by the user in the directory containing
+    nunit.uikit.dll may now be in PNG format. Icons are now recognized
+	for Skipped and Inconclusive status in addition to Success, Failure
+	and Ignored.
+<li>A new setting option allows the user to disable checking for the 
+    existence of files in the Recent Files list before listing them. This
+    prevents NUnit from appearing to freeze when the file is on a network
+    path that is no longer connected.
+</ul>
+
+<h4>Extensibility</h4>
+
+<ul>
+<li>The <b>ITestCaseProvider2</b> and <b>IDatapointProvider2</b> interfaces
+    extend <b>ITestCaseProvider</b> and <b>IDatapointProvider</b>
+    with methods that include the fixture for which the test case is being
+    built. Providers may implement either the old or the new interface, 
+	but the new interface is required if the data source is contained in
+	the test fixture itself so that the fixture may be constructed with
+	the proper parameters in the case of a parameterized fixture.
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>Lambda in Throws constraint was not compiling correctly.
+<li>Null reference exception is no longer thrown when adding an assembly to a 
+    new project that has not yet been saved.
+<li>Dispose is now called on disposable types created while loading test case 
+    parameters.
+<li>Installations that copy NUnit to a single folder (no lib or framework folders) 
+    now work correctly.
+<li>Test Assemblies menu item is no longer enabled when no test was loaded
+<li>The Text Output tab of the Settings dialog no longer causes an exception
+    when invoked from the mini-gui.
+<li>Errors in various copyright statements were fixed and the year updated to 2009.
+<li>Control characters in test arguments are now escaped in the display.
+<li>Additional control characters are now escaped in error messages.
+<li>Miscellaneous typographic corrections were made to the documentation.
+</ul>

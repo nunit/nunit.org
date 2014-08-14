@@ -1,0 +1,56 @@
+<h3>RequiresSTAAttribute (NUnit 2.5)</h3>
+
+<p>The <b>RequiresSTAAttribute</b> is used on a test method, class or assembly
+   to specify that the tests should be run in the Single-threaded apartment.
+   It causes creation of a new thread if the parent test is not already running
+   in the STA.
+   
+<p><b>Note:</b> On test methods, you may also use the <b>STAThreadAttribute</b>.
+   Although the runtime only recognizes this attribute on the entrypoint of 
+   an executable assembly, many users have expected it to work on tests, so
+   we treat it as a synonym.
+
+<h4>Examples</h4>
+   
+<div class="code">
+
+<pre>
+
+// An STA thread will be created and used to run
+// all the tests in the assembly
+[assembly:RequiresSTA]
+
+...
+
+// TestFixture requiring a separate thread
+[TestFixture, RequiresSTA]
+public class FixtureRequiringSTA
+{
+  // An STA thread will be created and all
+  // tests in the fixture will run on it
+  // unless the containing assembly is
+  // already running on an STA Thread
+}
+
+[TestFixture]
+public class AnotherFixture
+{
+  [Test, RequiresSTA]
+  public void TestRequiringSTA()
+  {
+    // A separate thread will be created for this test
+	// unless the containing fixture is already running 
+	// in the STA.
+  }
+}
+
+</pre>
+
+</div>
+
+<h4>See also...</h4>
+<ul>
+<li><?php echo nunit_doc_link("requiresThread", "RequiresThreadAttribute") ?>
+<li><?php echo nunit_doc_link("requiresMTA", "RequiresMTAAttribute") ?>
+</ul>
+   

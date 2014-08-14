@@ -1,0 +1,33 @@
+<h3>CombinatorialAttribute (NUnit 2.5)</h3>
+
+<p>The <b>CombinatorialAttribute</b> is used on a test to specify that NUnit should
+   generate test cases for all possible combinations of the individual
+   data items provided for the parameters of a test. Since this is the
+   default, use of this attribute is optional.
+   
+<h4>Example</h4>
+
+<p>The following test will be executed six times, as follows:
+<pre>
+	MyTest(1, "A")
+	MyTest(1, "B")
+	MyTest(2, "A")
+	MyTest(2, "B")
+	MyTest(3, "A")
+	MyTest(3, "B")
+</pre>
+<div class="code"><pre>
+[Test, Combinatorial]
+public void MyTest(
+    [Values(1,2,3)] int x,
+    [Values("A","B")] string s)
+{
+    ...
+}
+</pre></div>
+
+<h4>See also...</h4>
+<ul>
+<li><?php echo nunit_doc_link("sequential", "SequentialAttribute") ?>
+<li><?php echo nunit_doc_link("pairwise", "PairwiseAttribute") ?>
+</ul>

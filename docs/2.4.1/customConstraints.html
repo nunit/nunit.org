@@ -1,0 +1,28 @@
+<h2>Custom Constraints (NUnit 2.4)</h2>
+
+<p>You can implement your own custom constraints by creating a class
+that implements the <b>IConstraint</b> interface, which supports performing a test
+   on an actual value and generating appropriate messages. The interface is
+   defined as follows:
+   
+<div class="code" style="width: 36em">
+<pre>public interface IConstraint
+{
+    bool Matches( object actual );
+    void WriteMessageTo( MessageWriter writer );
+    void WriteDescriptionTo( MessageWriter writer );
+    void WriteActualValueTo( MessageWriter writer );
+}</pre>
+</div>   
+
+<p>One approach is to derive from the abstract class Constraint, which 
+provides the <b>&amp;</b> and <b>|</b> operators as well as a default
+implementation of the WriteMessageTo() and WriteActualValueTo() methods.
+
+<p>Your derived class should save the actual argument to Matches for later use.
+If deriving from Constraint, use the protected field actual for this purpose.
+
+<p>The MessageWriter abstract class is implemented in the framework by
+TextMessageWriter. Examining the source for some of the builtin constraints
+should give you a good idea of how to use it.
+

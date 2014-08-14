@@ -1,0 +1,41 @@
+<h2>Parameterized Tests</h2>
+
+<p>NUnit 2.5 supports parameterized tests. Test methods
+may have parameters and various attributes are available
+to indicate what arguments should be supplied by NUnit.
+
+<p>Multiple sets of arguments cause the creation of multiple
+tests. All arguments are created at the point of loading the
+tests, so the individual test cases are available for 
+display and selection in the Gui, if desired.
+
+<p>Some attributes allow you to specify arguments inline - directly on
+   the attribute - while others use a separate method, property or field
+   to hold the arguments. In addition, some attributes identify complete test cases,
+   including all the necessary arguments, while others only provide data
+   for a single argument. This gives rise to four groups of attributes,
+   as shown in the following table.
+   
+<table class="nunit">
+<tr><th></th><th>Complete Test Cases</th><th>Data for One Argument</th></tr>
+<tr><th>Inline</th>
+    <td><?php echo nunit_doc_link( "testCase", "TestCaseAttribute" ) ?></td>
+    <td><?php echo nunit_doc_link( "random", "RandomAttribute" ) ?><br>
+	    <?php echo nunit_doc_link( "range", "RangeAttribute" ) ?><br>
+		<?php echo nunit_doc_link( "values", "ValuesAttribute" ) ?></td></tr>
+<tr><th>Separate</th>
+	<td><?php echo nunit_doc_link( "testCaseSource", "TestCaseSourceAttribute" ) ?></td>
+	<td><?php echo nunit_doc_link( "valueSource", "ValueSourceAttribute" ) ?></td></tr>
+</table>
+
+<p>In addition, when data is specified for individual arguments, special attributes
+may be added to the test method itself in order to tell NUnit how
+to go about combining the arguments. Currently, the following attributes
+are provided:
+
+<ul>
+<li><?php echo nunit_doc_link("combinatorial", "CombinatorialAttribute") ?> (default)
+<li><?php echo nunit_doc_link("pairwise", "PairwiseAttribute") ?>
+<li><?php echo nunit_doc_link("sequential", "SequentialAttribute") ?>
+</ul>
+

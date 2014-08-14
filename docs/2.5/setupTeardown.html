@@ -1,0 +1,20 @@
+<h2>Setup and Teardown</h2>
+
+<p>NUnit provides a number of attributes to perform initialization
+before a test is run and to clean up after it.
+
+<p>Each test fixture may contain one - and no more than one - 
+method marked with one of the following attributes:
+
+<ul>
+<li><?php echo nunit_doc_link("setup", "SetUpAttribute") ?>
+<li><?php echo nunit_doc_link("teardown", "TearDownAttribute") ?>
+<li><?php echo nunit_doc_link("fixtureSetup", "TestFixtureSetUpAttribute") ?>
+<li><?php echo nunit_doc_link("fixtureTeardown", "TestFixtureTearDownAttribute") ?>
+</ul>
+
+<p>In addition, you may provide one or more higher level setup and teardown
+fixtures that control the tests within a namespace or within the entire assembly
+using the <?php echo nunit_doc_link("setupFixture", "SetUpFixtureAttribute") ?>
+
+

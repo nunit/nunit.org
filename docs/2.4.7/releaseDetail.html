@@ -1,0 +1,53 @@
+<h3>NUnit 2.4.7 - March 30, 2008</h3>
+
+<h4>General</h4>
+
+<ul>
+<li>NUnit no longer uses log4net for its internal logging,
+eliminating conflicts with tested applications that used
+an earlier version of log4net.
+</ul>
+
+<h4>Gui</h4>
+
+<ul>
+<li>The level of logging sent to the gui for display is
+now controlled by a setting in the config file for each
+test. If no setting is provided, the default value is Error. 
+See the NUnitTests.config file for an example of how to set this.
+</ul>
+
+<h4>Extensibility</h4>
+<ul>
+<li>NUnit now includes the <b>RowTest</b> extension, written by
+Andreas Schlapsi, in it's extension assemblies. This extension 
+allows you to write
+test methods that take arguments and to provide multiple sets 
+of argument values using the <b>RowAttribute</b>. To use <b>RowTest</b>,
+your test must reference the nunit.framework.extensions assembly.
+<br><br>
+<b>Note:</b> Merging extensions into NUnit's own extension assembly 
+is an experiment we are trying for this release. The approach may
+change in future releases.
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>Fixed null reference exception in SimpleSettingsDialog
+<li>String equality comparisons now use Equals rather than
+String.Compare, which was causing some unexpected results.
+<li>Fixed a race condition in the EventPump
+<li>Exceptions in Dispose are now handled properly
+<li>Projects in directories for which the user does not
+have write access are closed correctly.
+<li>The Reload command is now disabled when no project
+is open, eliminating a crashing problem.
+<li>Visual Studio projects with platforms other than
+Any CPU may now be opened correctly.
+<li>Assemblies located on a UNC path now load correctly
+<li>The EventListeners extension point is correctly initialized
+<li>Has.None no longer causes a null reference exception
+<li>Use of log4net for internal logging has been eliminated
+due to performance and compatibility problems.
+</ul>

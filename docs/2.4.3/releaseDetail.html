@@ -1,0 +1,47 @@
+<h3>NUnit 2.4.3 - August 16, 2007</h3>
+
+<h4>General</h4>
+<ul>
+<li>Mono compatibility is significantly improved. The Gui runs under Mono
+1.2.2. A number of tests, which were previously skipped under Mono, are now 
+executed successfully. See the 
+<a href="http://nunit.com/index.php?p=platformSupport">Platform Support</a>
+page on the website for more information.
+
+<li>Documentation is now available as a separate download.
+</ul>
+
+<h4>Console Runner</h4>
+
+<ul>
+<li>The console runner now uses negative return codes for errors encountered
+in trying to run the test.
+Failures or errors in the test themselves give a positive return 
+code equal to the number of such failures or errors.
+
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>Comparisons between numeric values of various types now work correctly (see note).
+
+<li>Fixed crashing problems running the Gui under .NET 1.0. and Mono.
+
+<li>Fixed several problems when the new Load Fixture facility of the Gui:
+  <ul>
+    <li>An exception is no longer thrown when using it with multiple AppDomains.
+	<li>The Load Fixture menu item is no longer enabled for the top-level node.
+	<li>Assemblies within a test project now load without error.
+	<li>The full namespace hierarchy is now shown when loading a TestFixture.
+  </ul>
+  
+<li>Fixed incorrect implementation of CollectionAssert.AreEquivalent and
+CollectionAssert.IsEqualTo so that the number of occurences of an object
+in a collection is properly taken into account (see note). 
+<br><br>
+<b>Note:</b> Several of these fixes may cause failures of tests, which 
+had appeared to pass. In most cases, the passing tests were probably
+false positives.
+
+</ul>

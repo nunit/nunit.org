@@ -1,0 +1,44 @@
+<h3>RandomAttribute (NUnit 2.5)</h3>
+
+<p>The <b>RandomAttribute</b> is used to specify a set of random values to be provided
+   for an individual parameter of a parameterized test method. Since
+   NUnit combines the data provided for each parameter into a set of
+   test cases, data must be provided for all parameters if it is
+   provided for any of them.
+   
+<p>By default, NUnit creates test cases from all possible combinations
+   of the datapoints provided on parameters - the combinatorial approach.
+   This default may be modified by use of specific attributes on the
+   test method itself.
+   
+<p>RandomAttribute supports the following constructors:
+
+<div class="code"><pre>
+public Random( int count );
+public Random( double min, double max, int count );
+public Random( int min, int max, int count );
+</pre></div>
+   
+<h4>Example</h4>
+
+<p>The following test will be executed fifteen times, three times
+for each value of x, each combined with 5 random doubles from -1.0 to +1.0.
+
+<div class="code"><pre>
+[Test]
+public void MyTest(
+    [Values(1,2,3)] int x,
+    [Random(-1.0, 1.0, 5)] double d)
+{
+    ...
+}
+</pre></div>
+
+<h4>See also...</h4>
+<ul>
+<li><?php echo nunit_doc_link("values", "ValuesAttribute") ?>
+<li><?php echo nunit_doc_link("range", "RangeAttribute") ?>
+<li><?php echo nunit_doc_link("sequential", "SequentialAttribute") ?>
+<li><?php echo nunit_doc_link("combinatorial", "CombinatorialAttribute") ?>
+<li><?php echo nunit_doc_link("pairwise", "PairwiseAttribute") ?>
+</ul>

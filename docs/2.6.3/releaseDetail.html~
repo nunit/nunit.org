@@ -1,0 +1,31 @@
+<style><!--
+li { padding-bottom: .5em; }
+ul ul li { padding-bottom: 0; }
+dt { font-weight: bold }
+--></style>
+
+<h3>NUnit 2.6.3 Preview - Version 2.6.3.13278 - October 5, 2013</h3>
+
+<h4>Framework</h4>
+<ul>
+<li>When running under .NET 4.5, <b>async</b> methods may now be used as the target of a <b>ThrowsConstraint</b>.
+<li>When running under .NET 4.5, <b>async</b> methods may now be used as an <b>ActualValueDelegate</b> passed to <b>Assert.That()</b> or <b>Assume.That()</b>.
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>1071714 	TestContext is broken when a previous version of the runner is used alongside a new version of the framework
+<li>1071164 	Support async methods in usage scenarios of Throws constraints
+<li>1071861 	Error in Path Constraints
+<li>1072379 	Report test execution time at a higher resolution
+<li>1074568 	Assert/Assume should support an async method for the ActualValueDelegate
+<li>1079296 	NUnit 2.6.2 Failure on Mono
+<li>1082330 	Better Exception if SetCulture attribute is applied multiple times
+<li>1096902 	Trace output is disabled by default in version 2.6.2.12296
+<li>1097854 	Incorrect documentation for console runner /test option
+<li>1107746 	Add nunit tags to nuget packages
+<li>1130239 	classicModel.html is linked in local help, but doesn't exist
+<li>1222148 	/framework switch does not recognize net-4.5
+</ul>
+

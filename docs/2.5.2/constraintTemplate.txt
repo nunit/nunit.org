@@ -1,0 +1,21 @@
+<h3>xxConstraint</h3>
+
+<h4>Action</h4>
+<p>
+
+<h4>Constructor</h4>
+<div class="code"><pre>
+</pre></div>
+
+<h4>Syntax</h4>
+<div class="code"><pre>
+</pre></div>
+
+<h4>Examples of Use</h4>
+<div class="code"><pre>
+</pre></div>
+
+<h4>Notes</h4>
+<ol>
+<li>??
+</ol>

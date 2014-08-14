@@ -1,0 +1,25 @@
+<h2>Same As Constraint (NUnit 2.4)</h2>
+
+<p>A SameAsConstraint is used to test whether the object passed
+   as an actual value has the same identity as the object supplied
+   in its constructor.
+
+<table class="constraints">
+<tr><th>Syntax Helper</th><th>Constructor</th><th>Operation</th></tr>
+<tr><td>Is.SameAs( object )</td><td>SameAsConstraint( null )</td></td><td>tests that two object references refer to the same object</td></tr>
+</table>
+
+<h4>Examples of Use</h4>
+
+<div class="code"><pre>
+Exception ex1 = new Exception();
+Exception ex2 = ex1;
+Assert.That( ex2, Is.SameAs( ex1 ) );
+
+Exception ex3 = new Exception();
+Assert.That( ex3, Is.Not.SameAs( ex1 ) );
+
+// Using inheritance
+Expect( ex2, SameAs( ex1 ) );
+Expect( ex3, Not.SameAs( ex1 ) );
+</pre></div>

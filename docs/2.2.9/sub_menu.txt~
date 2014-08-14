@@ -1,0 +1,51 @@
+# NUnit Documentation Menu Layout
+#
+# Top-level menu items are unindented.
+# Level 1 submenus are indented with 1 space,
+# level 2 with 2 spaces, etc. Each line consists
+# of a page name and an optional display name
+# for use in the menu, separated by a comma.
+# 
+docHome,NUnit 2.2.9
+ getStarted,Getting&nbsp;Started
+  quickStart,Quick&nbsp;Start
+ installation
+  upgrade,Upgrading
+ features
+  assertions
+   equalityAsserts,Equality&nbsp;Asserts
+   identityAsserts,Identity&nbsp;Asserts
+   comparisonAsserts,Comparison&nbsp;Asserts
+   typeAsserts,Type&nbsp;Asserts
+   conditionAsserts,Condition&nbsp;Tests
+   utilityAsserts,Utility&nbsp;Methods
+   stringAssert,String&nbsp;Assert
+  attributes
+   testFixture,Test&nbsp;Fixture
+   test
+   setup
+   teardown
+   fixtureSetup,Test&nbsp;Fixture&nbsp;SetUp
+   fixtureTeardown,Test&nbsp;Fixture&nbsp;TearDown
+   exception,Expected&nbsp;Exception
+   platform
+   category
+   explicit
+   suite
+   ignore
+  configFiles,Configuration&nbsp;Files
+  multiAssembly,Multiple&nbsp;Assemblies
+  vsSupport,Visual&nbsp;Studio&nbsp;Support
+ nunit-console,NUnit-Console
+  consoleCommandLine,Command-Line
+ nunit-gui,NUnit-Gui
+  guiCommandLine,Command-Line
+  mainMenu,Main&nbsp;Menu
+  contextMenu,Context&nbsp;Menu
+  optionsDialog,Options&nbsp;Dialog
+  testProperties,Test&nbsp;Properties
+  configEditor,Configuration&nbsp;Editor
+  projectEditor,Project&nbsp;Editor
+ releaseNotes,Release&nbsp;Notes
+ samples
+ license

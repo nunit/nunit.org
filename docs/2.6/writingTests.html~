@@ -1,0 +1,13 @@
+<h2>Writing Tests</h2>
+
+<p>NUnit tests may be written using any .NET language that supports attributes.
+
+<p><?php echo nunit_doc_link("attributes", "Attributes") ?> are used to indicate
+   test classes and methods and to modify their behavior in various ways.
+
+<p><?php echo nunit_doc_link("assertions", Assertions) ?> test an actual value
+   against one or more <?php echo nunit_doc_link("constraintModel", "Constraints") ?>
+   and result in either a successful test or a failure.
+
+<p>User code may acquire information about the test and it's environment by
+   use of the <?php echo nunit_doc_link("testContext", "Test&nbsp;Context") ?>.

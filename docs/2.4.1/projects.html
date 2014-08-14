@@ -1,0 +1,52 @@
+<h2>NUnit Test Projects</h2>
+
+<p>Running tests from multiple assemblies is facilitated by the use of NUnit test projects. These are
+files with the extension .nunit containing information about the assemblies to be loaded. The
+following is an example of a hypothetical test project file:</p>
+
+<div class="code">
+<pre>&lt;NUnitProject&gt;
+  &lt;Settings activeconfig="Debug"/&gt;
+  &lt;Config name="Debug"&gt;
+    &lt;assembly path="LibraryCore\bin\Debug\Library.dll"/&gt;
+    &lt;assembly path="LibraryUI\bin\Debug\LibraryUI.dll"/&gt;
+  &lt;/Config&gt;
+  &lt;Config name="Release"&gt;
+    &lt;assembly path="LibraryCore\bin\Release\Library.dll"/&gt;
+    &lt;assembly path="LibraryUI\bin\Release\LibraryUI.dll"/&gt;
+  &lt;/Config&gt;
+&lt;/NUnitProject&gt;</pre>
+</div>
+
+<p>The project contains two configurations, each of which contains two assemblies. The Debug
+configuration is currently active. By default, the assemblies will be loaded using the directory
+containing this file as the ApplicationBase. The PrivateBinPath will be set automatically to
+<code>LibraryCore\bin\Debug;LibraryUI\bin\Debug</code> or to the corresonding release path.
+XML attributes are used to specify non-default values for the ApplicationBase, Configuration
+File and PrivateBinPath. The <?= nunit_doc_link( "projectEditor", "Project Editor" ) ?>
+may be used to create or modify NUnit projects.</p>
+
+<h2>Projects</h2>
+<p>NUnit uses <em>projects</em> to manage multiple test assemblies. Projects are 
+	described by project files, which have the file type ".nunit." The easiest way 
+	to create and manage project files is with the GUI interface. The GUI allows 
+	you to create new projects or open existing ones, via the File menu. The 
+	Project menu allows you to add additional assemblies to the current project. 
+	The Project!Edit menu item allows you to remove assemblies from the project, or 
+	to configure the project. Normally when working with projects, the project is 
+	the topmost node in the tree pane.</p>
+<p>If you are using the GUI to run a single test assembly, NUnit creates an 
+	implicit project that doesn't appear in the tree pane. Nevertheless, you can 
+	save this project via the File menu, and you can edit it, or add additional 
+	assemblies via the Project menu. Whenever you add an assembly to an implicit 
+	project, or edit its properties, the project will appear explicitly as the root 
+	node in the tree pane, with the default filename derived from the assembly name 
+	by replacing the ".dll" or ".exe" with ".nunit." Saving an implicit assembly 
+	that isn't visible in the tree pane won't make it visible, but the next time 
+	you open the project file, it will appear.</p>
+<p>In addition to manually adding assemblies, NUnit also allows you to open 
+	relevant Visual Studio .Net project files, specifically .csproj (C#) and 
+	.vbproj (Visual Basic) project files. Again, NUnit will automatically create 
+	the project for you, although it won't be saved unless you save it on exiting 
+	or by using the File!Save menu item.</p>
+<p id="sig">Gary Feldman</p>

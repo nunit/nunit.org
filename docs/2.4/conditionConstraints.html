@@ -1,0 +1,33 @@
+<h2>Condition Constraints (NUnit 2.4)</h2>
+
+<p>ConditionConstraints test a specific condition and are named for the condition 
+   they test. They verify that the actual value satisfies the condition. The
+   following condition helpers are provided.
+   
+<table class="constraints">
+<tr><th>Syntax Helper</th><th>Constructor</th><th>Operation</th></tr>
+<tr><td>Is.Null</td><td>EqualConstraint( null )</td></td><td>tests for null</td></tr>
+<tr><td>Is.True</td><td>EqualConstraint( true )</td></td><td>tests for <b>true</b></td></tr>
+<tr><td>Is.False</td><td>EqualConstraint( false )</td></td><td>tests for <b>false</b></td></tr>
+<tr><td>Is.NaN</td><td>EqualConstraint( double.NaN )<br>EqualConstraint( float.NaN )</td></td><td>tests for floating NaN</td></tr>
+<tr><td>Is.Empty</td><td>EmptyConstraint()</td></td><td>tests for empty string or collection</td></tr>
+<tr><td>Is.Unique</td><td>UniqueItemsConstraint()</td></td><td>tests that collection contains unique items</td></tr>
+</table>
+
+<h4>Examples</h4>
+ 
+<div class="code"><pre>
+Assert.That( anObject, Is.Null );
+Assert.That( anObject, Is.Not.Null );
+Assert.That( condition, Is.True );
+Assert.That( condition, Is.False );
+Assert.That( aDouble, Is.NaN );
+Assert.That( aDouble, Is.Not.NaN );
+Assert.That( aString, Is.Empty );
+Assert.That( collection, Is.Empty );
+Assert.That( collection, Is.Unique );
+
+// Using inheritance
+Expect( aDouble, NaN );
+Expect( collection, Unique );
+</pre></div>

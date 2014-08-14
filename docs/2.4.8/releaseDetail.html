@@ -1,0 +1,31 @@
+<h3>NUnit 2.4.8 - July 21, 2008</h3>
+
+<h4>General</h4>
+
+<ul>
+<li>NUnit is now built using NAnt 0.86 beta 1
+</ul>
+
+<h4>Framework</h4>
+
+<ul>
+<li><b>PlatformAttribute</b> has been extended to accept the new keywords
+    <b>NT6</b>, <b>Vista</b> and <b>Win2008Server</b>.
+	<br><br>
+	<b>Note:</b> In the current release, NUnit is still unable to 
+	distintuish between Vista and Windows 2008 Server. Either
+	of them will match all the above values. This problem will
+	be addressed in the 2.5 release.
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>The Gui output panes were failing to use a fixed font.
+<li>An NUnitSettings.xml file of zero length was causing a crash.
+<li>Invoking the gui with /exclude:XXX, where XXX is a non-existent
+    category, was causing all tests to be excluded.
+<li>Categories were not working properly on repeated tests.
+<li>A serious memory leak was fixed in the NUnit test runners.
+<li>Addins now work with the console runner.
+</ul>

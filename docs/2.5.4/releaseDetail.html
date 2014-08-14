@@ -1,0 +1,50 @@
+<style><!--
+li { padding-bottom: .5em; }
+ul ul li { padding-bottom: 0; }
+dt { font-weight: bold }
+--></style>
+
+<h3>NUnit 2.5.4 - Version 2.5.4.10098 - April 8, 2010</h3>
+
+<h4>Features</h4>
+
+<ul>
+<li>NUnit now defaults to running an assembly under the runtime version for
+which it was built. If that version is not available, a higher version may be
+used. See the <?php echo nunit_doc_link( "runtimeSelection", "Runtime Selection" ); ?> 
+page for details.
+<li><b>ProjectEditor</b> now provides a 'Default' selection for the runtime
+version to be used.
+<li>The XML result file format has been enhanced to provide additional information
+needed to identify and report on theories and also includes extended result states
+such as Inconclusive, Invalid, Error and Cancelled.
+<li>The <b>EmptyConstraint</b> (Is.Empty) may now be used with a <b>DirectoryInfo</b>
+to test whether the directory is empty.
+<li>Datapoints for <b>boolean</b> and <b>enum</b> arguments are now generated 
+automatically for theories.
+<li>The cache path for shadow copying is now saved in the NUnit settings file
+rather than in the config files. The settings dialog may be used to change it
+if necessary.
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>NUnit crashing when a message contains ']]>'
+<li>Replace compile-time exclusion of code from Mono with run-time test
+<li>Message associated with Assert.Inconclusive() not shown in XML
+<li>Category on test case clashes with category on the test method
+<li>Console crash when specifying /domain:Single with multiple assemblies
+<li>Incorrect relative path causing problems in saving projects
+<li>Message associated with Assert.Pass() not shown in XML
+<li>Tests with ExpectedException compiled against NUnit 2.4 always pass under 2.5
+<li>Datapoints with a null value were not being passed correctly to theories
+<li>Error in XML output with FSharp.Net
+<li>Documentation refers to files missing from Windows install
+<li>Parameterized test fixtures with null parameters not handled correctly
+<li>Theories now work as designed, failing when no data satisfies the assumptions
+<li>Target framework of net-3.5 was causing console to crash
+<li>Mono stack traces are now parsed correctly in the Gui
+<li>Test failures under .NET 1.1
+<li>Thread CurentPrincipal set in TestFixtureSetUp not maintained between tests
+</ul>

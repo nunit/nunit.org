@@ -1,0 +1,17 @@
+<h2>Test Selection</h2>
+
+<p>NUnit a number of attributes to control which tests
+   are executed in a partiular run.
+   
+<ul>
+<li><?php echo nunit_doc_link("ignore", "IgnoreAttribute") ?> marks
+    tests as temporarily excluded from the run.
+<li><?php echo nunit_doc_link("explicit", "ExplicitAttribute") ?> indicates
+    that a test should only be run if directly selected.
+<li><?php echo nunit_doc_link("category", "CategoryAttribute") ?> is used
+    to group tests for selection or exclusion.
+<li><?php echo nunit_doc_link("platform", "PlatformAttribute") ?> is used
+    to include or exclude tests on particular platforms.
+<li><?php echo nunit_doc_link("culture", "CultureAttribute") ?> indicates
+    that a test should be run only for certain culture settings.
+</ul>

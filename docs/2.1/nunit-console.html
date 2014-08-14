@@ -1,0 +1,18 @@
+<h2>NUnit-Console</h2>
+<p>The nunit-console.exe program is a text-based runner and can be used when you 
+	want to run all your tests and don&#146;t need a red/yellow/green indication of 
+	success or failure.</p>
+<p>It is useful for automation of tests and integration into other systems. It 
+	automatically saves its results in XML format, allowing you to produce reports 
+	or otherwise process the results. The following is a screenshot of the console 
+	program.</p>
+
+<div class="screenshot">
+      <?php echo nunit_doc_img( "console-mock.gif" ) ?></div>
+
+<p>In this example, nunit-console has just run the tests in the mock-assembly.dll 
+	that is part of the NUnit distribution. This assembly contains seven tests, 
+	three of which are not run. The first ignored test has an incorrect method 
+	signature, the second has been marked with the Ignore attribute and the third 
+	uses the Explicit attribute, so that it can only be run directly. Click 
+	<?php echo nunit_doc_file( "TestResult.xml", "here" ) ?> to see the XML produced for this test run.</p>

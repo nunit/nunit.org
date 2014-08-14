@@ -1,0 +1,209 @@
+<style><!--
+li { padding-bottom: .5em; }
+ul ul li { padding-bottom: 0; }
+dt { font-weight: bold }
+--></style>
+
+<h2>Release Notes</h2>
+
+<h3>NUnit 2.9.6 - October 4, 2013</h3>
+
+<h4>Main Features</h4>
+
+<ul>
+  <li>Separate projects for nunit-console and nunit.engine
+  <li>New builds for .NET 4.5 and Silverlight
+  <li>TestContext is now supported and includes an additional property, <b>Random</b>, which may be used to generate repeatable random values for use in a test.
+  <li>The external framework API is now stable; internal interfaces are separate from API
+  <li>Tests may be run in parallel on separate threads
+  <li>Solutions and projects now use VS2012 (except for Compact framework)
+</ul>
+ 
+<h4>Bug Fixes</h4>
+
+<ul>
+  <li>463470 	We should encapsulate references to pre-2.0 collections
+  <li>498690 	Assert.That() doesn't like properties with scoped setters
+  <li>501784 	Theory tests do not work correctly when using null parameters
+  <li>531873 	Feature: Extraction of unit tests from NUnit test assembly and calling appropriate one
+  <li>611325 	Allow Teardown to detect if last test failed
+  <li>611938 	Generic Test Instances disappear
+  <li>655882 	Make CategoryAttribute inherited
+  <li>664081 	Add Server2008 R2 and Windows 7 to PlatformAttribute
+  <li>671432 	Upgrade NAnt to Latest Release
+  <li>676560 	Assert.AreEqual does not support IEquatable<T>
+  <li>691129 	Add Category parameter to TestFixture
+  <li>697069 	Feature request: dynamic location for TestResult.xml
+  <li>708173 	NUnit's logic for comparing arrays - use Comparer<T[]> if it is provided
+  <li>709062 	"System.ArgumentException : Cannot compare" when the element is a list
+  <li>712156 	Tests cannot use AppDomain.SetPrincipalPolicy
+  <li>719184 	Platformdependency in src/ClientUtilities/util/Services/DomainManager.cs:40
+  <li>719187 	Using Path.GetTempPath() causes conflicts in shared temporary folders
+  <li>735851 	Add detection of 3.0, 3.5 and 4.0 frameworks to PlatformAttribute
+  <li>736062 	Deadlock when EventListener performs a Trace call + EventPump synchronisation
+  <li>756843 	Failing assertion does not show non-linear tolerance mode
+  <li>766749 	net-2.0\nunit-console-x86.exe.config should have a <startup /> element and also enable loadFromRemoteSources
+  <li>770471 	Assert.IsEmpty does not support IEnumerable
+  <li>785460 	Add Category parameter to TestCaseSourceAttribute
+  <li>787106 	EqualConstraint provides inadequate failure information for IEnumerables
+  <li>792466 	TestContext MethodName
+  <li>794115 	HashSet incorrectly reported
+  <li>800089 	Assert.Throws() hides details of inner AssertionException
+  <li>848713 	Feature request: Add switch for console to break on any test case error
+  <li>878376 	Add 'Exactly(n)' to the NUnit constraint syntax
+  <li>882137 	When no tests are run, higher level suites display as Inconclusive
+  <li>882517 	NUnit 2.5.10 doesn't recognize TestFixture if there are only TestCaseSource inside
+  <li>885173 	Tests are still executed after cancellation by user
+  <li>885277 	Exception when project calls for a runtime using only 2 digits
+  <li>885604 	Feature request: Explicit named parameter to TestCaseAttribute
+  <li>890129 	DelayedConstraint doesn't appear to poll properties of objects
+  <li>892844 	Not using Mono 4.0 profile under Windows
+  <li>893919 	DelayedConstraint fails polling properties on references which are initially null
+  <li>896973 	Console output lines are run together under Linux
+  <li>897289 	Is.Empty constraint has unclear failure message
+  <li>898192 	Feature Request: Is.Negative, Is.Positive
+  <li>898256 	IEnumerable<T> for Datapoints doesn't work
+  <li>899178 	Wrong failure message for parameterized tests that expect exceptions
+  <li>904841 	After exiting for timeout the teardown method is not executed
+  <li>908829 	TestCase attribute does not play well with variadic test functions
+  <li>910218 	NUnit should add a trailing separator to the ApplicationBase
+  <li>920472 	CollectionAssert.IsNotEmpty must dispose Enumerator
+  <li>922455 	Add Support for Windows 8 and Windows 2012 Server to PlatformAttribute
+  <li>928246 	Use assembly.Location instead of assembly.CodeBase
+  <li>958766 	For development work under TeamCity, we need to support nunit2 formatted output under direct-runner
+  <li>1000181 	Parameterized TestFixture with System.Type as constructor arguments fails
+  <li>1000213 	Inconclusive message Not in report output
+  <li>1023084 	Add Enum support to RandomAttribute
+  <li>1028188 	Add Support for Silverlight
+  <li>1029785 	Test loaded from remote folder failed to run with exception System.IODirectory
+  <li>1037144 	Add MonoTouch support to PlatformAttribute
+  <li>1041365 	Add MaxOsX and Xbox support to platform attribute
+  <li>1057981 	C#5 async tests are not supported
+  <li>1060631 	Add .NET 4.5 build
+  <li>1064014 	Simple async tests should not return Task<T>
+  <li>1071164 	Support async methods in usage scenarios of Throws constraints
+  <li>1071343 	Runner.Load fails on CF if the test assembly contains a generic method
+  <li>1071861 	Error in Path Constraints
+  <li>1072379 	Report test execution time at a higher resolution
+  <li>1074568 	Assert/Assume should support an async method for the ActualValueDelegate
+  <li>1082330 	Better Exception if SetCulture attribute is applied multiple times
+  <li>1111834 	Expose Random Object as part of the test context
+  <li>1111838 	Include Random Seed in Test Report
+  <li>1172979 	Add Category Support to nunitlite Runner
+  <li>1203361 	Randomizer uniqueness tests sometimes fail
+  <li>1221712 	When non-existing test method is specified in -test, result is still "Tests run: 1, Passed: 1"
+  <li>1223294 	System.NullReferenceException thrown when ExpectedExceptionAttribute is used in a static class
+  <li>1225542 	Standardize commandline options for test harness
+</ul>
+	
+<h3>NUnit 2.9.5 - July 30, 2010</h3>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+  <li>483836 	Allow non-public test fixtures consistently
+  <li>487878 	Tests in generic class without proper TestFixture attribute should be invalid
+  <li>498656 	TestCase should show array values in GUI
+  <li>513989 	Is.Empty should work for directories
+  <li>519912 	Thread.CurrentPrincipal Set In TestFixtureSetUp Not Maintained Between Tests
+  <li>532488 	constraints from ConstraintExpression/ConstraintBuilder are not reusable
+  <li>590717 	categorie contains dash or trail spaces is not selectable
+  <li>590970 	static TestFixtureSetUp/TestFixtureTearDown methods in base classes are not run
+  <li>595683 	NUnit console runner fails to load assemblies
+  <li>600627 	Assertion message formatted poorly by PropertyConstraint
+  <li>601108 	Duplicate test using abstract test fixtures
+  <li>601645 	Parametered test should try to convert data type from source to parameter
+  <li>605432 	ToString not working properly for some properties
+  <li>606548 	Deprecate Directory Assert in 2.5 and remove it in 3.0
+  <li>608875 	NUnit Equality Comparer incorrectly defines equality for Dictionary objects
+</ul>
+	
+<h3>NUnit 2.9.4 - May 4, 2010</h3>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+  <li>419411 	Fixture With No Tests Shows as Non-Runnable
+  <li>459219 	Changes to thread princpal cause failures under .NET 4.0
+  <li>459224 	Culture test failure under .NET 4.0
+  <li>462019 	Line endings needs to be better controlled in source
+  <li>462418 	Assume.That() fails if I specify a message
+  <li>483845 	TestCase expected return value cannot be null
+  <li>488002 	Should not report tests in abstract class as invalid
+  <li>490679 	Category in TestCaseData clashes with Category on ParameterizedMethodSuite
+  <li>501352 	VS2010 projects have not been updated for new directory structure
+  <li>504018 	Automatic Values For Theory Test Parameters Not Provided For bool And enum
+  <li>505899 	'Description' parameter in both TestAttribute and TestCaseAttribute is not allowed
+  <li>523335 	TestFixtureTearDown in static class not executed
+  <li>556971 	Datapoint(s)Attribute should work on IEnumerable<T> as well as on Arrays
+  <li>561436 	SetCulture broken with 2.5.4
+  <li>563532 	DatapointsAttribute should be allowed on properties and methods
+</ul>
+	 
+<h3>NUnit 2.9.3 - October 26, 2009</h3>
+
+<h4>Main Features</h4>
+ 
+<ul>
+  <li>Created new API for controlling framework
+  <li>New builds for .Net 3.5 and 4.0, compact framework 3.5
+  <li>Support for old style tests has been removed
+  <li>New adhoc runner for testing the framework
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+  <li>432805 	Some Framework Tests don't run on Linux
+  <li>440109 	Full Framework does not support "Contains"
+</ul>
+
+<h3>NUnit 2.9.2 - September 19, 2009</h3>
+
+<h4>Main Features</h4>
+
+<ul>
+  <li>NUnitLite code is now merged with NUnit
+  <li>Added NUnitLite runner to the framework code
+  <li>Added Compact framework builds
+</ul>
+ 
+<h4>Bug Fixes</h4>
+
+<ul>
+  <li>430100 	Assert.Catch<T> should return T
+  <li>432566 	NUnitLite shows empty string as argument
+  <li>432573 	Mono test should be at runtime
+</ul>
+
+<h3>NUnit 2.9.1 - August 27, 2009</h3>
+
+<h4>Main Features</h4>
+
+<ul>
+  <li>Created a separate project for the framework and framework tests
+  <li>Changed license to MIT / X11
+  <li>Created Windows installer for the framework
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+  <li>400502 	NUnitEqualityComparer.StreamsE­qual fails for same stream
+  <li>400508 	TestCaseSource attirbute is not working when Type is given
+  <li>400510 	TestCaseData variable length ctor drops values
+  <li>417557 	Add SetUICultureAttribute from NUnit 2.5.2
+  <li>417559 	Add Ignore to TestFixture, TestCase and TestCaseData
+  <li>417560 	Merge Assert.Throws and Assert.Catch changes from NUnit 2.5.2
+  <li>417564 	TimeoutAttribute on Assembly
+</ul>
+
+<h3>Earlier Releases</h3>
+
+<ul>
+<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.2">NUnit 2.6 through 2.6.2</a>
+<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.5.10">NUnit 2.5 through 2.5.10</a>
+<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.4.8">NUnit 2.4 through 2.4.8</a>
+<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.2.10">NUnit 2.0 through 2.2.10</a>
+</ul>
+

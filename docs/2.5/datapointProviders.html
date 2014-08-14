@@ -1,0 +1,30 @@
+<h3>DataPointProviders (NUnit 2.5)</h3>
+
+<h4>Purpose</h4>
+<p>DataPointProviders are used to supply data for an individual parameter
+of a parameterized test method.
+
+<h4>Extension Point</h4>
+<p>Addins use the host to access this extension point by name:
+
+<pre>
+	IExtensionPoint listeners = host.GetExtensionPoint( "DataPointProviders" );</pre>
+
+<h4>Interface</h4>
+<p>The extension object passed to Install must implement the IDataPointProvider interface:
+
+<pre>
+	public interface IDataPointProvider
+	{
+		bool HasDataFor( ParameterInfo parameter );
+		IEnumerable GetDataFor( ParameterInfo parameter );
+	}
+</pre>
+
+<p>The HasDataFor method should return true if the provider is able to
+   supply data for the specified parameter. If a provider only wants to be used 
+   on certain types of tests, it can examine the supplied ParameterInfo and
+   its associated MethodInfo and Type.
+
+<p>The GetDataFor method should return a list of individual values to
+   use for the supplied parameter in running the test.

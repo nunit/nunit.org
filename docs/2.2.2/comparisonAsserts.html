@@ -1,0 +1,111 @@
+<h2>Comparisons</h2>
+<p>Assertions that perform comparisons are often your best choice because they 
+	report both expected and actual values when they fail. The expected value 
+	is always the first argument. NUnit provides Assert methods to test both
+	equality and object equivalence.</p>
+
+<h3>Testing Equality</h3>
+
+<p>These methods test whether the two arguments are equal. Overloaded
+methods are provided for common value types so that languages that don't
+automatically box values can use them directly.</p>
+
+<div class="code" style="width: 36em" >
+	<pre>Assert.AreEqual( int expected, int actual );
+Assert.AreEqual( int expected, int actual, string message );
+Assert.AreEqual( int expected, int actual, string message, 
+                 object[] parms );
+
+Assert.AreEqual( decimal expected, decimal actual );
+Assert.AreEqual( decimal expected, decimal actual, string message );
+Assert.AreEqual( decimal expected, decimal actual, string message, 
+                 object[] parms );
+
+Assert.AreEqual( float expected, float actual, float tolerance );
+Assert.AreEqual( float expected, float actual, float tolerance,
+                 string message );
+Assert.AreEqual( float expected, float actual, float tolerance,
+                 string message, object[] parms );
+
+Assert.AreEqual( double expected, double actual, double tolerance );
+Assert.AreEqual( double expected, double actual, double tolerance,
+                 string message );
+Assert.AreEqual( double expected, double actual, double tolerance,
+                 string message, object[] parms );
+
+Assert.AreEqual( object expected, object actual );
+Assert.AreEqual( object expected, object actual, string message );
+Assert.AreEqual( object expected, object actual, string message, 
+                 object[] parms );
+
+Assert.AreNotEqual( int expected, int actual );
+Assert.AreNotEqual( int expected, int actual, string message );
+Assert.AreNotEqual( int expected, int actual, string message,
+                object[] parms );
+
+Assert.AreNotEqual( decimal expected, decimal actual );
+Assert.AreNotEqual( decimal expected, decimal actual, string message );
+Assert.AreNotEqual( decimal expected, decimal actual, string message,
+                object[] parms );
+
+Assert.AreNotEqual( float expected, float actual );
+Assert.AreNotEqual( float expected, float actual, string message );
+Assert.AreNotEqual( float expected, float actual, string message,
+                object[] parms );
+
+Assert.AreNotEqual( double expected, double actual );
+Assert.AreNotEqual( double expected, double actual, string message );
+Assert.AreNotEqual( double expected, double actual, string message,
+                object[] parms );
+
+Assert.AreNotEqual( object expected, object actual );
+Assert.AreNotEqual( object expected, object actual, string message );
+Assert.AreNotEqual( object expected, object actual, string message,
+                object[] parms );</pre>
+</div>
+
+<h4>Comparing Numerics of Different Types</h4>
+
+<p>The method overloads that compare two objects make special provision so that numeric 
+	values of different types compare as expected. This assert succeeds:
+	<pre>        Assert.AreEqual( 5, 5.0 );</pre>
+</p>
+
+<h4>Comparing Floating Point Values</h4>
+
+<p>Values of type float and double are normally compared using an additional
+argument that indicates a tolerance within which they will be considered 
+as equal. Special values are handled so that the following Asserts succeed:</p>
+
+<pre>        Assert.AreEqual( double.PositiveInfinity, double.PositiveInfinity );
+        Assert.AreEqual( double.NegativeInfinity, double.NegativeInfinity );</pre>
+
+<p>In keeping with standard floating point comparison logic, the following Assert fails:</p>
+
+<pre>        Assert.AreEqual( double.NaN, double.NaN );</pre>
+
+<h4>Comparing Arrays</h4>
+
+<p>Starting with version 2.2, special provision has been made for comparing single-dimensioned
+	arrays. Two arrays will be treated as equal by Assert.AreEqual if they are the same 
+	length and each of the corresponding elements is equal.</p>
+	
+<blockquote><i><b>Note:</b> Multi-dimensioned arrays, nested arrays (arrays of arrays) 
+	and other collection types such as ArrayList are not currently supported.</i></blockquote>
+
+
+<h3>Testing Object Equivalence</h3>
+
+<p>These methods test whether the same objects are referenced by the two arguments.</p> 
+
+<div class="code" style="width: 36em" >
+<pre>Assert.AreSame( object expected, object actual );
+Assert.AreSame( object expected, object actual, string message );
+Assert.AreSame( object expected, object actual, string message, 
+                object[] parms );
+
+Assert.AreNotSame( object expected, object actual );
+Assert.AreNotSame( object expected, object actual, string message );
+Assert.AreNotSame( object expected, object actual, string message, 
+                object[] parms );</pre>
+</div>

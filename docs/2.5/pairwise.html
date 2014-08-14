@@ -1,0 +1,17 @@
+<h3>PairwiseAttribute (NUnit 2.5)</h3>
+
+<p>The <b>PairwiseAttribute</b> is used on a test to specify that NUnit should
+   generate test cases in such a way that all possible pairs of
+   values are used. This is a well-known approach for combatting
+   the combinatorial explosion of test cases when more than
+   two features (parameters) are involved.
+   
+<p><b>Note:</b> In the current Alpha release, this attribute is 
+accepted but ignored and data items are combined usin the default
+combinatorial approach.
+   
+<h4>See also...</h4>
+<ul>
+<li><?php echo nunit_doc_link("sequential", "SequentialAttribute") ?>
+<li><?php echo nunit_doc_link("combinatorial", "CombinatorialAttribute") ?>
+</ul>
