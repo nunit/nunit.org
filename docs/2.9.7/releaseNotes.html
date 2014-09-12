@@ -6,6 +6,67 @@ dt { font-weight: bold }
 
 <h2>Release Notes</h2>
 
+<h3>NUnit 2.9.7 - August 8, 2014</h3>
+
+<h4>Breaking Changes</h4>
+
+<ul>
+  <li>NUnit no longer supports void async test methods. You should use a Task return Type instead.
+  <li>The ExpectedExceptionAttribute is no longer supported. Use Assert.Throws() or Assert.That(..., Throws) instead for a more precise specification of where the exception is expected to be thrown.
+</ul>
+
+<h4>New Features</h4>
+
+<ul>
+  <li>Parallel test execution is supported down to the Fixture level. Use ParallelizableAttribute to indicate types that may be run in parallel.
+  <li>Async tests are supported for .NET 4.0 if the user has installed support for them.
+  <li>A new FileExistsConstraint has been added along with FileAssert.Exists and FileAssert.DoesNotExist
+  <li>ExpectedResult is now supported on simple (non-TestCase) tests.
+  <li>The Ignore attribute now takes a named parameter Until, which allows specifying a date after which the test is no longer ignored.
+  <li>The following new values are now recognized by PlatformAttribute: Win7, Win8, Win8.1, Win2012Server, Win2012ServerR2, NT6.1, NT6.2, 32-bit, 64-bit
+  <li>TimeoutAttribute is now supported under Silverlight
+  <li>ValuesAttribute may be used without any values on an enum or boolean argument. All possible values are used.
+  <li>You may now specify a tolerance using Within when testing equality of DateTimeOffset values.
+  <li>The XML output now includes a start and end time for each test.
+</ul>
+
+<h4>Issues Resolved</h4>
+
+<ul>
+  <li>8    [SetUpFixture] is not working as expected
+  <li>14   CI Server for NUnit Framework
+  <li>21   Is.InRange Constraint Ambiguity
+  <li>27   Values attribute support for enum types
+  <li>29   Specifying a tolerance with "Within" doesn't work for DateTimeOffset data types
+  <li>31   Report start and end time of test execution
+  <li>36   Make RequiresThread, RequiresSTA, RequiresMTA inheritable
+  <li>45   Need of Enddate together with Ignore
+  <li>55   Incorrect XML comments for CollectionAssert.IsSubsetOf
+  <li>62   Matches(Constraint) does not work as expected
+  <li>63   Async support should handle Task return type without state machine
+  <li>64   AsyncStateMachineAttribute should only be checked by name
+  <li>65   Update NUnit Wiki to show the new location of samples
+  <li>66   Parallel Test Execution within test assemblies
+  <li>67   Allow Expected Result on simple tests
+  <li>70   EquivalentTo isn't compatible with IgnoreCase for dictioneries
+  <li>75   Async tests should be supported for projects that target .NET 4.0
+  <li>82   nunit-framework tests are timing out on Linux
+  <li>83   Path-related tests fail on Linux
+  <li>85   Culture-dependent NUnit tests fail on non-English machine
+  <li>88   TestCaseSourceAttribute documentation
+  <li>90   EquivalentTo isn't compatible with IgnoreCase for char
+  <li>100  Changes to Tolerance definitions
+  <li>110  Add new platforms to PlatformAttribute
+  <li>113  Remove ExpectedException
+  <li>118  Workarounds for missing InternalPreserveStackTrace in mono
+  <li>121  Test harness does not honor the --worker option when set to zero
+  <li>129  Standardize Timeout in the Silverlight build
+  <li>130  Add FileAssert.Exists and FileAssert.DoesNotExist
+  <li>132  Drop support for void async methods
+  <li>153  Surprising behavior of DelayedConstraint pollingInterval
+  <li>161  Update API to support stopping an ongoing test run
+</ul>
+
 <h3>NUnit 2.9.6 - October 4, 2013</h3>
 
 <h4>Main Features</h4>

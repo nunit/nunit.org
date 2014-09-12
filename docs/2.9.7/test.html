@@ -29,7 +29,7 @@
 <p>Beginning with NUnit 2.6.2, test methods targetting .Net 4.5 may be 
    marked as <b>async</b> and NUnit will wait for the method to complete 
    before recording the result and moving on to the next test.<b>Async</b> 
-   test methods may return <b>void</b> or <b>Task</b> if no value is returned,
+   test methods may return <b>Task</b> if no value is returned,
    or <b>Task&lt;T&gt;</b> if a value of type <b>T</b> is returned.
 	
 <p>If the programmer marks a test method that does not have the correct signature 

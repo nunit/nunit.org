@@ -31,7 +31,6 @@ docHome,NUnit 2.9.7
    culture
    datapoint,Datapoint(s)
    description
-   exception
    explicit
    ignore
    maxtime
