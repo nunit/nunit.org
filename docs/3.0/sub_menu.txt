@@ -6,7 +6,7 @@
 # of a page name and an optional display name
 # for use in the menu, separated by a comma.
 # 
-docHome,NUnit 2.9.7
+docHome,NUnit 3.0 Alpha Release
  getStarted,Getting&nbsp;Started
   quickStart,Quick&nbsp;Start
    quickStartSource,Source&nbsp;Listing
