@@ -120,7 +120,7 @@ function BuildMenuItem( $lines, $levels, $index )
 {
     $line = $lines[$index];
     $level = $levels[$index];
-    $part = split( ',', $line );
+    $part = explode( ',', $line );
 
     $name = $part[0];
     $display_name = "";
