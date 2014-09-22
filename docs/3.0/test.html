@@ -39,6 +39,9 @@
 <p>In the examples on this page, NUnit would have no way of knowing what values 
    to supply as arguments, so methods without parameters are used.
    
+<p>As of NUnit 3.0, you may pass in the expected result to the Test attribute and it
+   will be checked for equality with the return value of the test method.
+   
 <h4>Example:</h4>
 
 <div class="code">
@@ -66,6 +69,12 @@
 
     public void TestSubtract()
     { /* backwards compatibility */ }
+    
+    [Test(ExpectedResult = 4)]
+    public int TestAdd()
+    {
+        return 2 + 2;
+    }
   }
 }
 </pre>
