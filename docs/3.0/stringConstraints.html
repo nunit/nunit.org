@@ -1,1 +1,150 @@
-<?php unchangedSince("2.5.3") ?>
+<h2>String Constraints (NUnit 2.4)</h2>
+
+<p>String constraints perform tests that are specific to strings.
+   Attempting to test a non-string value with a string constraint
+   is an error and gives an exception.
+   
+<p>The <b>Text</b> prefix was deprecated beginning with NUnit 2.5.1
+   and has been removed in NUnit 3.0.
+   
+<p><b>Is.StringStarting, Is.StringContaining, Is.StringEnding and Is.StringMatching</b> are deprecated in NUnit 3.0 and will be removed in a future version. They have been replaced with <b>Does.StartWith, Does.Contain, Does.EndWith and Does.Match.</b><p>
+
+<p><b>Constains.Substring</b> has also been deprecated in NUnit 3.0 in favor of <b>Does.Contain</b></p>
+ 
+<h3>SubstringConstraint</h3>  
+
+<h4>Action</h4>
+<p>Tests for a substring.
+
+<h4>Constructor</h4>
+<div class="code"><pre>
+SubstringConstraint(string expected)
+</pre></div>
+
+<h4>Syntax</h4>
+<div class="code"><pre>
+Does.Contain(string expected)
+
+</pre></div>
+
+<h4>Modifiers</h4>
+<div class="code"><pre>
+...IgnoreCase
+</pre></div>
+
+<h4>Examples of Use</h4>
+<div class="code"><pre>
+string phrase = "Make your tests fail before passing!"
+
+Assert.That( phrase, Does.Contain( "tests fail" ) );
+Assert.That( phrase, Does.Not.Contain( "tests pass" ) );
+Assert.That( phrase, Does.Contain( "make" ).IgnoreCase );
+</pre></div>
+
+<h3>StartsWithConstraint</h3>
+
+<h4>Action</h4>
+<p>Tests for an initial string.
+
+<h4>Constructor</h4>
+<div class="code"><pre>
+StartsWithConstraint(string expected)
+</pre></div>
+
+<h4>Syntax</h4>
+<div class="code"><pre>
+Does.StartWith(string expected)
+StartsWith(string expected)
+</pre></div>
+
+<h4>Modifiers</h4>
+<div class="code"><pre>
+...IgnoreCase
+</pre></div>
+
+<h4>Examples of Use</h4>
+<div class="code"><pre>
+string phrase = "Make your tests fail before passing!"
+
+Assert.That( phrase, Does.StartWith( "Make" ) );
+Assert.That( phrase, Does.Not.StartWith( "Break" ) );
+Expect( phrase, StartsWith( "Make" ) );
+</pre></div>
+
+<h4>Notes</h4>
+<ol>
+<li><b>StartsWith</b> may appear only in the body of a constraint 
+    expression or when the inherited syntax is used.
+</ol>
+
+<h3>EndsWithConstraint</h3>
+
+<h4>Action</h4>
+<p>Tests for an ending string.
+
+<h4>Constructor</h4>
+<div class="code"><pre>
+EndsWithConstraint(string expected)
+</pre></div>
+
+<h4>Syntax</h4>
+<div class="code"><pre>
+Does.EndWith(string expected)
+EndsWith(string expected)
+</pre></div>
+
+<h4>Modifiers</h4>
+<div class="code"><pre>
+...IgnoreCase
+</pre></div>
+
+<h4>Examples of Use</h4>
+<div class="code"><pre>
+string phrase = "Make your tests fail before passing!"
+
+Assert.That( phrase, Does.EndWith( "!" ) );
+Assert.That( phrase, Does.EndWith( "PASSING!" ).IgnoreCase );
+Expect( phrase, EndsWith( "!" ) );
+</pre></div>
+
+<h4>Notes</h4>
+<ol>
+<li><b>EndsWith</b> may appear only in the body of a constraint 
+    expression or when the inherited syntax is used.
+</ol>
+
+<h3>RegexConstraint</h3>
+
+<h4>Action</h4>
+<p>Tests that a pattern is matched.
+
+<h4>Constructor</h4>
+<div class="code"><pre>
+RegexConstraint(string pattern)
+</pre></div>
+
+<h4>Syntax</h4>
+<div class="code"><pre>
+Does.Match(string pattern)
+Matches(string pattern)
+</pre></div>
+
+<h4>Modifiers</h4>
+<div class="code"><pre>
+...IgnoreCase
+</pre></div>
+
+<h4>Examples of Use</h4>
+<div class="code"><pre>
+string phrase = "Make your tests fail before passing!"
+
+Assert.That( phrase, Does.Match( "Make.*tests.*pass" ) );
+Assert.That( phrase, Does.Not.Match( "your.*passing.*tests" ) );
+Expect( phrase, Matches( "Make.*pass" ) );
+</pre></div>
+
+<h4>Notes</h4>
+<ol>
+<li><b>Matches</b> may appear only in the body of a constraint 
+    expression or when the inherited syntax is used.
+</ol>
