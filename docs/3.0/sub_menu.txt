@@ -25,6 +25,7 @@ docHome,NUnit 3.0 Alpha Release
    collectionAssert,Collection&nbsp;Assert
    fileAssert,File&nbsp;Assert
   attributes
+   author
    actionAttributes,Action&nbsp;Attributes
    category
    combinatorial
@@ -56,6 +57,7 @@ docHome,NUnit 3.0 Alpha Release
    testCase
    testCaseSource
    testFixture
+   testOf
    fixtureSetup,TestFixtureSetUp
    fixtureTeardown,TestFixtureTearDown
    theory
