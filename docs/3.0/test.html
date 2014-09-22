@@ -3,10 +3,7 @@
 <h3>TestAttribute (NUnit 2.0 / 2.5 / 2.6)</h3>
 
 <p>The Test attribute is one way of marking a method inside a TestFixture class
-    as a test. For backwards compatibility with previous versions of Nunit a 
-	test method may also be found if the first 4 letters are &quot;test&quot; 
-	regardless of case. This option is available by setting a value in
-	the config file for the test.</p>
+    as a test.</p>
 	
 <p>Prior to NUnit 2.5, the signature for a test method was:
 	<pre>        public void MethodName()</pre></p>
@@ -66,10 +63,7 @@
   {
     [Test] public void Add()
     { /* ... */ }
-
-    public void TestSubtract()
-    { /* backwards compatibility */ }
-    
+   
     [Test(ExpectedResult = 4)]
     public int TestAdd()
     {

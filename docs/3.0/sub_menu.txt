@@ -25,8 +25,8 @@ docHome,NUnit 3.0 Alpha Release
    collectionAssert,Collection&nbsp;Assert
    fileAssert,File&nbsp;Assert
   attributes
-   author
    actionAttributes,Action&nbsp;Attributes
+   author
    category
    combinatorial
    culture
