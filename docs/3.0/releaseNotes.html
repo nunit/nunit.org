@@ -6,6 +6,72 @@ dt { font-weight: bold }
 
 <h2>Release Notes</h2>
 
+<h3>NUnit 3.0.0 Alpha - September 22, 2014</h3>
+
+<h5>NOTE: A combined description of changes since NUnit 2.6.3 is under development along with a summary statement of major features. Both will be available in the next release.</h5>
+
+<h4>Breaking Changes</h4>
+
+<ul>
+ <li>Legacy suites are no longer supported
+ <li>Assert.NullOrEmpty is no longer supported (Use Is.Null.Or.Empty)
+</ul>
+
+<h4>General</h4>
+
+<ul>
+ <li>MsBuild is now used for the build rather than NAnt
+ <li>The framework test harness has been removed now that nunit-console is at a point where it can run the tests.
+</ul>
+
+<h4>New Features</h4>
+
+<ul>
+ <li>Action Attributes have been added with the same features as in NUnit 2.6.3.
+ <li>TestContext now has a method that allows writing to the XML output.
+ <li>TestContext.CurrentContext.Result now provides the error message and stack trace during teardown.
+ <li>Does prefix operator supplies several added constraints.
+</ul>
+
+<h4>Issues Resolved</h4>
+<ul>
+ <li>6	Log4net not working with NUnit
+ <li>13	Standardize commandline options for nunitlite runner
+ <li>17	No allowance is currently made for nullable arguents in TestCase parameter conversions
+ <li>33	TestCaseSource cannot refer to a parameterized test fixture
+ <li>54	Store message and stack trace in TestContext for use in TearDown
+ <li>111	Implement Changes to File, Directory and Path Assertions
+ <li>112	Implement Action Attributes
+ <li>156	Accessing multiple AppDomains within unit tests result in SerializationException
+ <li>163	Add --trace option to NUnitLite
+ <li>167	Create interim documentation for the alpha release
+ <li>169	Design and implement distribution of NUnit packages
+ <li>171	Assert.That should work with any lambda returning bool
+ <li>175	Test Harness should return an error if any tests fail
+ <li>180	Errors in Linux CI build
+ <li>181	Replace NAnt with MsBuild / XBuild
+ <li>183	Standardize commandline options for test harness
+ <li>188	No output from NUnitLite when selected test is not found
+ <li>189	Add string operators to Does prefix
+ <li>193	TestWorkerTests.BusyExecutedIdleEventsCalledInSequence fails occasionally
+ <li>197	Deprecate or remove Assert.NullOrEmpty
+ <li>202	Eliminate legacy suites
+ <li>203	Combine framework, engine and console runner in a single solution and repository
+ <li>209	Make Ignore attribute's reason mandatory
+ <li>215	Running 32-bit tests on a 64-bit OS
+ <li>219	Teardown failures are not reported
+</ul>
+
+<h4>Console Issues Resolved (Old nunit-console project, now combined with nunit)</h4>
+<ul>
+ <li>2	Failure in TestFixtureSetUp is not reported correctly
+ <li>5	CI Server for nunit-console
+ <li>6	System.NullReferenceException on start nunit-console-x86
+ <li>21	NUnitFrameworkDriverTests fail if not run from same directory
+ <li>24	'Debug' value for /trace option is deprecated in 2.6.3
+ <li>38	Confusing Excluded categories output
+</ul>
+
 <h3>NUnit 2.9.7 - August 8, 2014</h3>
 
 <h4>Breaking Changes</h4>

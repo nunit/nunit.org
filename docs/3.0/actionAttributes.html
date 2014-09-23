@@ -1,6 +1,4 @@
-<h2>Action Attributes (NUnit 2.6)</h2>
-
-<h2>Not Yet Supported in NUnit 2.9.7</h2>
+<h2>Action Attributes (NUnit 2.6 / 3.0)</h2>
 
 <p><b>Action Attributes</b> are a feature of NUnit designed to better enable composability of test logic. Often 
 when writing unit tests we have logic that we want to run upon certain events in the test cycle (e.g. SetUp, 
@@ -71,9 +69,9 @@ interface, which is defined as follows:
 <div class="code"><pre>
     public interface ITestAction
     {
-        void BeforeTest(TestDetails details);
+        void BeforeTest(ITest test);
 
-        void AfterTest(TestDetails details);
+        void AfterTest(ITest test);
 
         ActionTargets Targets { get; }
     }
@@ -103,7 +101,7 @@ may derive from <b>System.Attribute</b> and implement the interface directly.
 <p>When an attribute that returns <b>ActionTargets.Suite</b> is applied to either a class or a parameterized 
 method, NUnit will execute the attribute's <b>BeforeTest</b> method prior to executing the test suite
 and then execute the <b>AfterTest</b> method after the test suite has finished executing. This is similar 
-to how the <b>TestFixtureSetUp</b> and <b>TestFixtureTearDown</b> attributes work.
+to how the <b>OneTimeSetUp</b> and <b>OneTimeTearDown</b> attributes work.
 
 <p>On the other hand, when an attribute that returns <b>ActionTargets.Test</b> is used in the same
 situations, NUnit will execute the attribute's <b>BeforeTest</b> method prior to each contained
@@ -114,20 +112,57 @@ and <b>TearDown</b> attributes work.
 which they are attached. When attached to a method, they behave as if <b>ActionTargets.Test</b> had been
 specified. When attached to a class or assembly, they behave as if <b>ActionTargets.Suite</b> was returned.
 
-<h4>Test Details</h4>
+<h4>ITest Interface</h4>
 
-The <b>BeforeTest</b> and <b>AfterTest</b> methods are provided with certain information
-about the test that is about to run (before) or has just run (after). The <b>TestDetails</b>
-class provides the following private properties, which may be used by the before or after
-method to decide what actions to take:
+<p>The <b>BeforeTest</b> and <b>AfterTest</b> methods are provided with information
+about the test that is about to run (before) or has just run (after). The <b>ITest</b>
+interface is an internal NUnit inteface to the representation of a test, which may be
+either a test case or a suite. The before and after methods may use the interface 
+to decide what actions to take or retrieve information about the test.</p>
 
-<ul>
-<li><b>Fixture</b> - an object representing the user fixture, if available, or null
-<li><b>Method</b> - the MethodInfo that implements the test, if available, or null
-<li><b>FullName</b> - a string giving the full name of the test
-<li><b>Type</b> - a string representing the type of the test, e.g. "Test Case"
-<li><b>IsSuite</b> - true if the test is a suite, otherwise false
-</ul>
+<div class="code"><pre>
+ public interface ITest : IXmlNodeBuilder
+{
+    // Gets the id of the test
+    int Id { get; }
+    
+    // Gets the name of the test
+    string Name { get; }
+    
+    // Gets the fully qualified name of the test
+    string FullName { get; }
+    
+    // Gets the Type of the test fixture, if applicable, or
+    // null if no fixture type is associated with this test.
+    Type FixtureType { get; }
+    
+    // Gets a MethodInfo for the method implementing this test.
+    // Returns null if the test is not implemented as a method.
+    MethodInfo Method { get; }
+    
+    // Gets the RunState of the test, indicating whether it can be run.
+    RunState RunState { get; }
+    
+    // Count of the test cases ( 1 if this is a test case )
+    int TestCaseCount { get; }
+    
+    // Gets the properties of the test
+    IPropertyBag Properties { get; }
+    
+    // Gets the parent test, if any.
+    ITest Parent { get; }
+    
+    // Returns true if this is a test suite
+    bool IsSuite { get; }
+    
+    // Gets a bool indicating whether the current test
+    // has any descendant tests.
+    bool HasChildren { get; }
+    
+    // Gets this test's child tests
+    System.Collections.Generic.IList<ITest> Tests { get; }
+}
+</pre></div>
 
 <h3>Examples</h3>
 
@@ -143,14 +178,14 @@ public class ConsoleActionAttribute : Attribute, ITestAction
 
     public ConsoleActionAttribute(string message) { _Message = message; }
 
-    public void BeforeTest(TestDetails details)
+    public void BeforeTest(ITest test)
     {
-        WriteToConsole("Before", details);
+        WriteToConsole("Before", test);
     }
 
-    public void AfterTest(TestDetails details)
+    public void AfterTest(ITest test)
     {
-        WriteToConsole("After", details);
+        WriteToConsole("After", test);
     }
 
     public ActionTargets Targets
@@ -162,10 +197,10 @@ public class ConsoleActionAttribute : Attribute, ITestAction
     {
         Console.WriteLine("{0} {1}: {2}, from {3}.{4}.",
             eventMessage,
-            details.IsSuite ? "Suite" : "Case",
+            test.IsSuite ? "Suite" : "Case",
             _Message,
-            fixture != null ? fixture.GetType().Name : "{no fixture}",
-            method != null ? method.Name : "{no method}");
+            test.FixtureType != null ? test.FixtureType.Name : "{no fixture}",
+            test.Method != null ? test.Method.Name : "{no method}");
     }
 }
 </pre></div>
@@ -176,6 +211,9 @@ public class ConsoleActionAttribute : Attribute, ITestAction
    reuse the attribute in multiple examples. The attribute takes a single 
    constructor argument, a message, that will be used to write output to the console. All of
    the Before and After methods write output via the WriteToConsole method.
+   
+<p><b>Note:</b> Due to a bug in the current alpha release, use of the union of the two ActionTargets
+does not currently work. Use a single value only with this release.
 
 <h3>Method Attached Actions</h3>
 
