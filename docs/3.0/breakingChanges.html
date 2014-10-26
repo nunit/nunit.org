@@ -1,0 +1,66 @@
+<p>This page lists features present in NUnit 2.6, which are either removed in NUnit 3.0 or have had their behavior modified in a way that will break existing code.</p>
+
+<table class="roadmap">
+<tr><th>Feature</th>
+    <th>Notes</th></tr>
+<tr><th>Addins</th>
+    <td>No longer supported. See [[Addin Replacement in the Framework]].</td></tr>
+<tr><th>Assert.IsNullOrEmpty</th>
+    <td>No longer supported. Use `Assert.That(..., Is.Null.Or.Empty)`</td></tr>
+<tr><th>Assert.IsNotNullOrEmpty</th>
+    <td>No longer supported. Use `Assert.That(..., Is.Not.Null.Or.Empty)`</td></tr>
+<tr><th>CurrentDirectory</th>
+    <td>No longer set to the directory containing the test assembly. Use `TestContext.TestDirectory` to locate that directory.</td></tr>
+<tr><th>ExpectedExceptionAttribute</th>
+    <td>No longer supported. Use `Assert.Throws` or `Assert.That`.</td></tr>
+<tr><th>IgnoreAttribute</th>
+    <td>The reason is now mandatory</td></tr>
+<tr><th>Is.InstanceOfType</th>
+    <td>No longer supported. Use `Is.InstanceOf`</td></tr>
+<tr><th>Is.StringStarting</th>
+    <td>Deprecated. Use `Does.StartWith`</td></tr>
+<tr><th>Is.StringContaining</th>
+    <td>Deprecated. Use `Does.Contain`</td></tr>
+<tr><th>Is.StringEnding</th>
+    <td>Deprecated. Use `Does.EndWith`</td></tr>
+<tr><th>Is.StringMatching</th>
+    <td>Deprecated. Use `Does.Match`</td></tr>
+<tr><th>MTAThreadAttribute</th>
+    <td>No longer treated as `RequiresMTAAttribute`</td></tr>
+<tr><th>NullOrEmptyStringConstraint</th>
+    <td>No longer supported. See `Assert.IsNullOrEmpty` above  </td></tr>
+<tr><th>SetUpFixture</th>
+    <td>Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed.</td></tr>
+<tr><th>STAThreadAttribute</th>
+    <td>No longer treated as `RequiresSTAAttribute`</td></tr>
+<tr><th>SubDirectoryContainsConstraint</th>
+    <td>No longer supported. Various alternatives are available.</td></tr>
+<tr><th>SuiteAttribute</th>
+    <td>No longer supported.</td></tr>
+<tr><th>TearDown and OneTimeTearDown</th>
+    <td>There is a change to the logic by which teardown methods are called. See [[SetUp and TearDown]] for details.</td></tr>
+<tr><th>TestCaseAttribute</th>
+    <td>Named parameter `Result=` is no longer supported. Use `ExpectedResult=`.</td></tr>
+<tr><th>TestFixtureSetUpAttribute</th>
+    <td>Deprecated. Use `OneTimeSetUpAttribute'.</td></tr>
+<tr><th>TestFixtureTearDownAttribute</th>
+    <td>Deprecated. Use `OneTimeTearDownAttribute'.</td></tr>
+<tr><th>Text.All</th>
+    <td>No longer supported. Use `Does.All`</td></tr>
+<tr><th>Text.Contains</th>
+    <td>No longer supported. Use `Does.Contain` or `Contains.Substring`</td></tr>
+<tr><th>Text.DoesNotContain</th>
+    <td>No longer supported. Use `Does.Not.Contain`</td></tr>
+<tr><th>Text.StartsWith</th>
+    <td>No longer supported. Use `Does.StartWith`</td></tr>
+<tr><th>Text.DoesNotStartWith</th>
+    <td>No longer supported. Use `Does.Not.StartWith`</td></tr>
+<tr><th>Text.EndsWith</th>
+    <td>No longer supported. Use `Does.EndWith`</td></tr>
+<tr><th>Text.DoesNotEndWith</th>
+    <td>No longer supported. Use `Does.Not.EndWith`</td></tr>
+<tr><th>Text.Matches</th>
+    <td>No longer supported. Use `Does.Match`</td></tr>
+<tr><th>Text.DoesNotMatch</th>
+    <td>No longer supported. Use `Does.Not.Match`</td></tr>
+</table>

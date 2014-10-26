@@ -10,8 +10,8 @@ docHome,NUnit 3.0 Alpha Release
  getStarted,Getting&nbsp;Started
   quickStart,Quick&nbsp;Start
    quickStartSource,Source&nbsp;Listing
-  installation
-   upgrade,Upgrading
+  upgrade,Upgrading
+  breakingChanges,Breaking&nbsp;Changes
  writingTests,Writing&nbsp;Tests
   assertions
    equalityAsserts,Equality&nbsp;Asserts
