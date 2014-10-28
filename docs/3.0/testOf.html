@@ -5,7 +5,7 @@
 <p>The constructor takes the string name or the type of the class being tested. TestOf can also be specified on
 a TestFixture or Test attribute.
 
-<div class="code"><pre>
+<pre class="prettyprint">
 [TestFixture]
 [TestOf(typeof(MyClass)]
 public class MyTests
@@ -27,6 +27,6 @@ public class MyOtherTests
  [Test(TestOf = typeof(MySubClass))]
  public void Test2() { /* ... */ }
 }
-</pre></div> 
+</pre>
 
 <p><strong>Note:</strong> you can currently only have one TestOf attribute per fixture or test.

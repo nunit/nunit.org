@@ -5,7 +5,7 @@
 <p>The constructor takes the name of the test author and optionally the author's email address. Author can also be specified on
 a TestFixture or Test attribute.
 
-<div class="code"><pre>
+<pre class="prettyprint">
 [TestFixture]
 [Author("Jane Doe", "jane.doe@example.com")]
 public class MyTests
@@ -27,6 +27,6 @@ public class MyOtherTests
  [Test(Author = "Joe Developer")]
  public void Test2() { /* ... */ }
 }
-</pre></div> 
+</pre>
 
 <p><strong>Note:</strong> you can currently only have one Author attribute per fixture or test.

@@ -11,7 +11,7 @@
 <p>Assert.Throws provides both a non-generic and (in the .NET 2.0 version)
    a generic syntax.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 
 Assert.Throws( Type expectedExceptionType, TestSnippet code );
 Assert.Throws( Type expectedExceptionType, TestSnippet code, 
@@ -33,7 +33,7 @@ in question. Under .NET 2.0, this may be an anonymous delegate.
 <p>The following example shows four equivalent ways of writing the
 same test. All of them except the first require .NET 2.0.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class AssertThrowsTests
 {

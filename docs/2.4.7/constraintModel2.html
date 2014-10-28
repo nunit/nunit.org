@@ -6,19 +6,19 @@
    method.
    
 <p>Here's a very simple assert using the constraint model:
-<pre>      Assert.That( myString, Is.EqualTo("Hello") );</pre>
+<pre class="prettyprint">      Assert.That( myString, Is.EqualTo("Hello") );</pre>
 
 <p>The second argument in this assertion uses one of NUnit's 
 <?= nunit_doc_link( "syntaxHelpers", "Syntax&nbsp;Helpers" ) ?> to
 create an <b>EqualConstraint</b>, one of the
 <?= nunit_doc_link( "constraintClasses", "Constraint&nbsp;Classes" ) ?> provided
 NUnit. The same assertion could also be made in this form:
-<pre>      Assert.That( myString, new EqualConstraint("Hello") );</pre>
+<pre class="prettyprint">      Assert.That( myString, new EqualConstraint("Hello") );</pre>
 
 <p>Test fixture classes inheriting from <b>AssertionHelper</b>
 are able to use shorter forms. In such a class, the example above could
 be expressed as:
-<pre>      Expect( myString, EqualTo("Hello" ) );</pre>
+<pre class="prettyprint">      Expect( myString, EqualTo("Hello" ) );</pre>
 
 <p>The general form of   
 <p><b>See also:</b> the 

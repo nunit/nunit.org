@@ -19,7 +19,7 @@
 <p><b>Assert.Catch</b> is similar to <b>Assert.Throws</b> but will pass for an exception
    that is derived from the one specified.
    
-<div class="code" style="width: 40em"><pre>
+<div class="code" style="width: 40em"><pre class="prettyprint">
 Exception Assert.Throws( Type expectedExceptionType, TestDelegate code );
 Exception Assert.Throws( Type expectedExceptionType, TestDelegate code, 
 		string message );
@@ -67,7 +67,7 @@ If compiling under C# 3.0, it may be a lambda expression.
 <p>The following example shows different ways of writing the
 same test.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class AssertThrowsTests
 {
@@ -99,7 +99,7 @@ public class AssertThrowsTests
 <p>This example shows use of the return value to perform
 additional verification of the exception.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class UsingReturnValue
 {
@@ -116,7 +116,7 @@ public class UsingReturnValue
 <p>This example does the same thing
 using the overload that includes a constraint.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class UsingConstraint
 {
@@ -141,8 +141,7 @@ a constraint. Alternatively, you may use <b>Assert.Catch</b>,
 which differs from <b>Assert.Throws</b> in allowing derived
 types. See the following code for examples:
 
-<div class="code">
-<pre>
+<div class="code"><pre class="prettyprint">
 // Require an ApplicationException - derived types fail!
 Assert.Throws( typeof(ApplicationException), code );
 Assert.Throws&lt;ApplicationException&gt;()( code );

@@ -30,7 +30,7 @@
 	</div>
 </div>
 
-<pre class="cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -44,7 +44,7 @@
 }
 </pre>
 
-<pre class="vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -56,7 +56,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -77,7 +77,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -107,7 +107,7 @@ public class SuccessTests
 	</div>
 </div>
 
-<pre class="cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -122,7 +122,7 @@ public class SuccessTests
 }
 </pre>
 
-<pre class="vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -136,7 +136,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -156,7 +156,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -180,7 +180,7 @@ public class SuccessTests
 a test for a specific period of time, after which the test will run normally. The until date must be a string
 that can be parsed to a date.</p>
 
-<div class="code"><pre>
+<pre class="prettyprint">
 [TestFixture]
 [Ignore("Waiting for Joe to fix his bugs", Until = "2014-07-31 12:00:00Z"]
 public class MyTests
@@ -188,4 +188,4 @@ public class MyTests
  [Test]
  public void Test1() { /* ... */ }
 }
-</pre></div> 
+</pre>

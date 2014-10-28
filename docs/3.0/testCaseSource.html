@@ -6,11 +6,9 @@
 identify the property, method or field that will provide the required 
 arguments. The attribute has three public constructors.
 
-<div class="code">
-<pre>
+<pre class="prettyprint">
 TestCaseSourceAttribute(Type sourceType);
 </pre>
-</div>
 
 <p>The <b>sourceType</b> argument represents the class that provides test cases.
 It must implement <b>IEnumerable</b> and return test case data appropriate for
@@ -20,12 +18,10 @@ the test method on which the attribute appears.
 use in preference to other forms because it doesn't use a string to specify
 the data source and is therefore more easily refactored.
 
-<div class="code">
-<pre>
+<pre class="prettyprint">
 TestCaseSourceAttribute(Type sourceType, string sourceName);
 TestCaseSourceAttribute(string sourceName);
 </pre>
-</div>
 
 <p>These older constructors are no longer recommended. If a <b>sourceType</b>
 is specified, it represents the class that provides
@@ -102,8 +98,7 @@ that argument it is used directly.
 the arguments for the method, as in this example, which returns
 arguments from a named static field.
 
-<div class="code">
-<pre>[Test, TestCaseSource("DivideCases")]
+<pre class="prettyprint">Test, TestCaseSource("DivideCases")]
 public void DivideTest(int n, int d, int q)
 {
     Assert.AreEqual( q, n / d );
@@ -115,7 +110,7 @@ static object[] DivideCases =
     new object[] { 12, 2, 6 },
     new object[] { 12, 4, 3 } 
 };
-</pre></div>
+</pre>
 
 <li><p>If it is an array of some other type, NUnit can use it provided
 that the arguments to the method are all of that type. For example,
@@ -129,7 +124,7 @@ an argument of a different type.
 This can also eliminate a bit of extra typing by the programmer, 
 as in this example:
 
-<div class="code"><pre>
+<pre class="prettyprint">
 static int[] EvenNumbers = new int[] { 2, 4, 6, 8 };
 
 [Test, TestCaseSource("EvenNumbers")]
@@ -137,7 +132,7 @@ public void TestMethod(int num)
 {
     Assert.IsTrue( num % 2 == 0 );
 }
-</pre></div>
+</pre>
 
 </ol>
 
@@ -148,8 +143,7 @@ public void TestMethod(int num)
    class for this purpose. The following    example returns <b>TestCaseData</b> 
    instances from a data source in a separately defined class.
 
-<div class="code">
-<pre>[TestFixture]
+<pre class="prettyprint">[TestFixture]
 public class MyTests
 {
   [Test,TestCaseSource(typeof(MyFactoryClass),"TestCases")]
@@ -177,19 +171,18 @@ public class MyFactoryClass
     }
   }  
 }
-</div>
+</pre>
 
 <p>This example uses the fluent interface supported by <b>TestCaseData</b>
 to make the program more readable. The last yield statement above  is equivalent to
 
-<div class="code"><pre>
+<pre class="prettyprint">
       TestCaseData data = new TestCaseData(0,0);
       data.ExpectedException = typeof(DivideByZeroException;
       data.TestName = "DivideByZero";
       data.Description = "An exception is expected";
       yield return data;
 </pre>
-</div> 
 
 <p><b>TestCaseData</b> supports the following properties
 and methods, which may be appended to an instance in any order.

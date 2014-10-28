@@ -9,7 +9,7 @@ p>The related <b>ThrowsNothingConstraint</b> simply asserts that the delegate
 does not throw an exception.
 
 <h4>Constructors</h4>
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 ThrowsConstraint(Type expectedType)
 ThrowsConstraint&lt;T&gt;()
 ThrowsConstraint(Type expectedType, Constraint constraint)
@@ -18,7 +18,7 @@ ThrowsNothingConstraint()
 </pre></div>
 
 <h4>Syntax</h4>
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 Throws.Exception
 Throws.TypeOf(Type expectedType)
 Throws.TypeOf&lt;T&gt;()
@@ -28,7 +28,7 @@ Throws.Nothing
 </pre></div>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 // .NET 1.1
 Assert.That( new TestDelegate(SomeMethod),
   Throws.TypeOf(typeof(ArgumentException)));

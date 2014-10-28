@@ -4,16 +4,16 @@
 <p>
 
 <h4>Constructor</h4>
-<div class="code"><pre>
-</pre></div>
+<pre class="prettyprint">
+</pre>
 
 <h4>Syntax</h4>
-<div class="code"><pre>
-</pre></div>
+<pre class="prettyprint">
+</pre>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre>
-</pre></div>
+<pre class="prettyprint">
+</pre>
 
 <h4>Notes</h4>
 <ol>
