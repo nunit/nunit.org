@@ -16,6 +16,11 @@
     white-space: normal;
 }
 
+/* Front page */
+div.panel-body blockquote {
+    margin-bottom: 0;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
