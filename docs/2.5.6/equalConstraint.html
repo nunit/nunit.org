@@ -63,7 +63,7 @@ in "Units in the Last Place" or ULPs. For certain types of numerical work,
 this is safer than a fixed tolerance because it automatically compensates
 for the added inaccuracy of larger numbers.
 
-<div class="code" style="width: 42em"><pre>
+<div class="code" style="width: 42em"><pre class="prettyprint">
 Assert.That( 2.1 + 1.2, Is.EqualTo( 3.3 ).Within( .0005 );
 Assert.That( double.PositiveInfinity, Is.EqualTo( double.PositiveInfinity ) );
 Assert.That( double.NegativeInfinity, Is.EqualTo( double.NegativeInfinity ) );

@@ -5,7 +5,7 @@ same constraint in several places can lead to unexpected results.
 
 <p>Consider the following code as an example:
 
-<code><pre>
+<code><pre class="prettyprint">
     Constraint myConstraint = Is.Not.Null;
     Assert.That("not a null", myConstraint); // Passes, of course
     Assert.That("not a null", myConstraint); // Fails! What's that about?
@@ -14,7 +14,7 @@ same constraint in several places can lead to unexpected results.
 <p>We'll save the technical explanation for later and show the
 solution first:
 
-<code><pre>
+<code><pre class="prettyprint">
     ReusableConstraint myConstraint = Is.Not.Null;
     Assert.That("not a null", myConstraint); // Passes
     Assert.That("not a null", myConstraint); // Passes
@@ -22,7 +22,7 @@ solution first:
 
 Or alternatively..
 
-<code><pre>
+<code><pre class="prettyprint">
     var myConstraint = new ReusableConstraint(Is.Not.Null);
     Assert.That("not a null", myConstraint); // Passes
     Assert.That("not a null", myConstraint); // Passes
@@ -50,7 +50,7 @@ only sees the NullConstraint and not the NotConstraint.
 <p>So, for reusability, what we want to save is the result
 of resolving the constraint, in this case
 
-<pre>    NotConstraint => NullConstraint</pre>
+<pre class="prettyprint">    NotConstraint => NullConstraint</pre>
 
 That's what <b>ReusableConstraint</b> does for us. It resolves
 the full expression and saves the result. Then it passes all
@@ -67,7 +67,7 @@ avoid using it in the following cases...
 <ol>
 <li> With a simple constraint involving no operators, like...
 
-<pre>
+<pre class="prettyprint">
     Constraint myConstraint = Is.Null;
     Constraint myConstraint = Is.EqualTo(42);
 </pre>
@@ -75,7 +75,7 @@ avoid using it in the following cases...
 <li> With any constraint you construct using new, without
 using the "dotted" constraint syntax...
 
-<pre>
+<pre class="prettyprint">
     Constraint myConstraint = new NotConstraint(new NullConstraint());
     Constraint myConstraint = new AndConstraint(
         new GreaterThanConstraint(0), 

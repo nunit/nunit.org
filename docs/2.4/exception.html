@@ -38,7 +38,7 @@ same extension was made to the constructor taking a string argument. With
 NUnit 2.4, these arguments are marked obsolete, and a named parameter
 is provided instead...</p>
 
-<div class="code" style="width: 44em"><pre>// Obsolete form:
+<div class="code" style="width: 44em"><pre class="prettyprint">// Obsolete form:
 [ExpectedException( typeof( ArgumentException ), "expected message" )]
 [ExpectedException( "System.ArgumentException", "expected message" )]
 
@@ -65,7 +65,7 @@ follows:</p>
 with a message containing "unspecified" is received.</p>
 
 <div class="code" style="width: 57em">
-<pre>[ExpectedException( typeof( ArgumentException), ExpectedMessage="unspecified", MatchType=MessageMatch.Contains )]
+<pre class="prettyprint">[ExpectedException( typeof( ArgumentException), ExpectedMessage="unspecified", MatchType=MessageMatch.Contains )]
 public void TestMethod()
 {
 ...</pre></div>
@@ -79,7 +79,7 @@ displayed if the ExpectedException attribute is not satisfied. This
 is done through the UserMessage named parameter...</p>
 
 <div class="code" style="width: 41em">
-<pre>[ExpectedException( typeof( ArgumentException ), UserMessage="Custom message" )]
+<pre class="prettyprint">[ExpectedException( typeof( ArgumentException ), UserMessage="Custom message" )]
 public void TestMethod()
 {
 ...</pre>
