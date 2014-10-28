@@ -1,0 +1,72 @@
+﻿@{
+  ViewBag.Title = "Donations";
+}
+
+
+<div class="row">
+  <div class="col-md-4">
+
+    <h3>Donating to NUnit</h3>
+
+    <p>
+      Your donation to NUnit helps us pay for web hosting, making presentations
+      at user events and - of course - continuing to develop the software itself.
+    </p>
+    <p>
+      You can make a donation easily through Paypal, by clicking on the 'Donate' button.
+    </p>
+
+    @Html.Partial("_DonationForm")
+
+  </div>
+  <div class="col-md-4">
+
+    <h3>Recent Donations</h3>
+
+    <p>
+      We thank the following individuals and companies for their
+      donations to the NUnit project.
+    </p>
+
+    <div id="carousel-past-donations" class="carousel slide" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          @Html.Partial("_2014")
+        </div>
+        <div class="item">
+          @Html.Partial("_2013")
+        </div>
+        <div class="item">
+          @Html.Partial("_2012")
+        </div>
+        <div class="item">
+          @Html.Partial("_2011")
+        </div>
+        <div class="item">
+          @Html.Partial("_2010")
+        </div>
+        <div class="item">
+          @Html.Partial("_2009")
+        </div>
+        <div class="item">
+          @Html.Partial("_2008")
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h3>In-Kind Donations</h3>
+
+    <p>
+      Several companies have provided us with equipment, software
+      and other assistance needed to carry out the work of the project.
+      We thank them for their support.
+    </p>
+
+    @Html.Partial("_InKind")
+  </div>
+</div>
+
+

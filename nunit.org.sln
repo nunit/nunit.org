@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nunit.org", "nunit.org.csproj", "{99779F72-359E-4875-82A3-6F2BFC2C1EF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{18E2C97E-8FBC-429F-896E-F800C189D1C1}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{98A9F243-C06B-46FD-B27C-DB6132E14495}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\nunitorg-WAWS-dev.json = PublishScripts\Configurations\nunitorg-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99779F72-359E-4875-82A3-6F2BFC2C1EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99779F72-359E-4875-82A3-6F2BFC2C1EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99779F72-359E-4875-82A3-6F2BFC2C1EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99779F72-359E-4875-82A3-6F2BFC2C1EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98A9F243-C06B-46FD-B27C-DB6132E14495} = {18E2C97E-8FBC-429F-896E-F800C189D1C1}
+	EndGlobalSection
+EndGlobal

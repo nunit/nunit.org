@@ -1,0 +1,144 @@
+﻿@{
+  ViewBag.Title = "Home";
+}
+
+<div class="row">
+  <div class="col-md-8">
+
+    <h3>What Is NUnit?</h3>
+
+    <p>
+      NUnit is a unit-testing framework for all .Net languages. Initially ported from <a href="http://www.junit.org" target="_self">
+        JUnit
+      </a>, the current production release, version 2.6, is the seventh major release of
+      this xUnit based unit testing tool for Microsoft .NET. It is written entirely
+      in C# and has been completely redesigned to take advantage of many .NET
+      language features, for example custom attributes and other reflection related
+      capabilities. NUnit brings xUnit to all .NET languages.
+    </p>
+
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <blockquote>
+          <p>
+            ... an excellent example of idiomatic design. Most folks who port xUnit just
+            transliterate the Smalltalk or Java version. That's what we did with NUnit at
+            first, too. This new version is NUnit as it would have been done had it been
+            done in C# to begin with.
+          </p>
+          <footer><cite title="Kent Beck">Kent Beck</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <p>
+      NUnit 3.0 is currently under development and is a complete rewrite of NUnit. With
+      a new infrastructure and new features. An alpha release is currently available.
+    </p>
+
+    <h3>License</h3>
+
+    <p>
+      NUnit is Open Source software. NUnit 2.6.3 is released under the <a href="nuget/license.html">NUnit license</a>
+      while NUnit 3.0 uses the <a href="nuget/nunit3-license.txt">MIT license</a>. Both of these licenses
+      allow the use of NUnit in free and commercial applications and libraries without restrictions.
+
+      <h3>About Us</h3>
+
+    <p>
+      NUnit 2.6.3 was created by Charlie Poole, Jordan Terrell and Simone Busoli. The
+      3.0 release is being developed by Charlie Poole, Rob Prouse, Simone Busoli, with
+      numerous contributions from the community.
+
+    <p>
+      Earlier versions of NUnit were developed by Charlie Poole, James W. Newkirk,
+      Alexei A. Vorontsov, Michael C. Two and Philip A. Craig.
+    </p>
+
+    <p>
+      We would also like to thank the following people for their contributions and support:
+      Jamie Cansdale, Cvetomir Todorov, Doug de la Torre, David White, Ethan Smith, Al Gonzalez,
+      Ron Jeffries and Rob Jeffries. A special acknowledgment needs to be sent to Kent Beck
+      and Erich Gamma because without their efforts none of this would have been possible.
+    </p>
+
+    <p>Site design by Anne Lewis.</p>
+
+    <h3>Donations</h3>
+
+    <div class="row">
+      <div class="col-md-10">
+        <p>
+          The NUnit team invests a great deal of time and effort to make NUnit a
+          useful tool. In addition, we have expenses. We have to purchase domain names,
+          arrange for web site hosting and acquire equipment.
+
+        <p>
+          Making a financial contribution is one way in which you can help us ensure
+          that NUnit continues to develop and remains free and open software. For
+          more information or to view a list of donors, see our
+          @Html.ActionLink("Donations", "Donations", "Home") page.
+      </div>
+      <div class="col-md-2">
+        @Html.Partial("_DonationForm")
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col-md-3 col-md-offset-1">
+    <div id="news">
+      <h4>Recent News</h4>
+
+      <p>
+        <b>NUnit 3.0 Alpha Released</b><br>
+        This is the long awaited first release of NUnit 3.0. It includes
+        the framework itself, the new NUnit test engine and the nunit-console
+        runner. While still alpha level, it is functional and recommended for
+        use in select projects for testing.
+
+      <p>
+        You may download NUnit 3.0 Alpha from
+        <a href="https://github.com/nunit/nunit/releases">Github</a>.
+        See the
+        <a href="http://nunit.org/Documentation?p=releaseNotes&r=3.0">release notes</a>
+        for more information.
+      </p>
+
+      <p>
+        <b>NUnit Visual Studio Test Adapter 1.2 Released</b><br>
+        This is a bug fix update, supporting all updates of VS 2012 and VS 2013 as of September 2014. <br />
+      <p>
+        You may download it from
+        <a href="https://github.com/nunit/nunit-vs-adapter/releases">Github project site</a>,
+        or from the <a href="http://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d">Visual Studio Gallery</a>,
+        or as a <a href="http://www.nuget.org/packages/NUnitTestAdapter/">NuGet package.</a>
+        See the
+        <a href="http://nunit.org/Documentation?p=vsTestAdapterReleaseNotes&r=2.6.3">release notes</a>
+        for more information.
+      </p>
+
+      <p>
+        <b>NUnit 2.6.3 Released</b><br>
+        This fixes several bugs in NUnit 2.6.2 and has additional suppport for
+        async methods. See the
+        <a href="http://nunit.org/?p=releaseNotes&r=2.6.3">release notes</a>
+        for details of changes or
+        @Html.ActionLink("Download", "Download", "Home") it.
+
+      <p>
+        <b>NUnitLite 1.0 Released</b><br>
+        This is the first production release of the NUnitLite test framework.
+        It incorporates most features from NUnit and provides builds for
+        use with .NET 1.1, 2.0, 3.5, 4.0 and 4.5, Compact Framework 2.0 and 3.5
+        and Silverlight 3.0, 4.0 and 5.0.
+      </p>
+
+      <p>
+        You may download NUnitLite from our
+        <a href="http://launchpad.net/nunitlite">Launchpad project site</a>
+        or as a <a href="http://nuget.org/packages/NUnitLite">NUget</a> package.
+      </p>
+    </div>
+  </div>
+</div>
