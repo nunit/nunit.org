@@ -6,8 +6,7 @@
 direct NUnit to searh for type-compatible TestCaseFactories to provide the
 arguments. The attribute has two constructors.
 
-<div class="code">
-<pre>
+<div class="code"><pre class="prettyprint">
 UseCompatibleFactories();
 UseCompatibleFactories(Type factoryType);
 </pre>
@@ -44,8 +43,7 @@ enumerator as follows:
 the arguments for the method, as in this example, which returns
 arguments from a named static field.
 
-<div class="code">
-<pre>[Test, Factories("DivideCases")]
+<div class="code"><pre class="prettyprint">[Test, Factories("DivideCases")]
 public void DivideTest(int n, int d, int q)
 {
     Assert.AreEqual( q, n / d );
@@ -70,7 +68,7 @@ of course take a single argument of the same type for this to work.
 This eliminates a bit of syntax on the part of the programmer, as in
 this example:
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 static int[] EvenNumbers = new int[] { 2, 4, 6, 8 };
 
 [Test, Factories("EvenNumbers")]
@@ -109,8 +107,7 @@ and any public fields or properties with the following names are used:
    example returns <b>TestCaseData</b> instances from a data source in
    a separately defined class.
 
-<div class="code">
-<pre>[TestFixture]
+<div class="code"><pre class="prettyprint">[TestFixture]
 public class MyTests
 {
   [Test,Factories(typeof(MyFactoryClass)]
@@ -144,8 +141,7 @@ public class MyFactoryClass
 <p>This example uses the fluent interface supported by <b>TestCaseData</b>
 to make the program more readable. The last yield statement above  is equivalent to
 
-<div class="code">
-<pre>      TestCaseData data = new TestCaseData(0,0);
+<div class="code"><pre class="prettyprint">      TestCaseData data = new TestCaseData(0,0);
       data.ExpectedException = typeof(DivideByZeroException;
       data.TestName = "DivideByZero";
       data.Description = "An exception is expected";

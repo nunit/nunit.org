@@ -17,29 +17,28 @@
 <p>Tests for a substring.
 
 <h4>Constructor</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 SubstringConstraint(string expected)
-</pre></div>
+</pre>
 
 <h4>Syntax</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 Does.Contain(string expected)
-
-</pre></div>
+</pre>
 
 <h4>Modifiers</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 ...IgnoreCase
-</pre></div>
+</pre>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 string phrase = "Make your tests fail before passing!"
 
 Assert.That( phrase, Does.Contain( "tests fail" ) );
 Assert.That( phrase, Does.Not.Contain( "tests pass" ) );
 Assert.That( phrase, Does.Contain( "make" ).IgnoreCase );
-</pre></div>
+</pre>
 
 <h3>StartsWithConstraint</h3>
 
@@ -47,29 +46,29 @@ Assert.That( phrase, Does.Contain( "make" ).IgnoreCase );
 <p>Tests for an initial string.
 
 <h4>Constructor</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 StartsWithConstraint(string expected)
-</pre></div>
+</pre>
 
 <h4>Syntax</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 Does.StartWith(string expected)
 StartsWith(string expected)
-</pre></div>
+</pre>
 
 <h4>Modifiers</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 ...IgnoreCase
-</pre></div>
+</pre>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 string phrase = "Make your tests fail before passing!"
 
 Assert.That( phrase, Does.StartWith( "Make" ) );
 Assert.That( phrase, Does.Not.StartWith( "Break" ) );
 Expect( phrase, StartsWith( "Make" ) );
-</pre></div>
+</pre>
 
 <h4>Notes</h4>
 <ol>
@@ -83,29 +82,29 @@ Expect( phrase, StartsWith( "Make" ) );
 <p>Tests for an ending string.
 
 <h4>Constructor</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 EndsWithConstraint(string expected)
-</pre></div>
+</pre>
 
 <h4>Syntax</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 Does.EndWith(string expected)
 EndsWith(string expected)
-</pre></div>
+</pre>
 
 <h4>Modifiers</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 ...IgnoreCase
-</pre></div>
+</pre>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 string phrase = "Make your tests fail before passing!"
 
 Assert.That( phrase, Does.EndWith( "!" ) );
 Assert.That( phrase, Does.EndWith( "PASSING!" ).IgnoreCase );
 Expect( phrase, EndsWith( "!" ) );
-</pre></div>
+</pre>
 
 <h4>Notes</h4>
 <ol>
@@ -119,29 +118,29 @@ Expect( phrase, EndsWith( "!" ) );
 <p>Tests that a pattern is matched.
 
 <h4>Constructor</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 RegexConstraint(string pattern)
-</pre></div>
+</pre>
 
 <h4>Syntax</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 Does.Match(string pattern)
 Matches(string pattern)
-</pre></div>
+</pre>
 
 <h4>Modifiers</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 ...IgnoreCase
-</pre></div>
+</pre>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre>
+<pre class="prettyprint">
 string phrase = "Make your tests fail before passing!"
 
 Assert.That( phrase, Does.Match( "Make.*tests.*pass" ) );
 Assert.That( phrase, Does.Not.Match( "your.*passing.*tests" ) );
 Expect( phrase, Matches( "Make.*pass" ) );
-</pre></div>
+</pre>
 
 <h4>Notes</h4>
 <ol>

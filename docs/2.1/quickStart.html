@@ -6,8 +6,7 @@
 
 <p>Let’s start with a simple example. Suppose we are writing a bank application and we have a basic domain class – Account. Account supports operations to deposit, withdraw, and transfer funds. The Account class may look like this:</p>
 
-<div class="code">
-<pre>namespace bank
+<div class="code"><pre class="prettyprint">namespace bank
 {
   public class Account
   {
@@ -36,8 +35,7 @@
 
 <p>Now let’s write a test for this class – AccountTest. The first method we will test is TransferFunds.</p>
 
-<div class="code">
-<pre>namespace bank
+<div class="code"><pre class="prettyprint">namespace bank
 {
   using NUnit.Framework;
 
@@ -75,8 +73,7 @@ and the stack trace panel right below it reported where in the test code the fai
 
 <p>That is expected behavior; the test has failed because we have not implemented the TransferFunds method yet. Now let’s get it to work. Don’t close the GUI and go back to your IDE and fix the code, make your TransferFunds method look like this:</p>
 
-<div class="code">
-<pre>public void TransferFunds(Account destination, float amount)
+<div class="code"><pre class="prettyprint">public void TransferFunds(Account destination, float amount)
 {
 	destination.Deposit(amount);
 	Withdraw(amount);
@@ -88,8 +85,7 @@ and the stack trace panel right below it reported where in the test code the fai
 
 <p>Let’s add some error checking to our Account code. We are adding the minimum balance requirement for the account to make sure that banks continue to make their money by charging your minimal overdraft protection fee. Let’s add the minimum balance property to our Account class:</p>
 
-<div class="code">
-<pre>private float minimumBalance = 10.00F;
+<div class="code"><pre class="prettyprint">private float minimumBalance = 10.00F;
 public float MinimumBalance
 {
 	get{ return minimumBalance;}
@@ -98,8 +94,7 @@ public float MinimumBalance
 
 <p>We will use an exception to indicate an overdraft:</p>
 
-<div class="code">
-<pre>namespace bank
+<div class="code"><pre class="prettyprint">namespace bank
 {
   using System;
   public class InsufficientFundsException : ApplicationException
@@ -110,8 +105,7 @@ public float MinimumBalance
 
 <p>Add a new test method to our AccountTest class:</p>
 
-<div class="code">
-<pre>[Test]
+<div class="code"><pre class="prettyprint">[Test]
 [ExpectedException(typeof(InsufficientFundsException))]
 public void TransferWithInsufficientFunds()
 {
@@ -129,8 +123,7 @@ public void TransferWithInsufficientFunds()
 
 Let’s fix our Account code again, modify the TransferFunds method this way:</p>
 
-<div class="code">
-<pre>public void TransferFunds(Account destination, float amount)
+<div class="code"><pre class="prettyprint">public void TransferFunds(Account destination, float amount)
 {
 	destination.Deposit(amount);
 	if(balance-amount&lt;minimumBalance)
@@ -141,8 +134,7 @@ Let’s fix our Account code again, modify the TransferFunds method this way:</p>
 
 <p>Compile and run the tests – green bar. Success! But wait, looking at the code we’ve just written we can see that the bank may be loosing money on every unsuccessful funds Transfer operation. Let’s write a test to confirm our suspicions. Add this test method:</p>
 	
-<div class="code">
-<pre>[Test]
+<div class="code"><pre class="prettyprint">[Test]
 public void TransferWithInsufficientFundsAtomicity()
 {
 	Account source = new Account();
@@ -164,8 +156,7 @@ public void TransferWithInsufficientFundsAtomicity()
 
 <p>We are testing the transactional property of our business method – all operations are successful or none. Compile and run – red bar. OK, we’ve made $300.00 out of a thin air (1999.com déjà vu?) – the source account has the correct balance of 150.00 but the destination account shows : $450.00. How do we fix this? Can we just move the minimum balance check call in front of the updates:</p>
 
-<div class="code">
-<pre>public void TransferFunds(Account destination, float amount)
+<div class="code"><pre class="prettyprint">public void TransferFunds(Account destination, float amount)
 {
 	if(balance-amount&lt;minimumBalance) 
 		throw new InsufficientFundsException();
@@ -176,8 +167,7 @@ public void TransferWithInsufficientFundsAtomicity()
 
 <p>What if the Withdraw() method throws another exception? Should we execute a compensating transaction in the catch block or rely on our transaction manager to restore the state of the objects? We need to answer those questions at some point, but not now; but what do we do with the failing test in the meantime – remove it? A better way is to temporarily ignore it, add the following attribute to your test method</p>
 	
-<div class="code">
-<pre>[Test]
+<div class="code"><pre class="prettyprint">[Test]
 [Ignore("Decide how to implement transaction management")]
 public void TransferWithInsufficientFundsAtomicity()
 {
@@ -189,8 +179,7 @@ public void TransferWithInsufficientFundsAtomicity()
 
 <p>Looking at our test code we can see that some refactoring is in order. All test methods share a common set of test objects. Let’s extract this initialization code into a setup method and reuse it in all of our tests. The refactored version of our test class looks like this:</p>
 
-<div class="code">
-<pre>namespace bank
+<div class="code"><pre class="prettyprint">namespace bank
 {
   using System;
   using NUnit.Framework;

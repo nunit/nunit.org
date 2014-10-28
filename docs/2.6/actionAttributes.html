@@ -30,7 +30,7 @@ and compose them together as our tests need them.
 
 <p><b>Action Attributes</b> get us out of our bind. Consider this example:
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture, ResetServiceLocator]
 public class MyTests
 {
@@ -66,7 +66,7 @@ We can even develop and distribute a library of common test actions.
 <p>Action attributes are defined by the programmer. They implement the <b>ITestAction</b>
 interface, which is defined as follows:
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
     public interface ITestAction
     {
         void BeforeTest(TestDetails details);
@@ -81,7 +81,7 @@ interface, which is defined as follows:
 an abstract class with virtual implementations of each member of the interface. Alternatively, you
 may derive from <b>System.Attribute</b> and implement the interface directly.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
     [Flags]
     public enum ActionTargets
     {
@@ -179,7 +179,7 @@ public class ConsoleActionAttribute : Attribute, ITestAction
 
 <h4>Example 1 (applied to simple test method):</h4>
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class ActionAttributeSampleTests
 {
@@ -200,7 +200,7 @@ public class ActionAttributeSampleTests
 
 <h4>Example 2 (applied action twice to test method):</h4>
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class ActionAttributeSampleTests
 {
@@ -229,7 +229,7 @@ it will generally be stable for a single release of .NET.
 
 <h4>Example 3 (applied to a test method with test cases):</h4>
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class ActionAttributeSampleTests
 {
@@ -265,7 +265,7 @@ Note that the order in which test cases are executed is indeterminate.
 
 <h4>Example 1:</h4>
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture] [ConsoleAction("Hello")]
 public class ActionAttributeSampleTests
 {
@@ -300,7 +300,7 @@ In this case, the class is the test suite. BeforeTest and AfterTest are run once
 
 <h4>Example 2 (attached to interface):</h4>
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [ConsoleAction("Hello")]
 public interface IHaveAnAction
 {
@@ -383,7 +383,7 @@ public class ActionAttributeSampleTests : IHaveAnAction
 
 <h4>Example 1:</h4>
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [assembly: ConsoleAction("Hello")]
 
 [TestFixture]

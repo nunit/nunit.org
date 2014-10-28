@@ -8,13 +8,11 @@
 identify the property, method or field that will provide the required 
 arguments. The attribute has three public constructors.
 
-<div class="code">
-<pre>
+<pre class="prettyprint">
 TestCaseSourceAttribute(Type sourceType); // #1
 TestCaseSourceAttribute(Type sourceType, string sourceName); // #2
 TestCaseSourceAttribute(string sourceName); // #3
 </pre>
-</div>
 
 <p>Constructor #1 is the new form of the attribute, beginning in NUnit 2.6.2.
 It is recommended for use in preference to other forms because it doesn't use
@@ -98,7 +96,7 @@ the arguments for the method, as in this example, which returns
 arguments from a named static field.
 
 <div class="code">
-<pre>[Test, TestCaseSource("DivideCases")]
+<pre class="prettyprint">[Test, TestCaseSource("DivideCases")]
 public void DivideTest(int n, int d, int q)
 {
     Assert.AreEqual( q, n / d );
@@ -124,7 +122,7 @@ an argument of a different type.
 This can also eliminate a bit of extra typing by the programmer, 
 as in this example:
 
-<div class="code"><pre>
+<pre class="prettyprint">
 static int[] EvenNumbers = new int[] { 2, 4, 6, 8 };
 
 [Test, TestCaseSource("EvenNumbers")]
@@ -132,7 +130,7 @@ public void TestMethod(int num)
 {
     Assert.IsTrue( num % 2 == 0 );
 }
-</pre></div>
+</pre>
 
 </ol>
 
@@ -143,8 +141,7 @@ public void TestMethod(int num)
    class for this purpose. The following    example returns <b>TestCaseData</b> 
    instances from a data source in a separately defined class.
 
-<div class="code">
-<pre>[TestFixture]
+<pre class="prettyprint">[TestFixture]
 public class MyTests
 {
   [Test,TestCaseSource(typeof(MyFactoryClass),"TestCases")]
@@ -172,19 +169,18 @@ public class MyFactoryClass
     }
   }  
 }
-</div>
+</pre>
 
 <p>This example uses the fluent interface supported by <b>TestCaseData</b>
 to make the program more readable. The last yield statement above  is equivalent to
 
-<div class="code"><pre>
+<pre class="prettyprint">
       TestCaseData data = new TestCaseData(0,0);
       data.ExpectedException = typeof(DivideByZeroException;
       data.TestName = "DivideByZero";
       data.Description = "An exception is expected";
       yield return data;
-</pre>
-</div> 
+</pre> 
 
 <p><b>TestCaseData</b> supports the following properties
 and methods, which may be appended to an instance in any order.

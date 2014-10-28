@@ -16,7 +16,7 @@
 <p>Assert.DoesNotThrow simply verifies that the delegate does not throw
    an exception.
    
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 Assert.Throws( Type expectedExceptionType, TestDelegate code );
 Assert.Throws( Type expectedExceptionType, TestDelegate code, 
 		string message );
@@ -47,7 +47,7 @@ in question. Under .NET 2.0, this may be an anonymous delegate.
 <p>The following example includes four equivalent ways of writing the
 same test.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class AssertThrowsTests
 {
@@ -77,7 +77,7 @@ public class AssertThrowsTests
 <p>This example shows use of the return value to perform
 additional verification of the exception.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class UsingReturnValue
 {
@@ -94,7 +94,7 @@ public class UsingReturnValue
 <p>This example does the same thing
 using the overload that includes a constraint.
 
-<div class="code"><pre>
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class UsingConstraint
 {
@@ -117,8 +117,7 @@ that exact type to be thrown. If you want to test for any
 derived Type, use a constraint. See the following code for
 examples:
 
-<div class="code">
-<pre>
+<div class="code"><pre class="prettyprint">
 // Require an ApplicationException - derived types fail!
 Assert.Throws( typeof(ApplicationException), code );
 Assert.Throws&lt;ApplicationException&gt;()( code );
