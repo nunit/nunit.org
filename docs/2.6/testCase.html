@@ -23,9 +23,9 @@ values using <b>Convert.ChangeType()</b> before supplying it to the test.
 
 <p><b>TestCaseAttribute</b> may appear one or more times on a test method,
 which may also carry other attributes providing test data, such as the
-<?php echo nunit_doc_link( "factories", "FactoriesAttribute" ) ?>.
+ nunit_doc_link( "factories", "FactoriesAttribute" ).
 The method may optionally be marked with the 
-<?php echo nunit_doc_link( "test", "TestAttribute" ) ?> as well.
+ nunit_doc_link( "test", "TestAttribute" ) as well.
 
 <p>By using the named parameter <b>Result</b> this test set may be simplified
 further:
@@ -62,7 +62,7 @@ named parameters, which may be used as follows:
 <dt><b>IgnoreReason</b>
 <dd>Causes this test case to be ignored and specifies the reason. Equivalent to <b>Ignore</b> combined with <b>Reason</b>. This attribute will be removed in a later release.
 <dt><b>MatchType</b>
-<dd>A <b>MessageMatch</b> enum value indicating how to test the expected message (See <?php echo nunit_doc_link("exception", "ExpectedExceptionAttribute") ?>)
+<dd>A <b>MessageMatch</b> enum value indicating how to test the expected message (See  nunit_doc_link("exception", "ExpectedExceptionAttribute"))
 <dt><b>Reason</b>
 <dd>Specifies the reason for not running this test case. Use in conjunction with <b>Ignore</b> or <b>Explicit</b>.
 <dt><b>Result</b>

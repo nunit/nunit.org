@@ -17,7 +17,7 @@ the test case factory. If not, the class containing the test method is used.
 
 <p>NUnit attempts to find factories that are compatible with the method
 signature using information provided by the  
-<?php echo nunit_doc_link("testCaseFactory", "TestCaseFactoryAttribute") ?>.
+ nunit_doc_link("testCaseFactory", "TestCaseFactoryAttribute").
 
 <p>Each test case factory has the following characteristics:
 <ul>
@@ -25,7 +25,7 @@ signature using information provided by the
 <li>It may be either an instance or a static member.
 <li>It must be an IEnumerable or a type that implemens IEnumerable.
 <li>In order for NUnit to locate the factory automatically, it must be
-    marked with a <?php echo nunit_doc_link("testCaseFactory", "TestCaseFactoryAttribute") ?>.
+    marked with a  nunit_doc_link("testCaseFactory", "TestCaseFactoryAttribute").
 </ul>
 
 <p>NUnit locates the factories at the time the tests are loaded, creates
