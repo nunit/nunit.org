@@ -186,7 +186,6 @@
     <Content Include="docs\1.0\license.html" />
     <Content Include="docs\1.0\listMapper.html" />
     <Content Include="docs\1.0\maxtime.html" />
-    <Content Include="docs\1.0\nunit.css" />
     <Content Include="docs\1.0\pairwise.html" />
     <Content Include="docs\1.0\parameterizedTests.html" />
     <Content Include="docs\1.0\pathConstraints.html" />
@@ -268,7 +267,6 @@
     <Content Include="docs\2.1\multiAssembly.html" />
     <Content Include="docs\2.1\nunit-console.html" />
     <Content Include="docs\2.1\nunit-gui.html" />
-    <Content Include="docs\2.1\nunit.css" />
     <Content Include="docs\2.1\optionsDialog.html" />
     <Content Include="docs\2.1\projectEditor.html" />
     <Content Include="docs\2.1\projects.html" />
@@ -327,7 +325,6 @@
     <Content Include="docs\2.2.10\multiAssembly.html" />
     <Content Include="docs\2.2.10\nunit-console.html" />
     <Content Include="docs\2.2.10\nunit-gui.html" />
-    <Content Include="docs\2.2.10\nunit.css" />
     <Content Include="docs\2.2.10\optionsDialog.html" />
     <Content Include="docs\2.2.10\platform.html" />
     <Content Include="docs\2.2.10\projectEditor.html" />
@@ -389,7 +386,6 @@
     <Content Include="docs\2.2.1\multiAssembly.html" />
     <Content Include="docs\2.2.1\nunit-console.html" />
     <Content Include="docs\2.2.1\nunit-gui.html" />
-    <Content Include="docs\2.2.1\nunit.css" />
     <Content Include="docs\2.2.1\optionsDialog.html" />
     <Content Include="docs\2.2.1\projectEditor.html" />
     <Content Include="docs\2.2.1\projects.html" />
@@ -447,7 +443,6 @@
     <Content Include="docs\2.2.2\multiAssembly.html" />
     <Content Include="docs\2.2.2\nunit-console.html" />
     <Content Include="docs\2.2.2\nunit-gui.html" />
-    <Content Include="docs\2.2.2\nunit.css" />
     <Content Include="docs\2.2.2\optionsDialog.html" />
     <Content Include="docs\2.2.2\platform.html" />
     <Content Include="docs\2.2.2\projectEditor.html" />
@@ -511,7 +506,6 @@
     <Content Include="docs\2.2.3\multiAssembly.html" />
     <Content Include="docs\2.2.3\nunit-console.html" />
     <Content Include="docs\2.2.3\nunit-gui.html" />
-    <Content Include="docs\2.2.3\nunit.css" />
     <Content Include="docs\2.2.3\optionsDialog.html" />
     <Content Include="docs\2.2.3\platform.html" />
     <Content Include="docs\2.2.3\projectEditor.html" />
@@ -577,7 +571,6 @@
     <Content Include="docs\2.2.4\multiAssembly.html" />
     <Content Include="docs\2.2.4\nunit-console.html" />
     <Content Include="docs\2.2.4\nunit-gui.html" />
-    <Content Include="docs\2.2.4\nunit.css" />
     <Content Include="docs\2.2.4\optionsDialog.html" />
     <Content Include="docs\2.2.4\platform.html" />
     <Content Include="docs\2.2.4\projectEditor.html" />
@@ -643,7 +636,6 @@
     <Content Include="docs\2.2.5\multiAssembly.html" />
     <Content Include="docs\2.2.5\nunit-console.html" />
     <Content Include="docs\2.2.5\nunit-gui.html" />
-    <Content Include="docs\2.2.5\nunit.css" />
     <Content Include="docs\2.2.5\optionsDialog.html" />
     <Content Include="docs\2.2.5\platform.html" />
     <Content Include="docs\2.2.5\projectEditor.html" />
@@ -709,7 +701,6 @@
     <Content Include="docs\2.2.6\multiAssembly.html" />
     <Content Include="docs\2.2.6\nunit-console.html" />
     <Content Include="docs\2.2.6\nunit-gui.html" />
-    <Content Include="docs\2.2.6\nunit.css" />
     <Content Include="docs\2.2.6\optionsDialog.html" />
     <Content Include="docs\2.2.6\platform.html" />
     <Content Include="docs\2.2.6\projectEditor.html" />
@@ -775,7 +766,6 @@
     <Content Include="docs\2.2.7\multiAssembly.html" />
     <Content Include="docs\2.2.7\nunit-console.html" />
     <Content Include="docs\2.2.7\nunit-gui.html" />
-    <Content Include="docs\2.2.7\nunit.css" />
     <Content Include="docs\2.2.7\optionsDialog.html" />
     <Content Include="docs\2.2.7\platform.html" />
     <Content Include="docs\2.2.7\projectEditor.html" />
@@ -841,7 +831,6 @@
     <Content Include="docs\2.2.8\multiAssembly.html" />
     <Content Include="docs\2.2.8\nunit-console.html" />
     <Content Include="docs\2.2.8\nunit-gui.html" />
-    <Content Include="docs\2.2.8\nunit.css" />
     <Content Include="docs\2.2.8\optionsDialog.html" />
     <Content Include="docs\2.2.8\platform.html" />
     <Content Include="docs\2.2.8\projectEditor.html" />
@@ -907,7 +896,6 @@
     <Content Include="docs\2.2.9\multiAssembly.html" />
     <Content Include="docs\2.2.9\nunit-console.html" />
     <Content Include="docs\2.2.9\nunit-gui.html" />
-    <Content Include="docs\2.2.9\nunit.css" />
     <Content Include="docs\2.2.9\optionsDialog.html" />
     <Content Include="docs\2.2.9\platform.html" />
     <Content Include="docs\2.2.9\projectEditor.html" />
@@ -969,7 +957,6 @@
     <Content Include="docs\2.2\multiAssembly.html" />
     <Content Include="docs\2.2\nunit-console.html" />
     <Content Include="docs\2.2\nunit-gui.html" />
-    <Content Include="docs\2.2\nunit.css" />
     <Content Include="docs\2.2\optionsDialog.html" />
     <Content Include="docs\2.2\projectEditor.html" />
     <Content Include="docs\2.2\projects.html" />
@@ -1054,7 +1041,6 @@
     <Content Include="docs\2.4.1\multiAssembly.html" />
     <Content Include="docs\2.4.1\nunit-console.html" />
     <Content Include="docs\2.4.1\nunit-gui.html" />
-    <Content Include="docs\2.4.1\nunit.css" />
     <Content Include="docs\2.4.1\nunitAddins.html" />
     <Content Include="docs\2.4.1\old_explicit.html" />
     <Content Include="docs\2.4.1\optionsDialog.html" />
@@ -1156,7 +1142,6 @@
     <Content Include="docs\2.4.2\multiAssembly.html" />
     <Content Include="docs\2.4.2\nunit-console.html" />
     <Content Include="docs\2.4.2\nunit-gui.html" />
-    <Content Include="docs\2.4.2\nunit.css" />
     <Content Include="docs\2.4.2\nunitAddins.html" />
     <Content Include="docs\2.4.2\old_explicit.html" />
     <Content Include="docs\2.4.2\optionsDialog.html" />
@@ -1260,7 +1245,6 @@
     <Content Include="docs\2.4.3\multiAssembly.html" />
     <Content Include="docs\2.4.3\nunit-console.html" />
     <Content Include="docs\2.4.3\nunit-gui.html" />
-    <Content Include="docs\2.4.3\nunit.css" />
     <Content Include="docs\2.4.3\nunitAddins.html" />
     <Content Include="docs\2.4.3\old_explicit.html" />
     <Content Include="docs\2.4.3\optionsDialog.html" />
@@ -1369,7 +1353,6 @@
     <Content Include="docs\2.4.4\multiAssembly.html" />
     <Content Include="docs\2.4.4\nunit-console.html" />
     <Content Include="docs\2.4.4\nunit-gui.html" />
-    <Content Include="docs\2.4.4\nunit.css" />
     <Content Include="docs\2.4.4\nunitAddins.html" />
     <Content Include="docs\2.4.4\old_explicit.html" />
     <Content Include="docs\2.4.4\optionsDialog.html" />
@@ -1478,7 +1461,6 @@
     <Content Include="docs\2.4.5\multiAssembly.html" />
     <Content Include="docs\2.4.5\nunit-console.html" />
     <Content Include="docs\2.4.5\nunit-gui.html" />
-    <Content Include="docs\2.4.5\nunit.css" />
     <Content Include="docs\2.4.5\nunitAddins.html" />
     <Content Include="docs\2.4.5\old_explicit.html" />
     <Content Include="docs\2.4.5\optionsDialog.html" />
@@ -1587,7 +1569,6 @@
     <Content Include="docs\2.4.6\multiAssembly.html" />
     <Content Include="docs\2.4.6\nunit-console.html" />
     <Content Include="docs\2.4.6\nunit-gui.html" />
-    <Content Include="docs\2.4.6\nunit.css" />
     <Content Include="docs\2.4.6\nunitAddins.html" />
     <Content Include="docs\2.4.6\old_explicit.html" />
     <Content Include="docs\2.4.6\optionsDialog.html" />
@@ -1696,7 +1677,6 @@
     <Content Include="docs\2.4.7\multiAssembly.html" />
     <Content Include="docs\2.4.7\nunit-console.html" />
     <Content Include="docs\2.4.7\nunit-gui.html" />
-    <Content Include="docs\2.4.7\nunit.css" />
     <Content Include="docs\2.4.7\nunitAddins.html" />
     <Content Include="docs\2.4.7\old_explicit.html" />
     <Content Include="docs\2.4.7\optionsDialog.html" />
@@ -1801,7 +1781,6 @@
     <Content Include="docs\2.4.8\multiAssembly.html" />
     <Content Include="docs\2.4.8\nunit-console.html" />
     <Content Include="docs\2.4.8\nunit-gui.html" />
-    <Content Include="docs\2.4.8\nunit.css" />
     <Content Include="docs\2.4.8\nunitAddins.html" />
     <Content Include="docs\2.4.8\optionsDialog.html" />
     <Content Include="docs\2.4.8\platform.html" />
@@ -1897,7 +1876,6 @@
     <Content Include="docs\2.4\multiAssembly.html" />
     <Content Include="docs\2.4\nunit-console.html" />
     <Content Include="docs\2.4\nunit-gui.html" />
-    <Content Include="docs\2.4\nunit.css" />
     <Content Include="docs\2.4\nunitAddins.html" />
     <Content Include="docs\2.4\old_explicit.html" />
     <Content Include="docs\2.4\optionsDialog.html" />
@@ -2008,7 +1986,6 @@
     <Content Include="docs\2.5.10\nunit-agent.html" />
     <Content Include="docs\2.5.10\nunit-console.html" />
     <Content Include="docs\2.5.10\nunit-gui.html" />
-    <Content Include="docs\2.5.10\nunit.css" />
     <Content Include="docs\2.5.10\nunitAddins.html" />
     <Content Include="docs\2.5.10\pairwise.html" />
     <Content Include="docs\2.5.10\parameterizedTests.html" />
@@ -2141,7 +2118,6 @@
     <Content Include="docs\2.5.1\multiAssembly.html" />
     <Content Include="docs\2.5.1\nunit-console.html" />
     <Content Include="docs\2.5.1\nunit-gui.html" />
-    <Content Include="docs\2.5.1\nunit.css" />
     <Content Include="docs\2.5.1\nunitAddins.html" />
     <Content Include="docs\2.5.1\pairwise.html" />
     <Content Include="docs\2.5.1\parameterizedTests.html" />
@@ -2272,7 +2248,6 @@
     <Content Include="docs\2.5.2\multiAssembly.html" />
     <Content Include="docs\2.5.2\nunit-console.html" />
     <Content Include="docs\2.5.2\nunit-gui.html" />
-    <Content Include="docs\2.5.2\nunit.css" />
     <Content Include="docs\2.5.2\nunitAddins.html" />
     <Content Include="docs\2.5.2\pairwise.html" />
     <Content Include="docs\2.5.2\parameterizedTests.html" />
@@ -2404,7 +2379,6 @@
     <Content Include="docs\2.5.3\multiAssembly.html" />
     <Content Include="docs\2.5.3\nunit-console.html" />
     <Content Include="docs\2.5.3\nunit-gui.html" />
-    <Content Include="docs\2.5.3\nunit.css" />
     <Content Include="docs\2.5.3\nunitAddins.html" />
     <Content Include="docs\2.5.3\pairwise.html" />
     <Content Include="docs\2.5.3\parameterizedTests.html" />
@@ -2535,7 +2509,6 @@
     <Content Include="docs\2.5.4\multiAssembly.html" />
     <Content Include="docs\2.5.4\nunit-console.html" />
     <Content Include="docs\2.5.4\nunit-gui.html" />
-    <Content Include="docs\2.5.4\nunit.css" />
     <Content Include="docs\2.5.4\nunitAddins.html" />
     <Content Include="docs\2.5.4\pairwise.html" />
     <Content Include="docs\2.5.4\parameterizedTests.html" />
@@ -2667,7 +2640,6 @@
     <Content Include="docs\2.5.5\multiAssembly.html" />
     <Content Include="docs\2.5.5\nunit-console.html" />
     <Content Include="docs\2.5.5\nunit-gui.html" />
-    <Content Include="docs\2.5.5\nunit.css" />
     <Content Include="docs\2.5.5\nunitAddins.html" />
     <Content Include="docs\2.5.5\pairwise.html" />
     <Content Include="docs\2.5.5\parameterizedTests.html" />
@@ -2799,7 +2771,6 @@
     <Content Include="docs\2.5.6\multiAssembly.html" />
     <Content Include="docs\2.5.6\nunit-console.html" />
     <Content Include="docs\2.5.6\nunit-gui.html" />
-    <Content Include="docs\2.5.6\nunit.css" />
     <Content Include="docs\2.5.6\nunitAddins.html" />
     <Content Include="docs\2.5.6\pairwise.html" />
     <Content Include="docs\2.5.6\parameterizedTests.html" />
@@ -2932,7 +2903,6 @@
     <Content Include="docs\2.5.7\multiAssembly.html" />
     <Content Include="docs\2.5.7\nunit-console.html" />
     <Content Include="docs\2.5.7\nunit-gui.html" />
-    <Content Include="docs\2.5.7\nunit.css" />
     <Content Include="docs\2.5.7\nunitAddins.html" />
     <Content Include="docs\2.5.7\pairwise.html" />
     <Content Include="docs\2.5.7\parameterizedTests.html" />
@@ -3067,7 +3037,6 @@
     <Content Include="docs\2.5.8\multiAssembly.html" />
     <Content Include="docs\2.5.8\nunit-console.html" />
     <Content Include="docs\2.5.8\nunit-gui.html" />
-    <Content Include="docs\2.5.8\nunit.css" />
     <Content Include="docs\2.5.8\nunitAddins.html" />
     <Content Include="docs\2.5.8\pairwise.html" />
     <Content Include="docs\2.5.8\parameterizedTests.html" />
@@ -3203,7 +3172,6 @@
     <Content Include="docs\2.5.9\nunit-agent.html" />
     <Content Include="docs\2.5.9\nunit-console.html" />
     <Content Include="docs\2.5.9\nunit-gui.html" />
-    <Content Include="docs\2.5.9\nunit.css" />
     <Content Include="docs\2.5.9\nunitAddins.html" />
     <Content Include="docs\2.5.9\pairwise.html" />
     <Content Include="docs\2.5.9\parameterizedTests.html" />
@@ -3338,7 +3306,6 @@
     <Content Include="docs\2.5\multiAssembly.html" />
     <Content Include="docs\2.5\nunit-console.html" />
     <Content Include="docs\2.5\nunit-gui.html" />
-    <Content Include="docs\2.5\nunit.css" />
     <Content Include="docs\2.5\nunitAddins.html" />
     <Content Include="docs\2.5\optionsDialog.html" />
     <Content Include="docs\2.5\pairwise.html" />
@@ -3484,7 +3451,6 @@
     <Content Include="docs\2.6.1\nunit-agent.html" />
     <Content Include="docs\2.6.1\nunit-console.html" />
     <Content Include="docs\2.6.1\nunit-gui.html" />
-    <Content Include="docs\2.6.1\nunit.css" />
     <Content Include="docs\2.6.1\nunitAddins.html" />
     <Content Include="docs\2.6.1\pairwise.html" />
     <Content Include="docs\2.6.1\parameterizedTests.html" />
@@ -3631,7 +3597,6 @@
     <Content Include="docs\2.6.2\nunit-agent.html" />
     <Content Include="docs\2.6.2\nunit-console.html" />
     <Content Include="docs\2.6.2\nunit-gui.html" />
-    <Content Include="docs\2.6.2\nunit.css" />
     <Content Include="docs\2.6.2\nunitAddins.html" />
     <Content Include="docs\2.6.2\pairwise.html" />
     <Content Include="docs\2.6.2\parameterizedTests.html" />
@@ -3779,7 +3744,6 @@
     <Content Include="docs\2.6.3\nunit-agent.html" />
     <Content Include="docs\2.6.3\nunit-console.html" />
     <Content Include="docs\2.6.3\nunit-gui.html" />
-    <Content Include="docs\2.6.3\nunit.css" />
     <Content Include="docs\2.6.3\nunitAddins.html" />
     <Content Include="docs\2.6.3\pairwise.html" />
     <Content Include="docs\2.6.3\parameterizedTests.html" />
@@ -3927,7 +3891,6 @@
     <Content Include="docs\2.6\nunit-agent.html" />
     <Content Include="docs\2.6\nunit-console.html" />
     <Content Include="docs\2.6\nunit-gui.html" />
-    <Content Include="docs\2.6\nunit.css" />
     <Content Include="docs\2.6\nunitAddins.html" />
     <Content Include="docs\2.6\pairwise.html" />
     <Content Include="docs\2.6\parameterizedTests.html" />
@@ -4042,7 +4005,6 @@
     <Content Include="docs\3.0\multiAssembly.html" />
     <Content Include="docs\3.0\nunit-agent.html" />
     <Content Include="docs\3.0\nunit-console.html" />
-    <Content Include="docs\3.0\nunit.css" />
     <Content Include="docs\3.0\pairwise.html" />
     <Content Include="docs\3.0\parameterizedTests.html" />
     <Content Include="docs\3.0\pathConstraints.html" />
