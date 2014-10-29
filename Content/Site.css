@@ -86,6 +86,7 @@ pre.prettyprint { padding: 10px; }
 }
 
 .docs-sidebar {
+    padding: 5px;
     margin-top: 10px;
     border: 1px solid #999;
     -moz-border-radius: 10px;
@@ -103,5 +104,10 @@ pre.prettyprint { padding: 10px; }
 }
 
 ul.nav ul.nav ul.nav {
-    padding-left: 12px;
+    margin-left: 12px;
+}
+
+.nav>li.active>a{
+    border-left: 2px solid #022a50;
+    color: #022a50;
 }
