@@ -29,56 +29,52 @@ textarea {
 }
 
 table.downloads tr td {
-  padding: 0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
 /* Code highlighting */
 div.code {
-   width: 36em; 
-   margin: 0 0; 
-   padding: 0 0; 
-   position: relative;
+    width: 36em;
+    margin: 0 0;
+    padding: 0 0;
+    position: relative;
 }
 
 div.langFilter {
-   position: absolute; 
-   top: 100px; 
-   left: 5%;
+    position: absolute;
+    top: 100px;
+    left: 5%;
 }
 
 div.code div.langFilter {
-   position: absolute; 
-   top: -15px; 
-   left: 0;
+    position: absolute;
+    top: -16px;
+    left: 0;
 }
 
-div.dropdown { 
-  position: absolute; 
-  top: 0; 
-  left: 14px; 
-  padding: 0 10px; 
-  width: 20px;
-  text-align: left; 
-  border: 1px solid #888; 
-  background-color: #ffd; 
+div.dropdown {
+    position: absolute;
+    top: 18px;
+    left: 2px;
+    padding: 0 2px;
+    width: 28px;
+    text-align: left;
+    border: 1px solid #888;
+    background-color: #eee;
+    font-size: 11px;
 }
 
-div.lang div.dropdown { 
-  position: absolute; 
-  left: 14px; 
-  top: 0; 
-  padding: 0 10px; 
-  width: 20px;
-	text-align: left; 
-  border: 1px solid #888; 
-  background-color: #ffd; 
+div.dropdown>a {
+    color: #222;
 }
 
-pre.prettyprint { padding: 10px; }
+pre.prettyprint {
+    padding: 10px;
+}
 
 /* Docs */
 .doc-content {
-    margin-top: 10px;    
+    margin-top: 10px;
 }
 
 /* Docs Side Nav */
@@ -95,19 +91,19 @@ pre.prettyprint { padding: 10px; }
     -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
 
-.docs-sidebar .nav>li>a {
-    display: block;
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #999;
-}
+    .docs-sidebar .nav > li > a {
+        display: block;
+        padding: 4px 10px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #999;
+    }
 
 ul.nav ul.nav ul.nav {
     margin-left: 12px;
 }
 
-.nav>li.active>a{
+.nav > li.active > a {
     border-left: 2px solid #022a50;
     color: #022a50;
 }

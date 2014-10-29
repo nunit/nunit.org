@@ -4268,6 +4268,7 @@
     <None Include="Scripts\jquery-2.1.1.intellisense.js">
       <DependentUpon>jquery-2.1.1.js</DependentUpon>
     </None>
+    <Content Include="Scripts\codeFuncs.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js">
       <DependentUpon>jquery-2.1.1.js</DependentUpon>

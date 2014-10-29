@@ -23,6 +23,9 @@ namespace nunit.org
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/codeFuncs").Include(
+                      "~/Scripts/codeFuncs.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-theme.css",
                       "~/Content/site.css"));

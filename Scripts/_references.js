@@ -6,3 +6,4 @@
 /// <reference path="jquery.validate.unobtrusive.js" />
 /// <reference path="respond.js" />
 /// <reference path="respond.matchmedia.addlistener.js" />
+/// <reference path="codefuncs.js" />
