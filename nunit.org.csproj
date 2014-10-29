@@ -117,7 +117,7 @@
     </Compile>
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\Documentation.cs" />
-    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MenuBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
