@@ -17,10 +17,8 @@ namespace nunit.org.Models
         public Document GetDocument( string page, string release )
         {
             string content = ParseOldPhpFunctions(GetDocumentationContent(page, release), release);
-            var document = new Document(content);
             var menu = new Menu(_server);
-            document.MenuItems = menu.GetMenu( release );
-            return document;
+            return new Document(content, menu.GetMenu(release));
         }
 
         private string GetDocumentationContent(string page, string release)

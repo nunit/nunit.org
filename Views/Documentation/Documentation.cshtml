@@ -1,10 +1,14 @@
 ﻿@model nunit.org.Models.Document
 
 <div class="row">
-  <div class="col-md-9">
-    @Html.Raw(Model.Content)
+  <div class="col-md-8">
+    <div class="doc-content">
+      @Html.Raw(Model.Content)
+    </div>
   </div>
-  <div class="col-md-2 col-md-push-1">
-    @Html.Raw(Model.MenuItems)
+  <div class="col-md-3 col-md-push-1">
+    <div class="docs-sidebar">
+      @Html.Raw(Model.Menu)
+    </div>
   </div>
 </div>

@@ -75,3 +75,33 @@ div.lang div.dropdown {
 }
 
 pre.prettyprint { padding: 10px; }
+
+/* Docs */
+.doc-content {
+    margin-top: 10px;    
+}
+
+/* Docs Side Nav */
+.docs-sidenav {
+}
+
+.docs-sidebar {
+    margin-top: 10px;
+    border: 1px solid #999;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+.docs-sidebar .nav>li>a {
+    display: block;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+}
+
+ul.nav ul.nav ul.nav {
+    padding-left: 12px;
+}
