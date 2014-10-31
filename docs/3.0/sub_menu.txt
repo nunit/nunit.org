@@ -35,6 +35,8 @@ docHome,NUnit 3.0 Alpha Release
    explicit
    ignore
    maxtime
+   onetimeSetup,OneTimeSetUp
+   onetimeTeardown,OneTimeTearDown
    pairwise
    platform
    property
@@ -58,8 +60,6 @@ docHome,NUnit 3.0 Alpha Release
    testCaseSource
    testFixture
    testOf
-   fixtureSetup,TestFixtureSetUp
-   fixtureTeardown,TestFixtureTearDown
    theory
    timeout
    values
