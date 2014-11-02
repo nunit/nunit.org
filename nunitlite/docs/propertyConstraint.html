@@ -1,0 +1,68 @@
+<h2>Property Constraints (NUnit 2.4.2)</h2>
+
+<p>Property constraints are used to test for the existence of a named property and
+optionally to test its value. It may also be used as a prefix for other constraints
+to be applied to the property.
+
+<h3>PropertyExistsConstraint</h3>
+
+<h4>Action</h4>
+
+<p>Tests for the existence of a named property on an object.
+
+<h4>Constructor</h4>
+
+<div class="code"><pre>
+PropertyExistsConstraint(string name)
+</pre></div>
+
+<h4>Syntax</h4>
+
+<div class="code"><pre>
+Has.Property( string )
+</pre></div>
+
+<h4>Examples of Use</h4>
+
+<div class="code"><pre>
+Assert.That( someObject, Has.Property( "Version" ) );
+</pre></div>
+
+<h3>PropertyConstraint</h3>
+
+<h4>Action</h4>
+
+<p>Tests for the existence of a named property on an object and causes subsequent
+allows tests to be made on the property value.
+
+<h4>Constructor</h4>
+
+<div class="code"><pre>
+PropertyConstraint(string name)
+</pre></div>
+
+<h4>Syntax</h4>
+
+<div class="code"><pre>
+Has.Property(string)...
+</pre></div>
+
+<h4>Examples of Use</h4>
+
+<div class="code"><pre>
+Assert.That(someObject, Has.Property("Version").EqualTo("2.0"));
+Assert.That(collection, Has.Property("Count").GreaterThan(10));
+</pre></div>
+
+<h3>Special Properties</h3>
+
+<p>Certain common properties are known to NUnit and 
+may be tested using the following syntax...
+
+<div class="code"><pre>
+Has.Length...
+Has.Count...
+Has.Message...
+Has.InnerException...
+</pre></div>
+

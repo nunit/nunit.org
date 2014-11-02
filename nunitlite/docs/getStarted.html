@@ -1,0 +1,13 @@
+<h2>Getting Started with NUnitLite</h2>
+
+<p>You may download NUnitLite from our <a href="http://launchpad.net/nunitlite">Launchpad project page</a> or as a <a href="http://nuget.org/projects/nunitlite">Nuget</a> package.</p>
+
+<p>If you download the zip file, simply extract all files to a convenient location, where you will be able to reference the nunitlite assembly from your test projects. No further installation is required. If you use the Nuget package, you should add it to each test assembly that uses nunitlite.</p>
+
+<p>Your test assembly should be an exe file and should reference the nunitlite assembly. If you place a call like this in your Main()
+
+<pre>
+    new TextUI().Execute(args);
+</pre>
+
+then NUnitLite will run all the tests in the test project, using any args you provided on the command line. Run with the -help option to see all available options.<p>
