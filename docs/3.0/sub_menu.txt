@@ -43,7 +43,6 @@ docHome,NUnit 3.0 Alpha Release
    random
    range
    repeat
-   requiredAddin
    requiresMTA,Requires&nbsp;MTA
    requiresSTA,Requires&nbsp;STA
    requiresThread,Requires&nbsp;Thread
@@ -52,7 +51,6 @@ docHome,NUnit 3.0 Alpha Release
    setUICulture
    setup
    setupFixture
-   suite
    teardown
    test
     parameterizedTests,Parameterized&nbsp;Tests

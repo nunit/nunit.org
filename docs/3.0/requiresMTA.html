@@ -1,1 +1,48 @@
-<?php unchangedSince("2.5") ?>
+<h3>RequiresMTAAttribute (NUnit 2.5)</h3>
+
+<p>The <b>RequiresMTAAttribute</b> is used on a test method, class or assembly
+   to specify that the tests should be run in the multi-threaded apartment.
+   It causes creation of a new thread if the parent test is not already running
+   in the MTA.
+   
+<h4>Examples</h4>
+   
+<div class="code"><pre class="prettyprint">
+
+// An MTA thread will be created and used to run
+// all the tests in the assembly
+[assembly:RequiresMTA]
+
+...
+
+// TestFixture requiring a separate thread
+[TestFixture, RequiresMTA]
+public class FixtureRequiringMTA
+{
+  // An MTA thread will be created and all
+  // tests in the fixture will run on it
+  // unless the containing assembly is
+  // already running on an MTA Thread
+}
+
+[TestFixture]
+public class AnotherFixture
+{
+  [Test, RequiresMTA]
+  public void TestRequiringMTA()
+  {
+    // A separate thread will be created for this test
+	// unless the containing fixture is already running 
+	// in the MTA.
+  }
+}
+
+</pre>
+
+</div>
+
+<h4>See also...</h4>
+<ul>
+<li><?php echo nunit_doc_link("requiresThread", "RequiresThreadAttribute") ?>
+<li><?php echo nunit_doc_link("requiresSTA", "RequiresSTAAttribute") ?>
+</ul>
