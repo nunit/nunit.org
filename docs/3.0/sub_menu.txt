@@ -85,6 +85,7 @@ docHome,NUnit 3.0 Alpha 2 Release
    consoleCommandLine,Command-Line
   nunit-agent,NUnit&nbsp;Agent
   runtimeSelection,Runtime&nbsp;Selection
+  platformSelection,Platform&nbsp;Selection
   assemblyIsolation,Assembly&nbsp;Isolation
   configFiles,Configuration&nbsp;Files
   multiAssembly,Multiple&nbsp;Assemblies

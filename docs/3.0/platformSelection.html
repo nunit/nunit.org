@@ -1,0 +1,15 @@
+<h3>Platform Selection</h3>
+
+<p>If your tests are compiled x86 or x64, NUnit will run your
+tests in nunit-agent targeted at the appropriate platform. If you
+specify multiple assemblies on the command line and they target different
+processors, you <b>must</b> specify <b>/process=Multiple</b> on the command
+line to run each of your assemblies in a different process.</p>
+
+<p>On an x64 machine, if your test assembly is compiled x86, you <b>must not</b>
+use <b>/process=Single</b> on the command line. NUnit will respect your directive and
+attempt to load the x86 assembly into the x64 process which will obviously fail.</p>
+
+<p>If your assembly is compiled AnyCPU, but references x86 or x64 assemblies, it is incorrect.
+If your assembly references platform specific assemblies, it should specify the same platform
+as the referenced assemblies.</p>
