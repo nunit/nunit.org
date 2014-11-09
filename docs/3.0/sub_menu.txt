@@ -24,6 +24,7 @@ docHome,NUnit 3.0 Alpha 2 Release
    stringAssert,String&nbsp;Assert
    collectionAssert,Collection&nbsp;Assert
    fileAssert,File&nbsp;Assert
+   directoryAssert,Directory&nbsp;Assert
   attributes
    actionAttributes,Action&nbsp;Attributes
    author
@@ -63,18 +64,19 @@ docHome,NUnit 3.0 Alpha 2 Release
    values
    valueSource
   constraintModel,Constraints
-   equalConstraint,Equal&nbsp;Constraint
-   sameasConstraint,SameAs&nbsp;Constraint
-   conditionConstraints,Condition&nbsp;Constraints
-   comparisonConstraints,Comparison&nbsp;Constrants
-   pathConstraints,Path&nbsp;Constraints
-   typeConstraints,Type&nbsp;Constraints
-   stringConstraints,String&nbsp;Constraints
-   collectionConstraints,Collection&nbsp;Constraints
-   propertyConstraint,Property&nbsp;Constraint
-   throwsConstraint,Throws&nbsp;Constraint
-   compoundConstraints,Compound&nbsp;Constraints
-   delayedConstraint,Delayed&nbsp;Constraint
+   equalConstraint,Equal
+   sameasConstraint,SameAs
+   conditionConstraints,Condition
+   comparisonConstraints,Comparison
+   pathConstraints,Path
+   fileConstraints,File&nbsp;&amp;&nbsp;Directory
+   typeConstraints,Type
+   stringConstraints,String
+   collectionConstraints,Collection
+   propertyConstraint,Property
+   throwsConstraint,Throws
+   compoundConstraints,Compound
+   delayedConstraint,Delayed
    listMapper,List&nbsp;Mapper
    reusableConstraint,Reusable&nbsp;Constraint
   testContext,Test&nbsp;Context
