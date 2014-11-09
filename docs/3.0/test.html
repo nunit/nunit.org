@@ -6,10 +6,12 @@
     as a test.</p>
 	
 <p>Prior to NUnit 2.5, the signature for a test method was:
-	<pre class="prettyprint">        public void MethodName()</pre></p>
+
+<pre class="prettyprint">public void MethodName()</pre></p>
 	
 <p>Beginning with NUnit 2.5, static methods may be used as tests:
-	<pre class="prettyprint">        public static void MethodName()</pre></p>
+
+<pre class="prettyprint">public static void MethodName()</pre></p>
 	
 <p>In addition, with 2.5, test methods may have arguments and return
    values, provided that NUnit is told what values to use for the
@@ -47,8 +49,6 @@
 	<div id="DD1" class="dropdown" style="display: none;" onclick="Hide('DD1')">
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
-		<a href="javascript:ShowMC()">C++</a><br>
-		<a href="javascript:ShowJS()">J#</a><br>
 	</div>
 </div>
 
@@ -83,41 +83,6 @@ Namespace Nunit.Tests
     End Sub
   End Class
 End Namespace
-</pre>
-
-<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
-using namespace System;
-using namespace NUnit::Framework;
-
-namespace NUnitTests
-{
-  [TestFixture]
-  public __gc class SuccessTests
-  {
-    [Test] void Add();
-  };
-}
-
-#include "cppsample.h"
-
-namespace NUnitTests {
-  // ...
-}
-</pre>
-
-<pre class="prettyprint js">package NUnit.Tests;
-
-import System.*;
-import NUnit.Framework.TestFixture;
-
-
-/** @attribute NUnit.Framework.TestFixture() */
-public class SuccessTests
-{
-  /** @attribute NUnit.Framework.Test() */
-  public void Add()
-  { /* ... */ }
-}
 </pre>
 </div>
 

@@ -111,7 +111,10 @@ div.notice {
   font-style: italic; 
   font-weight: bold; 
 }
-pre.prettyprint { padding: 10px; }
+pre.prettyprint {
+ padding: 10px; 
+ max-width: 660px;
+}
 /* 
 #content.wide p { width: expression( document.documentElement.clientWidth > 700 ? "660px" : "auto" ); }
 #content.wide blockquote { width: expression( document.documentElement.clientWidth > 700 ? "580px" : "auto"  ); }
