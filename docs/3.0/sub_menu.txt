@@ -6,7 +6,7 @@
 # of a page name and an optional display name
 # for use in the menu, separated by a comma.
 # 
-docHome,NUnit 3.0 Alpha 2 Release
+docHome,NUnit 3.0 Alpha 3 Release
  getStarted,Getting&nbsp;Started
   quickStart,Quick&nbsp;Start
    quickStartSource,Source&nbsp;Listing
@@ -89,7 +89,7 @@ docHome,NUnit 3.0 Alpha 2 Release
   assemblyIsolation,Assembly&nbsp;Isolation
   configFiles,Configuration&nbsp;Files
   multiAssembly,Multiple&nbsp;Assemblies
-  vsSupport,Visual&nbsp;Studio&nbsp;Support
+#  vsSupport,Visual&nbsp;Studio&nbsp;Support
  extensibility
   customAttributes, Custom&nbsp;Attributes
   customConstraints,Custom&nbsp;Constraints

@@ -1,1 +1,55 @@
-<?php unchangedSince("2.5.5") ?>
+<h3>DatapointAttribute / DatapointSourceAttribute (NUnit 2.5)</h3>
+
+<p>The <b>Datapoint</b> and <b>DatapointSource</b> attributes are used
+   to provide data for <b>Theories</b> and are ignored for ordinary
+   tests - including tests with parameters.
+   
+<h4>DatapointAttribute</h4>
+   
+<p>When a Theory is loaded, NUnit creates arguments for each
+   of its parameters by using any fields of the same type
+   as the parameter annotated with the <b>DatapointAttribute</b>.
+   Fields must be members of the class containing the Theory
+   and their Type must exactly match the argument for which
+   data is being supplied.
+   
+<h4>DatapointSourceAttribute</h4>
+   
+<p>In addition to specifying individual datapoints, collections of
+   datapoints may be provided by use of the <b>DatapointSourceAttribute</b>.
+   This attribute may be placed on methods or
+   properties in addition to fields. The returned value must be
+   either an array of the required type or (beginning with NUnit
+   2.5.5) an <b>IEnumerable&lt;T&gt;</b> returning an enumeration
+   of the required type. The data Type must exactly match the argument 
+   for which data is being supplied.
+   
+<h4>DatapointsAttribute</h4>
+
+<p>In earlier versions of NUnit, the obsolete <b>DatapointsAttribute</b>
+   was used in place of <b>DatapointSourceAttribute</b>.
+   
+<h4>Automatically Supplied Datapoints</h4>
+
+<p>It is normally not necessary to specify datapoints for 
+   <b>boolean</b> or <b>enum</b> arguments. Beginning with
+   version 2.5.4, NUnit automatically supplies values of <b>true</b> 
+   and <b>false</b> for <b>boolean</b> arguments and will supply all 
+   defined values of any enumeration.
+   
+<p>If for some reason you don't wish to use all possible values, you
+   can override this behavior by supplying your own datapoints. If you
+   supply any datapoints for an argument, automatic datapoint generation 
+   is suppressed.
+   
+<h4>Example</h4>
+
+<p>For an example of use, see <?php echo nunit_doc_link("theory", "TheoryAttribute" ); ?>.
+   
+<h4>See also...</h4>
+
+<ul>
+<li><?php echo nunit_doc_link("theory", "TheoryAttribute" ) ?>
+<li><?php echo nunit_doc_link("parameterizedTests", "Parameterized Tests" ) ?>
+</ul>
+   
