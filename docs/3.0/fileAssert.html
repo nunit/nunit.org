@@ -31,6 +31,9 @@ FileAssert.AreNotEqual( string expected, string actual, string message, params o
 
 <h4>NUnit 3.0</h4>
 
+NUnit 3.0 adds asserts to check if a file exists. You can pass a FileInfo or the path to the file
+to check.
+
 <pre class="prettyprint">
 FileAssert.Exists(FileInfo actual);
 FileAssert.Exists(FileInfo actual, string message);
@@ -48,3 +51,8 @@ FileAssert.DoesNotExist(string actual);
 FileAssert.DoesNotExist(string actual, string message);
 FileAssert.DoesNotExist(string actual, string message, params object[] args);
 </pre>
+
+<h4>See also...</h4>
+<ul>
+    <li><?php echo nunit_doc_link("fileConstraints", "FileConstraints") ?>
+</ul>

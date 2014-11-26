@@ -1,1 +1,28 @@
-<?php unchangedSince("2.2.3") ?>
+<h2>Identity Asserts</h2>
+
+<p>
+    <b>Assert.AreSame</b> and <b>Assert.AreNotSame</b> tests that the two arguments
+    reference the same object.
+</p>
+
+<pre class="prettyprint">Assert.AreSame( object expected, object actual );
+Assert.AreSame( object expected, object actual, string message );
+Assert.AreSame( object expected, object actual, string message, params object[] parms );
+
+Assert.AreNotSame( object expected, object actual );
+Assert.AreNotSame( object expected, object actual, string message );
+Assert.AreNotSame( object expected, object actual, string message, params object[] parms );</pre>
+
+<p>
+    <b>Assert.Contains</b> is used to test whether an object is contained in a
+    collection.
+</p>
+
+<pre class="prettyprint">Assert.Contains( object anObject, IList collection );
+Assert.Contains( object anObject, IList collection, string message );
+Assert.Contains( object anObject, IList collection, string message, params object[] parms );</pre>
+
+<h4>See also...</h4>
+<ul>
+    <li><?php echo nunit_doc_link("sameasConstraint", "SameAsConstraint") ?>
+</ul>
