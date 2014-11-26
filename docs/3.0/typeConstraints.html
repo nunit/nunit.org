@@ -1,1 +1,91 @@
-<?php unchangedSince("2.4") ?>
+<h2>Type Constraints (NUnit 2.4)</h2>
+
+<p>
+    Type constraints perform tests that are specific to Types. Generic type constraints were added in NUnit 3.0.
+</p>
+
+<h3>ExactTypeConstraint</h3>
+
+<h4>Action</h4>
+
+<p>Tests that an object is an exact Type</p>
+
+<h4>Constructor</h4>
+
+<pre class="prettyprint">ExactTypeConstraint( Type )</pre>
+
+<h4>Syntax</h4>
+
+<pre class="prettyprint">Is.TypeOf( Type )
+Is.TypeOf&lt;T&gt;()</pre>
+
+<h4>Examples of Use</h4>
+
+<pre class="prettyprint">Assert.That("Hello", Is.TypeOf(typeof(string)));
+Assert.That("Hello", Is.Not.TypeOf(typeof(int)));
+
+Assert.That("World", Is.TypeOf&lt;string&gt;();</pre>
+
+<h3>InstanceOfTypeConstraint</h3>
+
+<h4>Action</h4>
+
+<p>Tests that an object is of the type supplied or a derived type</p>
+
+<h4>Constructor</h4>
+
+<pre class="prettyprint">InstanceOfTypeConstraint( Type )</pre>
+
+<h4>Syntax</h4>
+
+<pre class="prettyprint">Is.InstanceOf( Type )
+Is.InstanceOf&lt;T&gt;()</pre>
+
+<h4>Examples of Use</h4>
+
+<pre class="prettyprint">Assert.That("Hello", Is.InstanceOf(typeof(string)));
+Assert.That(5, Is.Not.InstanceOf(typeof(string)));
+
+Assert.That(5, Is.Not.InstanceOf&lt;string&gt;(typeof(string)));</pre>
+
+<h3>AssignableFromConstraint</h3>
+
+<h4>Action</h4>
+
+<p>Tests that one type is assignable from another</p>
+
+<h4>Constructor</h4>
+
+<pre class="prettyprint">AssignableFromConstraint( Type )</pre>
+
+<h4>Syntax</h4>
+
+<pre class="prettyprint">Is.AssignableFrom( Type )
+Is.AssignableFrom&lt;T&gt;()</pre>
+
+<h4>Examples of Use</h4>
+
+<pre class="prettyprint">    
+Assert.That( "Hello", Is.AssignableFrom(typeof(string)));
+Assert.That( 5, Is.Not.AssignableFrom(typeof(string)));</pre>
+
+<h3>AssignableToConstraint</h3>
+
+<h4>Action</h4>
+
+<p>Tests that one type is assignable to another</p>
+
+<h4>Constructor</h4>
+
+<pre class="prettyprint">AssignableToConstraint( Type )</pre>
+
+<h4>Syntax</h4>
+
+<pre class="prettyprint">Is.AssignableTo( Type )
+Is.AssignableTo&lt;T&gt;()</pre>
+
+<h4>Examples of Use</h4>
+
+<pre class="prettyprint">    
+Assert.That( "Hello", Is.AssignableTo(typeof(object)));
+Assert.That( 5, Is.Not.AssignableTo(typeof(string)));</pre>
