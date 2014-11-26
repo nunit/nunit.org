@@ -36,7 +36,6 @@ outside of any namespace provides SetUp and TearDown for the entire assembly.
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
 		<a href="javascript:ShowMC()">C++</a><br>
-		<a href="javascript:ShowJS()">J#</a><br>
 	</div>
 </div>
 
@@ -80,14 +79,13 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
-using namespace System;
+<pre class="prettyprint mc">using namespace System;
 using namespace NUnit::Framework;
 
 namespace NUnitTests
 {
   [TestFixture]
-  public __gc class MySetUpClass
+  public ref class MySetUpClass
   {
     [OneTimeSetUp] public void RunBeforeAnyTests()
     {
@@ -105,25 +103,6 @@ namespace NUnitTests
 
 namespace NUnitTests {
   // ...
-}
-</pre>
-
-<pre class="prettyprint js">package NUnit.Tests;
-
-import System.*;
-import NUnit.Framework.TestFixture;
-
-
-/** @attribute NUnit.Framework.TestFixture() */
-public class MySetUpClass
-{
-  /** @attribute NUnit.Framework.OneTimeSetUp() */
-  public void RunBeforeAnyTests()
-  { /* ... */ }
-
-  /** @attribute NUnit.Framework.OneTimeTearDown() */
-  public void RunAfterAnyTests()
-  { /* ... */ }
 }
 </pre>
 

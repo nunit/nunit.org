@@ -24,7 +24,6 @@
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
 		<a href="javascript:ShowMC()">C++</a><br>
-		<a href="javascript:ShowJS()">J#</a><br>
 	</div>
 </div>
 
@@ -76,7 +75,7 @@ using namespace NUnit::Framework;
 namespace NUnitTests
 {
   [TestFixture]
-  public __gc class SuccessTests
+  public ref class SuccessTests
   {
     [SetUp] void Init();
     [TearDown] void Cleanup();
@@ -89,29 +88,6 @@ namespace NUnitTests
 
 namespace NUnitTests {
   // ...
-}
-</pre>
-
-<pre class="prettyprint js">package NUnit.Tests;
-
-import System.*;
-import NUnit.Framework.TestFixture;
-
-
-/** @attribute NUnit.Framework.TestFixture() */
-public class SuccessTests
-{
-  /** @attribute NUnit.Framework.SetUp() */
-  public void Init()
-  { /* ... */ }
-
-  /** @attribute NUnit.Framework.TearDown() */
-  public void Cleanup()
-  { /* ... */ }
-
-  /** @attribute NUnit.Framework.Test() */
-  public void Add()
-  { /* ... */ }
 }
 </pre>
 
