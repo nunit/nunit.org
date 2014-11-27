@@ -2,15 +2,16 @@
 
 <p>The <b>RequiresSTAAttribute</b> is used on a test method, class or assembly
    to specify that the tests should be run in the Single-threaded apartment.
-   It causes creation of a new thread if the parent test is not already running
+   When running tests in parallel, the test is simply scheduled to execute 
+   from a queue that uses the STA. When the parallel feature is not in use,
+   it causes creation of a new thread if the parent test is not already running 
    in the STA.
    
 <h4>Examples</h4>
    
 <div class="code"><pre class="prettyprint">
 
-// An STA thread will be created and used to run
-// all the tests in the assembly
+// All the tests in the assembly will use the STA by default
 [assembly:RequiresSTA]
 
 ...
@@ -19,10 +20,7 @@
 [TestFixture, RequiresSTA]
 public class FixtureRequiringSTA
 {
-  // An STA thread will be created and all
-  // tests in the fixture will run on it
-  // unless the containing assembly is
-  // already running on an STA Thread
+  // All tests in the fixture will run in the STA.
 }
 
 [TestFixture]
@@ -32,8 +30,8 @@ public class AnotherFixture
   public void TestRequiringSTA()
   {
     // A separate thread will be created for this test
-	// unless the containing fixture is already running 
-	// in the STA.
+    // unless the containing fixture is already running 
+    // in the STA.
   }
 }
 

@@ -2,15 +2,17 @@
 
 <p>The <b>RequiresMTAAttribute</b> is used on a test method, class or assembly
    to specify that the tests should be run in the multi-threaded apartment.
-   It causes creation of a new thread if the parent test is not already running
-   in the MTA.
+   When running tests in parallel, the test is simply scheduled to execute 
+   from a queue that uses the MTA. When the parallel feature is not in use,
+   it causes creation of a new thread if the parent test is not already running 
+   in the MTA. Note that MTA execution is the default for NUnit so this attribute
+   is not normally specified.
    
 <h4>Examples</h4>
    
 <div class="code"><pre class="prettyprint">
 
-// An MTA thread will be created and used to run
-// all the tests in the assembly
+// All the tests in the assembly will run in the MTA by default
 [assembly:RequiresMTA]
 
 ...
@@ -32,8 +34,8 @@ public class AnotherFixture
   public void TestRequiringMTA()
   {
     // A separate thread will be created for this test
-	// unless the containing fixture is already running 
-	// in the MTA.
+    // unless the containing fixture is already running 
+    // in the MTA.
   }
 }
 

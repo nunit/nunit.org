@@ -30,7 +30,7 @@ public RangeAttribute( double from, double to, double step );
 <h4>Example</h4>
 
 <p>
-    The following test will be executed nine times, as follows:
+    The following test will be executed nine times.
 </p>
 
 <pre class="prettyprint">
@@ -43,16 +43,18 @@ public void MyTest(
 }
 </pre>
 
-<pre class="prettyprint">
-MyTest(1, 0.2)
-MyTest(1, 0.4)
-MyTest(1, 0.6)
-MyTest(2, 0.2)
-MyTest(2, 0.4)
-MyTest(2, 0.6)
-MyTest(3, 0.2)
-MyTest(3, 0.4)
-MyTest(3, 0.6)
+<p>The MyTest method is called nine times, as follows:
+
+<pre>
+    MyTest(1, 0.2)
+    MyTest(1, 0.4)
+    MyTest(1, 0.6)
+    MyTest(2, 0.2)
+    MyTest(2, 0.4)
+    MyTest(2, 0.6)
+    MyTest(3, 0.2)
+    MyTest(3, 0.4)
+    MyTest(3, 0.6)
 </pre>
 
 <h4>See also...</h4>
