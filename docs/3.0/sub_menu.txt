@@ -5,7 +5,7 @@
 # level 2 with 2 spaces, etc. Each line consists
 # of a page name and an optional display name
 # for use in the menu, separated by a comma.
-# 
+#
 docHome,NUnit 3.0 Alpha 3 Release
  getStarted,Getting&nbsp;Started
   quickStart,Quick&nbsp;Start
@@ -58,6 +58,8 @@ docHome,NUnit 3.0 Alpha 3 Release
    testCase
    testCaseSource
    testFixture
+   testFixtureSetup
+   testFixtureTeardown
    testOf
    theory
    timeout
