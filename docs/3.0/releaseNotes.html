@@ -8,7 +8,50 @@ dt { font-weight: bold }
 
 <h5>NOTE: A combined description of changes since NUnit 2.6.3 is under development along with a summary statement of major features. Both will be available in the next release.</h5>
 
-<h3>NUnit 3.0.0 Alpha 3 - November 25, 2014</h3>
+<h3>NUnit 3.0.0 Alpha 3 - November 28, 2014</h3>
+
+<h4>Breaking Changes</h4>
+
+<ul>
+<li>NUnitLite tests must reference both the nunit.framework and nunitlite assemblies.
+</ul>
+
+<h4>Framework</h4>
+
+<ul>
+<li>The NUnit and NUnitLite frameworks have now been merged. There is no longer any distinction
+   between them in terms of features, although some features are not available on all platforms.
+<li>The release includes two new framework builds: compact framework 3.5 and portable. The portable
+   library is compatible with .NET 4.5, Silverlight 5.0, Windows 8, Windows Phone 8.1,
+   Windows Phone Silverlight 8, Mono for Android and MonoTouch.
+<li>A number of previously unsupported features are available for the Compact Framework:
+  <ul>
+    <li>Generic methods as tests
+    <li>RegexConstraint
+    <li>TimeoutAttribute
+    <li>FileAssert, DirectoryAssert and file-related constraints
+  </ul>
+</ul>
+
+<h4>Engine</h4>
+
+<ul>
+<li>The logic of runtime selection has now changed so that each assembly runs by default
+   in a separate process using the runtime for which it was built.
+<li>The writing of result files has moved from the console to the engine and a writability
+   check is now performed before trying to run the tests.
+</ul>
+
+<h4>Console</h4>
+
+<ul>
+<li>The console runner now runs tests in a separate process per assembly by default. They may
+   still be run in process or in a single separate process by use of command-line options.
+<li>The console runner now starts in the highest version of the .NET runtime available, making
+   it simpler to debug tests by specifying that they should run in-process on the command-line.
+<li>A writeability check is performed for each output result file before trying to run the tests.
+<li>The -teamcity option is now supported.
+</ul>
 
 <h4>Issues Resolved</h4>
 
@@ -420,7 +463,7 @@ dt { font-weight: bold }
 <h3>Earlier Releases</h3>
 
 <ul>
-<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.2">NUnit 2.6 through 2.6.2</a>
+<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.3">NUnit 2.6 through 2.6.3</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.5.10">NUnit 2.5 through 2.5.10</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.4.8">NUnit 2.4 through 2.4.8</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.2.10">NUnit 2.0 through 2.2.10</a>
