@@ -72,7 +72,9 @@ docHome,NUnit 3.0 Alpha 3 Release
    comparisonConstraints,Comparison
    pathConstraints,Path
    fileConstraints,File&nbsp;&amp;&nbsp;Directory
+   serializationConstraints,Serialization
    typeConstraints,Type
+   attributeConstraint,Attribute
    stringConstraints,String
    collectionConstraints,Collection
    propertyConstraint,Property
