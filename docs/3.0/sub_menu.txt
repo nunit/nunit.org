@@ -58,8 +58,8 @@ docHome,NUnit 3.0 Alpha 3 Release
    testCase
    testCaseSource
    testFixture
-   testFixtureSetup
-   testFixtureTeardown
+   testFixtureSetup,TestFixtureSetUp
+   testFixtureTeardown,TestFixtureTearDown
    testOf
    theory
    timeout
