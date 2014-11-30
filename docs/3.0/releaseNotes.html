@@ -38,6 +38,8 @@ dt { font-weight: bold }
 <ul>
 <li>The logic of runtime selection has now changed so that each assembly runs by default
    in a separate process using the runtime for which it was built.
+<li>On 64-bit systems, each test process is automatically created as 32-bit or 64-bit,
+   depending on the platform specified for the test assembly. 
 </ul>
 
 <h4>Console</h4>
@@ -47,6 +49,7 @@ dt { font-weight: bold }
    still be run in process or in a single separate process by use of command-line options.
 <li>The console runner now starts in the highest version of the .NET runtime available, making
    it simpler to debug tests by specifying that they should run in-process on the command-line.
+<li>The -x86 command-line option is provided to force execution in a 32-bit process on a 64-bit system.
 <li>A writeability check is performed for each output result file before trying to run the tests.
 <li>The -teamcity option is now supported.
 </ul>
