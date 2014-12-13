@@ -35,6 +35,10 @@
     <td>NUnitLite executable tests must now reference nunit.framework in addition to nunitlite.</td></tr>
 <tr><th>RequiredAddinAttribute</th>
     <td>No longer supported.</td></tr>
+<tr><th>RequiresMTAAttribute</th>
+    <td>Deprecated. Use `ApartmentAttribute`.</td></tr>
+<tr><th>RequiresSTAAttribute</th>
+    <td>Deprecated. Use `ApartmentAttribute`.</td></tr>
 <tr><th>SetUpFixture</th>
     <td>Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed.</td></tr>
 <tr><th>STAThreadAttribute</th>
@@ -48,9 +52,9 @@
 <tr><th>TestCaseAttribute</th>
     <td>Named parameter `Result=` is no longer supported. Use `ExpectedResult=`.</td></tr>
 <tr><th>TestFixtureSetUpAttribute</th>
-    <td>Deprecated. Use `OneTimeSetUpAttribute'.</td></tr>
+    <td>Deprecated. Use `OneTimeSetUpAttribute`.</td></tr>
 <tr><th>TestFixtureTearDownAttribute</th>
-    <td>Deprecated. Use `OneTimeTearDownAttribute'.</td></tr>
+    <td>Deprecated. Use `OneTimeTearDownAttribute`.</td></tr>
 <tr><th>Text.All</th>
     <td>No longer supported. Use `Does.All`</td></tr>
 <tr><th>Text.Contains</th>
