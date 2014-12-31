@@ -2,49 +2,25 @@
 
 <p>This page lists features present in NUnit 2.6, which are either removed in NUnit 3.0 or have had their behavior modified in a way that will break existing code.</p>
 
+<h4>Attributes</h4>
+
 <table class="roadmap">
-<tr><th>Feature</th>
+<tr><th>Name</th>
     <th>Notes</th></tr>
-<tr><th>Addins</th>
-    <td>No longer supported. See [[Addin Replacement in the Framework]].</td></tr>
-<tr><th>Assert.IsNullOrEmpty</th>
-    <td>No longer supported. Use `Assert.That(..., Is.Null.Or.Empty)`</td></tr>
-<tr><th>Assert.IsNotNullOrEmpty</th>
-    <td>No longer supported. Use `Assert.That(..., Is.Not.Null.Or.Empty)`</td></tr>
-<tr><th>CurrentDirectory</th>
-    <td>No longer set to the directory containing the test assembly. Use `TestContext.TestDirectory` to locate that directory.</td></tr>
 <tr><th>ExpectedExceptionAttribute</th>
     <td>No longer supported. Use `Assert.Throws` or `Assert.That`.</td></tr>
 <tr><th>IgnoreAttribute</th>
     <td>The reason is now mandatory</td></tr>
-<tr><th>Is.InstanceOfType</th>
-    <td>No longer supported. Use `Is.InstanceOf`</td></tr>
-<tr><th>Is.StringStarting</th>
-    <td>Deprecated. Use `Does.StartWith`</td></tr>
-<tr><th>Is.StringContaining</th>
-    <td>Deprecated. Use `Does.Contain`</td></tr>
-<tr><th>Is.StringEnding</th>
-    <td>Deprecated. Use `Does.EndWith`</td></tr>
-<tr><th>Is.StringMatching</th>
-    <td>Deprecated. Use `Does.Match`</td></tr>
-<tr><th>MTAThreadAttribute</th>
-    <td>No longer treated as `RequiresMTAAttribute`</td></tr>
-<tr><th>NullOrEmptyStringConstraint</th>
-    <td>No longer supported. See `Assert.IsNullOrEmpty` above  </td></tr>
-<tr><th>NUnitLite</th>
-    <td>NUnitLite executable tests must now reference nunit.framework in addition to nunitlite.</td></tr>
 <tr><th>RequiredAddinAttribute</th>
     <td>No longer supported.</td></tr>
 <tr><th>RequiresMTAAttribute</th>
     <td>Deprecated. Use `ApartmentAttribute`.</td></tr>
 <tr><th>RequiresSTAAttribute</th>
     <td>Deprecated. Use `ApartmentAttribute`.</td></tr>
-<tr><th>SetUpFixture</th>
-    <td>Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed.</td></tr>
-<tr><th>STAThreadAttribute</th>
+<tr><th>System.MTAThreadAttribute</th>
+    <td>No longer treated as `RequiresMTAAttribute`</td></tr>
+<tr><th>System.STAThreadAttribute</th>
     <td>No longer treated as `RequiresSTAAttribute`</td></tr>
-<tr><th>SubDirectoryContainsConstraint</th>
-    <td>No longer supported. Various alternatives are available.</td></tr>
 <tr><th>SuiteAttribute</th>
     <td>No longer supported.</td></tr>
 <tr><th>TearDown and OneTimeTearDown</th>
@@ -55,6 +31,31 @@
     <td>Deprecated. Use `OneTimeSetUpAttribute`.</td></tr>
 <tr><th>TestFixtureTearDownAttribute</th>
     <td>Deprecated. Use `OneTimeTearDownAttribute`.</td></tr>
+</table>
+
+<h4>Assertions and Constraints</h4>
+
+<table class="roadmap">
+<tr><th>Feature</th>
+    <th>Notes</th></tr>
+<tr><th>Assert.IsNullOrEmpty</th>
+    <td>No longer supported. Use `Assert.That(..., Is.Null.Or.Empty)`</td></tr>
+<tr><th>Assert.IsNotNullOrEmpty</th>
+    <td>No longer supported. Use `Assert.That(..., Is.Not.Null.Or.Empty)`</td></tr>
+<tr><th>Is.InstanceOfType</th>
+    <td>No longer supported. Use `Is.InstanceOf`</td></tr>
+<tr><th>Is.StringStarting</th>
+    <td>Deprecated. Use `Does.StartWith`</td></tr>
+<tr><th>Is.StringContaining</th>
+    <td>Deprecated. Use `Does.Contain`</td></tr>
+<tr><th>Is.StringEnding</th>
+    <td>Deprecated. Use `Does.EndWith`</td></tr>
+<tr><th>Is.StringMatching</th>
+    <td>Deprecated. Use `Does.Match`</td></tr>
+<tr><th>NullOrEmptyStringConstraint</th>
+    <td>No longer supported. See `Assert.IsNullOrEmpty` above  </td></tr>
+<tr><th>SubDirectoryContainsConstraint</th>
+    <td>No longer supported. Various alternatives are available.</td></tr>
 <tr><th>Text.All</th>
     <td>No longer supported. Use `Does.All`</td></tr>
 <tr><th>Text.Contains</th>
@@ -73,4 +74,60 @@
     <td>No longer supported. Use `Does.Match`</td></tr>
 <tr><th>Text.DoesNotMatch</th>
     <td>No longer supported. Use `Does.Not.Match`</td></tr>
+</table>
+
+<h4>Other Framework Features</h4>
+
+<table class="roadmap">
+<tr><th>Feature</th>
+    <th>Notes</th></tr>
+<tr><th>Addins</th>
+    <td>No longer supported. See [[Addin Replacement in the Framework]].</td></tr>
+<tr><th>CurrentDirectory</th>
+    <td>No longer set to the directory containing the test assembly. Use `TestContext.TestDirectory` to locate that directory.</td></tr>
+<tr><th>NUnitLite</th>
+    <td>NUnitLite executable tests must now reference nunit.framework in addition to nunitlite.</td></tr>
+<tr><th>SetUpFixture</th>
+    <td>Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed.</td></tr>
+</table>
+
+<h4>Console Command-line Options</h4>
+
+<table class="roadmap">
+<tr><th>Option</th>
+    <th>Function</th>
+    <th>Notes</th></tr>
+<tr><th>--fixture=STR</th>
+    <td>Test fixture or namespace to be loaded</td>
+    <td>No longer supported. Use --test instead.</td></tr>
+<tr><th>--run=STR</th>
+    <td>List of tests to run</td>
+    <td>No longer supported. Replaced by --test.</td></tr>
+<tr><th>--runlist=PATH</th>
+    <td>File containing list of tests to run.</td>
+    <td>No longer supported. Replaced by --testlist.</td></tr>
+<tr><th>--apartment=APT</th>
+    <td>Apartment in which to run tests</td>
+    <td>No longer supported. Use ApartmentAttribute</td></tr>
+<tr><th>--xmlConsole</th>
+    <td>Display XML to the console</td>
+    <td>No longer supported.</td></tr>
+<tr><th>--basepath</th>
+    <td>Set ApplicationBase for execution</td>
+    <td>No longer supported.</td></tr>
+<tr><th>--privatebinpath</th>
+    <td>Specify probing path for execution</td>
+    <td>No longer supported.</td></tr>
+<tr><th>--cleanup</th>
+    <td>Remove left-over cache files</td>
+    <td>No longer supported.</td></tr>
+<tr><th>--noshadow</th>
+    <td>Disable shadow copy</td>
+    <td>No longer supported.</td></tr>
+<tr><th>--nothread</th>
+    <td>Disable use of a separate thread for tests.</td>
+    <td>No longer supported.</td></tr>
+<tr><th>--nodots</th>
+    <td>Do not display dots as a progress indicator</td>
+    <td>No longer supported.</td></tr>
 </table>
