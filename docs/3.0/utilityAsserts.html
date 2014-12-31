@@ -4,20 +4,16 @@
     in order to allow more direct control of the test process:
 </p>
     <pre class="prettyprint">Assert.Pass();
-Assert.Pass( string message );
-Assert.Pass( string message, object[] parms );
+Assert.Pass( string message, params object[] parms );
 
 Assert.Fail();
-Assert.Fail( string message );
-Assert.Fail( string message, object[] parms );
+Assert.Fail( string message, params object[] parms );
 
 Assert.Ignore();
-Assert.Ignore( string message );
-Assert.Ignore( string message, object[] parms );
+Assert.Ignore( string message, params object[] parms );
 
 Assert.Inconclusive();
-Assert.Inconclusive( string message );
-Assert.Inconclusive( string message, object[] parms );</pre>
+Assert.Inconclusive( string message, params object[] parms );</pre>
 <p>
     The <b>Assert.Pass</b> method allows you to immediately end the test, recording
     it as successful. Since it causes an exception to be thrown, it is more

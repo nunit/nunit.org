@@ -14,10 +14,13 @@ Input files and options may be mixed in any order.</p>
 Assemblies are specified by file name or path, which may be absolute or
 relative. Relative paths are interpreted based on the current directory.</p>
 
-<p style="float:left; margin-left:-50px"><b>NYI:</b></p>
 <p>In addition to assemblies, you may specify any project type that is
-understood by NUnit. In the final release, this will include various
+understood by NUnit. Out of the box, this includes various
 Visual Studio project types as well as NUnit (.nunit) projects.</p>
+
+<p>If the NUnit V2 framework driver is installed, test assemblies may
+be run based on any version of the NUnit framework beginning with 2.0.
+Without the V2 driver, only version 3.0 and higher tests may be run.
 
 <h3>Options</h3>
 
@@ -43,6 +46,12 @@ Visual Studio project types as well as NUnit (.nunit) projects.</p>
     
 <tr><th>--framework=FRAMEWORK</th>
     <td>FRAMEWORK type/version to use for tests. Examples: mono, net-3.5, v4.0, 2.0, mono-4.0</td></tr>
+    
+<tr><th>--x86</th>
+    <td>Run tests in a 32-bit process on 64-bit systems.</td></tr>
+    
+<tr><th>--dispose-runners</th>
+    <td>Dispose each test runner after it has finished running its tests</td></tr>
     
 <tr><th>--timeout=MILLISECONDS</th>
     <td>Set timeout for each test case in MILLISECONDS.</td></tr>
@@ -85,6 +94,9 @@ Visual Studio project types as well as NUnit (.nunit) projects.</p>
     
 <tr><th>--trace=LEVEL</th>
     <td>Set internal trace LEVEL. Values: Off, Error, Warning, Info, Verbose (Debug)</td></tr>
+    
+<tr><th>--teamcity</th>
+    <td>Turns on use of TeamCity service messages.</td></tr>
     
 <tr><th>--noheader, --noh</th>
     <td>Suppress display of program information at start of run.</td></tr>

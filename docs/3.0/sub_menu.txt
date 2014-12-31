@@ -6,7 +6,7 @@
 # of a page name and an optional display name
 # for use in the menu, separated by a comma.
 #
-docHome,NUnit 3.0 Alpha 3 Release
+docHome,NUnit 3.0 Alpha 4 Release
  getStarted,Getting&nbsp;Started
   quickStart,Quick&nbsp;Start
    quickStartSource,Source&nbsp;Listing
@@ -27,6 +27,7 @@ docHome,NUnit 3.0 Alpha 3 Release
    directoryAssert,Directory&nbsp;Assert
   attributes
    actionAttributes,Action&nbsp;Attributes
+   apartment
    author
    category
    combinatorial
@@ -44,8 +45,6 @@ docHome,NUnit 3.0 Alpha 3 Release
    random
    range
    repeat
-   requiresMTA,Requires&nbsp;MTA
-   requiresSTA,Requires&nbsp;STA
    requiresThread,Requires&nbsp;Thread
    sequential
    setCulture
@@ -88,12 +87,15 @@ docHome,NUnit 3.0 Alpha 3 Release
   nunit-console,Console&nbsp;Runner
    consoleCommandLine,Command-Line
   nunit-agent,NUnit&nbsp;Agent
+  nunitlite,NUnitLite&nbsp;Runner
+   nunitliteOptions,NUnitLite&nbsp;Options
+  testEngine,Test&nbsp;Engine
   runtimeSelection,Runtime&nbsp;Selection
   platformSelection,Platform&nbsp;Selection
   assemblyIsolation,Assembly&nbsp;Isolation
   configFiles,Configuration&nbsp;Files
   multiAssembly,Multiple&nbsp;Assemblies
-#  vsSupport,Visual&nbsp;Studio&nbsp;Support
+  vsSupport,Visual&nbsp;Studio&nbsp;Support
  extensibility
   customAttributes, Custom&nbsp;Attributes
   customConstraints,Custom&nbsp;Constraints

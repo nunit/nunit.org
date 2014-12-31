@@ -23,8 +23,10 @@ is called before any tests or setup methods in the NUnit.Tests namespace. The me
 RunAfterAnyTests() is called after all the tests in the namespace as well as their
 individual or fixture teardowns have completed execution.</p>
 
-<p>Only one SetUpFixture should be created in a given namespace. A SetUpFixture
-outside of any namespace provides SetUp and TearDown for the entire assembly.
+<p>Multiple SetUpFixtures may be created in a given namespace. The order of execution
+of such fixtures is indeterminate.
+
+<p>A SetUpFixture outside of any namespace provides SetUp and TearDown for the entire assembly.
 
 <h4>Example:</h4>
 
