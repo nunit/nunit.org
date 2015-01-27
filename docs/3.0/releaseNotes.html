@@ -8,6 +8,67 @@ dt { font-weight: bold }
 
 <h5>NOTE: A combined description of changes since NUnit 2.6.3 is under development along with a summary statement of major features. Both will be available in the first Beta release.</h5>
 
+<h3>NUnit 3.0.0 Alpha 5 - January 30, 2015</h3>
+
+<h4>General</h4>
+
+<ul>
+<li>A Windows installer is now included in the release packages.
+</ul>
+ 
+<h4>Framework</h4>
+
+<ul>
+<li>TestCaseAttribute now allows arguments with default values to be omitted. Additionaly, it accepts IncludePlatform and ExcludePlatform properties to specify the platforms on which the test case should be run.
+<li>TestFixture and TestCase attributes now enforce the requirement that a reason needs to be provided when ignoring a test.
+<li>SetUp, TearDown, OneTimeSetUp and OneTimeTearDown methods may now be async.
+<li>String arguments over 20 characters in length are truncated when used as part of a test name.
+</ul>
+
+<h4>Engine</h4>
+
+<ul>
+<li>The engine is now extensible using Mono.Addins. In this release, extension points are provided for FrameworkDrivers, ProjectLoaders and OutputWriters. The following addins are bundled as a part of NUnit:
+  <ul>
+  <li>A FrameworkDriver that allows running NUnit V2 tests under NUnit 3.0.
+  <li>ProjectLoaders for NUnit and Visual Studio projects.
+  <li>An OutputWriter that creates XML output in NUnit V2 format.
+  </ul>
+<li>DomainUsage now defaults to Multiple if not specified by the runner
+</ul>
+
+<h4>Console</h4>
+
+<ul>
+<li>New options supported:
+  <ul>
+  <li>--testlist provides a list of tests to run in a file
+  <li>--stoponerror indicates that the run should terminate when any test fails.
+  </ul>
+</ul>
+
+<h4>Issues Resolved</h4>
+
+<ul>
+<li>20 TestCaseAttribute needs Platform property.
+<li>60 NUnit should support async setup, teardown, fixture setup and fixture teardown.
+<li>257  TestCaseAttribute should not require parameters with default values to be specified.
+<li>266  Pluggable framework drivers.
+<li>368  Create addin model.
+<li>369  Project loader addins
+<li>370  OutputWriter addins
+<li>403  Move ConsoleOptions.cs and Options.cs to Common and share...
+<li>419  Create Windows Installer for NUnit.
+<li>427  [TestFixture(Ignore=true)] should not be allowed.
+<li>437  Errors in tests under Linux due to hard-coded paths.
+<li>441  NUnit-Console should support --testlist option
+<li>442  Add --stoponerror option back to nunit-console.
+<li>456  Fix memory leak in RuntimeFramework.
+<li>459  Remove the Mixed Platforms build configuration.
+<li>468  Change default domain usage to multiple.
+<li>469  Truncate string arguments in test names in order to limit the length.
+</ul>
+
 <h3>NUnit 3.0.0 Alpha 4 - December 30, 2014</h3>
 
 <h4>Framework</h4>
@@ -41,6 +102,31 @@ dt { font-weight: bold }
 
 <ul>
 <li>The command-line may now include any number of assemblies and/or supported projects.
+</ul>
+
+<h4>Issues Resolved</h4>
+
+<ul>
+<li>37	Multiple SetUpFixtures should be permitted on same namespace
+<li>210	TestContext.WriteLine in an AppDomain causes an error
+<li>227	Add support for VS projects and solutions
+<li>231	Update C# samples to use NUnit 3.0
+<li>233	Update F# samples to use NUnit 3.0
+<li>234	Update C++ samples to use NUnit 3.0
+<li>265	Reorganize console reports for nunit-console and nunitlite
+<li>299	No full path to assembly in XML file under Compact Framework
+<li>301	Command-line length
+<li>363	Make Xml result output an engine service
+<li>377	CombiningStrategyAttributes don't work correctly on generic methods
+<li>388	Improvements to NUnitLite runner output
+<li>390	Specify exactly what happens when a test times out
+<li>396	ApartmentAttribute
+<li>397	CF nunitlite runner assembly has the wrong name
+<li>407	Assert.Pass() with ]]> in message crashes console runner
+<li>414	Simplify Assert overloads
+<li>416	NUnit 2.x Framework Driver
+<li>417	Complete work on NUnit projects
+<li>420	Create Settings file in proper location
 </ul>
 
 <h3>NUnit 3.0.0 Alpha 3 - November 29, 2014</h3>
