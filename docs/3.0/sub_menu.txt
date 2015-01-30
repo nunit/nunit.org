@@ -97,10 +97,10 @@ docHome,NUnit 3.0 Alpha 5 Release
   assemblyIsolation,Assembly&nbsp;Isolation
   configFiles,Configuration&nbsp;Files
   multiAssembly,Multiple&nbsp;Assemblies
-  vsSupport,Visual&nbsp;Studio&nbsp;Support
  extensibility
   customAttributes, Custom&nbsp;Attributes
   customConstraints,Custom&nbsp;Constraints
+  addins
  releaseNotes,Release&nbsp;Notes
  license
 
