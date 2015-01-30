@@ -86,10 +86,10 @@ docHome,NUnit 3.0 Alpha 5 Release
  runningTests,Running&nbsp;Tests
   nunit-console,Console&nbsp;Runner
    consoleCommandLine,Command-Line
-  nunit-agent,NUnit&nbsp;Agent
   nunitlite,NUnitLite&nbsp;Runner
    nunitliteOptions,NUnitLite&nbsp;Options
   testEngine,Test&nbsp;Engine
+  nunit-agent,NUnit&nbsp;Agent
   runtimeSelection,Runtime&nbsp;Selection
   platformSelection,Platform&nbsp;Selection
   assemblyIsolation,Assembly&nbsp;Isolation
