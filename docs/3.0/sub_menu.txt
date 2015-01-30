@@ -36,10 +36,12 @@ docHome,NUnit 3.0 Alpha 5 Release
    description
    explicit
    ignore
+   levelOfParallelization
    maxtime
    onetimeSetup,OneTimeSetUp
    onetimeTeardown,OneTimeTearDown
    pairwise
+   parallelizable
    platform
    property
    random
