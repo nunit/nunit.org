@@ -1,70 +1,113 @@
-<h2>TestContext (NUnit 2.5.7 / 2.6)</h2>
+<h2>TestContext (Modified for 3.0)</h2>
 
 <p>Each NUnit test runs in an execution context, which includes information about the environment as well as the test itself.
 The <b>TestContext</b> class allows tests to access certain information about the execution context.
 
-<p>This class has been present in NUnit since 2.5.7, but was undocumented until the 2.6 release. Those earlier versions of TestContext are not covered here.
+<h3>Static Properties</h3>
 
-<h3>CurrentContext</h3>
+<h4>CurrentContext</h4>
 
-<p>The context of the currently executing test may be accessed by
-use of the static property <b>CurrentContext</b>, which gets
-a reference to the current <b>TestContext</b>. This context
+<p>Gets the context of the currently executing test. This context
 is created separately for each test before it begins execution.
+See below for properties of the current context.
 
-<p>All other properties apply to the <b>TestContext</b> instance returned by <b>CurrentContext</b>. Note that the context may not be changed - all properties are read-only.
+<h4>Out</h4>
 
-<h3>Test</h3>
+<p>Gets a TextWriter used for sending output to the current test result.
+
+<h3>Static Methods</h4>
+
+<h4>Write(bool value)</br>
+    Write(char value)</br>
+    Write(char[] value)</br>
+    Write(double value)</br>
+    Write(Int32 value)</br>
+    Write(Int64 value)</br>
+    Write(decimal value)</br>
+    Write(object value)</br>
+    Write(Single value)</br>
+    Write(string value)</br>
+    Write(UInt32 value)</br>
+    Write(UInt64 value)</br>
+    Write(string format, object arg1)</br>
+    Write(string format, object arg1, object arg2)</br>
+    Write(string format, object arg1, object arg2, object arg3)</br>
+    Write(string format, params object[] args)</h4>
+
+<p>Writes text to the current test result.
+
+<h4>WriteLine()</br>
+    WriteLine(bool value)</br>
+    WriteLine(char value)</br>
+    WriteLine(char[] value)</br>
+    WriteLine(double value)</br>
+    WriteLine(Int32 value)</br>
+    WriteLine(Int64 value)</br>
+    WriteLine(decimal value)</br>
+    WriteLine(object value)</br>
+    WriteLine(Single value)</br>
+    WriteLine(string value)</br>
+    WriteLine(UInt32 value)</br>
+    WriteLine(UInt64 value)</br>
+    WriteLine(string format, object arg1)</br>
+    WriteLine(string format, object arg1, object arg2)</br>
+    WriteLine(string format, object arg1, object arg2, object arg3)</br>
+    WriteLine(string format, params object[] args)</h4>
+
+<p>Writes text to the current test result, followed by a newline.
+
+<h3>Properties of the CurrentContext</b>
+
+<h4>Test</h4>
 
 <p>Gets a representation of the current test, with the following properties:
 
 <ul>
-<li><b>Name</b> - The name of the test
+<li><b>ID</b> - The unique Id of the test
+<li><b>Name</b> - The name of the test, whether set by the user or generated automatically
 <li><b>FullName</b> - The fully qualified name of the test
-<li><b>Properties</b> - An <b>IDictionary</b> of the test properties
+<li><b>MethodName</b> - The name of the method representing the test, if any
+<li><b>Properties</b> - An <b>IPropertyBag</b> of the test properties
 </ul>
 
-<h3>Result</h3>
+<h4>Result</h4>
 
 <p>Gets a representation of the test result, with the following properties:
 
 <ul>
-<li><b>Status</b> - A <b>TestStatus</b> with possible values
+<li><b>Outcome</b> - A <b>ResultState</b> representing the outcome of the test. <b>ResultState</b> has the following properties:
   <ul>
-  <li>Inconclusive
-  <li>Skipped
-  <li>Passed
-  <li>Failed
-  </ul>
-<li><b>State</b> - A <b>TestState</b> with possible values
-  <ul>
-  <li>Inconclusive
-  <li>NotRunnable
-  <li>Skipped
-  <li>Ignored
-  <li>Success
-  <li>Failure
-  <li>Error
-  <li>Cancelled
+  <li><b>Status</b> - A <b>TestStatus</b> with possible values
+    <ul>
+    <li>Inconclusive
+    <li>Skipped
+    <li>Passed
+    <li>Failed
+    </ul>
+  <li><b>Label</b> - An optional string value, which further characterizes the result
+  <li><b>Site</b> - A <b>FailureSite</b> value, indicating the stage of execution in which the test generated its result. Possible values are
+    <ul>
+    <li>Test
+    <li>SetUp
+    <li>TearDown
+    <li>Parent
+    <li>Child
+    </ul>
   </ul>
 </ul>
 
-<h4>Notes:</h4>
-<ol>
-<li>The result of the test may be accessed during setup or test execution, but it only has a useful value at in the TearDown method.
-<li>The <b>Status</b> value should be used in preference to <b>State</b> wherever possible, since the latter will not be available in future releases.
-</ol>
+Although the outcome of the test may be accessed during setup or test execution, it only has a useful value in the teardown stage.
 
-<h3>TestDirectory</h3>
+<h4>TestDirectory</h4>
 
-<p>Gets the full path of the directory containing the current test assembly.
+<p>Gets the full path of the directory containing the current test assembly. Not available in the Silverlight or Portable builds.
 
-<h3>WorkDirectory</h3>
+<h4>WorkDirectory</h4>
 
 <p>Gets the full path of the directory to be used for output from this test run. The XML result file and any redirected output files are located under this directory. This is normally the directory that was current when execution of
 NUnit began but may be changed by use of the <b>/work</b> option of nunit-console.
 
-<h3>Random</h3>
+<h4>Random</h4>
 
 <p>Returns a <b>RandomGenerator</b> object, which may be used in the test code to generate random values. These values are repeatable on reruns of the tests so long as (a) the test assembly is not changed and (b) the same seed is used. The initial random seed used in any test run may be found in the XML result file and may be provided to a subsequent run on the command line.
 

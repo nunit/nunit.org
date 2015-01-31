@@ -8,29 +8,31 @@
 <tr><th>Name</th>
     <th>Notes</th></tr>
 <tr><th>ExpectedExceptionAttribute</th>
-    <td>No longer supported. Use `Assert.Throws` or `Assert.That`.</td></tr>
+    <td>No longer supported. Use Assert.Throws or Assert.That.</td></tr>
 <tr><th>IgnoreAttribute</th>
     <td>The reason is now mandatory</td></tr>
 <tr><th>RequiredAddinAttribute</th>
     <td>No longer supported.</td></tr>
 <tr><th>RequiresMTAAttribute</th>
-    <td>Deprecated. Use `ApartmentAttribute`.</td></tr>
+    <td>Deprecated. Use ApartmentAttribute.</td></tr>
 <tr><th>RequiresSTAAttribute</th>
-    <td>Deprecated. Use `ApartmentAttribute`.</td></tr>
+    <td>Deprecated. Use ApartmentAttribute.</td></tr>
 <tr><th>System.MTAThreadAttribute</th>
-    <td>No longer treated as `RequiresMTAAttribute`</td></tr>
+    <td>No longer treated as RequiresMTAAttribute</td></tr>
 <tr><th>System.STAThreadAttribute</th>
-    <td>No longer treated as `RequiresSTAAttribute`</td></tr>
+    <td>No longer treated as RequiresSTAAttribute</td></tr>
 <tr><th>SuiteAttribute</th>
     <td>No longer supported.</td></tr>
 <tr><th>TearDown and OneTimeTearDown</th>
     <td>There is a change to the logic by which teardown methods are called. See [[SetUp and TearDown]] for details.</td></tr>
 <tr><th>TestCaseAttribute</th>
-    <td>Named parameter `Result=` is no longer supported. Use `ExpectedResult=`.</td></tr>
+    <td>Named parameter Result= is no longer supported. Use ExpectedResult=.</br>Named parameter Ignore= now takes a string, giving the reason for ignoring the test.</td></tr>
+<tr><th>TestFixtureAttribute</th>
+    <td>Named parameter Ignore= now takes a string, giving the reason for ignoring the test.</td></tr>
 <tr><th>TestFixtureSetUpAttribute</th>
-    <td>Deprecated. Use `OneTimeSetUpAttribute`.</td></tr>
+    <td>Deprecated. Use OneTimeSetUpAttribute.</td></tr>
 <tr><th>TestFixtureTearDownAttribute</th>
-    <td>Deprecated. Use `OneTimeTearDownAttribute`.</td></tr>
+    <td>Deprecated. Use OneTimeTearDownAttribute.</td></tr>
 </table>
 
 <h4>Assertions and Constraints</h4>
@@ -39,41 +41,41 @@
 <tr><th>Feature</th>
     <th>Notes</th></tr>
 <tr><th>Assert.IsNullOrEmpty</th>
-    <td>No longer supported. Use `Assert.That(..., Is.Null.Or.Empty)`</td></tr>
+    <td>No longer supported. Use Assert.That(..., Is.Null.Or.Empty)</td></tr>
 <tr><th>Assert.IsNotNullOrEmpty</th>
-    <td>No longer supported. Use `Assert.That(..., Is.Not.Null.Or.Empty)`</td></tr>
+    <td>No longer supported. Use Assert.That(..., Is.Not.Null.Or.Empty)</td></tr>
 <tr><th>Is.InstanceOfType</th>
-    <td>No longer supported. Use `Is.InstanceOf`</td></tr>
+    <td>No longer supported. Use Is.InstanceOf</td></tr>
 <tr><th>Is.StringStarting</th>
-    <td>Deprecated. Use `Does.StartWith`</td></tr>
+    <td>Deprecated. Use Does.StartWith</td></tr>
 <tr><th>Is.StringContaining</th>
-    <td>Deprecated. Use `Does.Contain`</td></tr>
+    <td>Deprecated. Use Does.Contain</td></tr>
 <tr><th>Is.StringEnding</th>
-    <td>Deprecated. Use `Does.EndWith`</td></tr>
+    <td>Deprecated. Use Does.EndWith</td></tr>
 <tr><th>Is.StringMatching</th>
-    <td>Deprecated. Use `Does.Match`</td></tr>
+    <td>Deprecated. Use Does.Match</td></tr>
 <tr><th>NullOrEmptyStringConstraint</th>
-    <td>No longer supported. See `Assert.IsNullOrEmpty` above  </td></tr>
+    <td>No longer supported. See Assert.IsNullOrEmpty above  </td></tr>
 <tr><th>SubDirectoryContainsConstraint</th>
     <td>No longer supported. Various alternatives are available.</td></tr>
 <tr><th>Text.All</th>
-    <td>No longer supported. Use `Does.All`</td></tr>
+    <td>No longer supported. Use Does.All</td></tr>
 <tr><th>Text.Contains</th>
-    <td>No longer supported. Use `Does.Contain` or `Contains.Substring`</td></tr>
+    <td>No longer supported. Use Does.Contain or Contains.Substring</td></tr>
 <tr><th>Text.DoesNotContain</th>
-    <td>No longer supported. Use `Does.Not.Contain`</td></tr>
+    <td>No longer supported. Use Does.Not.Contain</td></tr>
 <tr><th>Text.StartsWith</th>
-    <td>No longer supported. Use `Does.StartWith`</td></tr>
+    <td>No longer supported. Use Does.StartWith</td></tr>
 <tr><th>Text.DoesNotStartWith</th>
-    <td>No longer supported. Use `Does.Not.StartWith`</td></tr>
+    <td>No longer supported. Use Does.Not.StartWith</td></tr>
 <tr><th>Text.EndsWith</th>
-    <td>No longer supported. Use `Does.EndWith`</td></tr>
+    <td>No longer supported. Use Does.EndWith</td></tr>
 <tr><th>Text.DoesNotEndWith</th>
-    <td>No longer supported. Use `Does.Not.EndWith`</td></tr>
+    <td>No longer supported. Use Does.Not.EndWith</td></tr>
 <tr><th>Text.Matches</th>
-    <td>No longer supported. Use `Does.Match`</td></tr>
+    <td>No longer supported. Use Does.Match</td></tr>
 <tr><th>Text.DoesNotMatch</th>
-    <td>No longer supported. Use `Does.Not.Match`</td></tr>
+    <td>No longer supported. Use Does.Not.Match</td></tr>
 </table>
 
 <h4>Other Framework Features</h4>
@@ -84,11 +86,11 @@
 <tr><th>Addins</th>
     <td>No longer supported. See [[Addin Replacement in the Framework]].</td></tr>
 <tr><th>CurrentDirectory</th>
-    <td>No longer set to the directory containing the test assembly. Use `TestContext.TestDirectory` to locate that directory.</td></tr>
+    <td>No longer set to the directory containing the test assembly. Use TestContext.TestDirectory to locate that directory.</td></tr>
 <tr><th>NUnitLite</th>
     <td>NUnitLite executable tests must now reference nunit.framework in addition to nunitlite.</td></tr>
 <tr><th>SetUpFixture</th>
-    <td>Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed.</td></tr>
+    <td>Now uses OneTimeSetUpAttribute and OneTimeTearDownAttribute to designate higher-level setup and teardown methods. SetUpAttribute and TearDownAttribute are no longer allowed.</td></tr>
 </table>
 
 <h4>Console Command-line Options</h4>
@@ -106,6 +108,12 @@
 <tr><th>--runlist=PATH</th>
     <td>File containing list of tests to run.</td>
     <td>No longer supported. Replaced by --testlist.</td></tr>
+<tr><th>--process=PROCESS</th>
+    <td>ProcessModel for test assemblies</td>
+    <td>Default value is now Separate for a single assembly, Multiple for more than one.</td></tr>
+<tr><th>--domain=DOMAIN</th>
+    <td>DomainUsage for test assemblies</td>
+    <td>Default value is now Separate for a single assembly, Multiple for more than one.</td></tr>
 <tr><th>--apartment=APT</th>
     <td>Apartment in which to run tests</td>
     <td>No longer supported. Use ApartmentAttribute</td></tr>

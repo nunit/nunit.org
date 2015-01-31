@@ -102,10 +102,14 @@ namespace NUnitTests {
    in the base class and another in the derived class. NUnit will call base
    class OneTimeTearDown methods after those in the derived classes.
    
-<p><b>Note:</b> Although it is possible to define multiple OneTimeTearDown methods
+<h4>Notes:</h4>
+<ol>
+<li>Although it is possible to define multiple OneTimeTearDown methods
    in the same class, you should rarely do so. Unlike methods defined in
    separate classes in the inheritance hierarchy, the order in which they
    are executed is not guaranteed.
+<li>OneTimeTearDown methods may be async if running under .NET 4.0 or higher.
+</ol>
 
 <h4>See also...</h4>
 <ul>
