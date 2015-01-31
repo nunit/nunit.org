@@ -36,7 +36,7 @@ docHome,NUnit 3.0 Alpha 5 Release
    description
    explicit
    ignore
-   levelOfParallelization
+   levelOfParallelism
    maxtime
    onetimeSetup,OneTimeSetUp
    onetimeTeardown,OneTimeTearDown
