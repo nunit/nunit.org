@@ -20,19 +20,15 @@
     }
 </pre></code>
 
+**Note:** In the current release, parallel execution of methods within a class is not yet implemented.
+
 Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
 
 <h4>Specifying Parallelizable at Multiple Test Levels</h4>
 
-<p>The <b>ParallelizableAttribute</b> may be specified on multiple levels of the tests, with lower-level specifications overriding higher ones. Thus, if the assembly has <b>ParallelScope.None</b> either by use of the attribute or by default, classes with <b>ParallelScope.Self</b> may be run in parallel as may their children if an appropriate scope is used.
+<p>The <b>ParallelizableAttribute</b> may be specified on multiple levels of the tests. Settings at a higher level may affect lower level tests, unless those lower-level tests override the inherited settings. Thus, if the assembly has <b>ParallelScope.None</b> either by use of the attribute or by default, classes with <b>ParallelScope.Self</b> may be run in parallel as may their children if an appropriate scope is used.
 
-<h4>Notes</h4>
-
-<ol>
-<li><p>In the current release, parallel execution of methods within a class is not yet implemented.
-
-<li><p>The <b>ParallelAttribute</b> only applies at the level on which it appears and below. It cannot override settings on higher-level tests. Thus, allowing parallel execution for methods of a class that does not allow it, results in those methods running in parallel with one another, but not in parallel with test methods under any other classes. This is the natural outcome of the fact that the execution of a test method is, in fact, part of the execution of the test represented by the class.
-</ol>
+<p>Note that a lower-level test cannot change the settings on higher-level tests. Thus, allowing parallel execution for methods of a class that does not allow it, results in those methods running in parallel with one another, but not in parallel with test methods under any other classes. This is the natural outcome of the fact that the execution of a test method is, in fact, part of the execution of the test represented by the class.
 
 <h4>See also...</h4>
 <ul>
