@@ -45,7 +45,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
     <td>DOMAIN isolation for test assemblies.  Values: None, Single, Multiple. If not specified, defaults to Separate for a single assembly or Multiple for more than one.</td></tr>
     
 <tr><th>--framework=FRAMEWORK</th>
-    <td>FRAMEWORK type/version to use for tests. Examples: mono, net-3.5, v4.0, 2.0, mono-4.0</td></tr>
+    <td>FRAMEWORK type/version to use for tests. Examples: mono, net-4.5, v4.0, 2.0, mono-4.0</td></tr>
     
 <tr><th>--x86</th>
     <td>Run tests in a 32-bit process on 64-bit systems.</td></tr>
@@ -94,6 +94,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
     
 <tr><th>--trace=LEVEL</th>
     <td>Set internal trace LEVEL. Values: Off, Error, Warning, Info, Verbose (Debug)</td></tr>
+    
+<tr><th>--shadowcopy</th>
+    <td>Tells .NET to copy loaded assemblies to the shadowcopy directory.</td></tr>
     
 <tr><th>--teamcity</th>
     <td>Turns on use of TeamCity service messages.</td></tr>
