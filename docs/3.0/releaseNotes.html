@@ -20,8 +20,8 @@ dt { font-weight: bold }
 
 <ul>
 <li>We no longer create a separate framework build for .NET 3.5. The 2.0 and 3.5 builds were essentially the same, so the former should now be used under both runtimes.
-<li>A new Constraint, DictionaryContainsKeyConstraint, may be used to test that a specified key is present in a dictionary.
-<li>LevelOfParallelizationAttribute has been renamed to LevelOfParallelism.
+<li>A new Constraint, <b>DictionaryContainsKeyConstraint</b>, may be used to test that a specified key is present in a dictionary.
+<li><b>LevelOfParallelizationAttribute</b> has been renamed to <b>LevelOfParallelismAttribute</b>.
 <li>The Silverlight runner now displays output in color and includes any text output created by the tests.
 <li>The class and method names of each test are included in the output xml where applicable.
 <li>String arguments used in test case names are now truncated to 40 rather than 20 characters.
@@ -31,13 +31,14 @@ dt { font-weight: bold }
 
 <ul>
 <li>The engine API has now been finalized. It permits specifying a minimum version of the engine that a runner is able to use. The best installed version of the engine will be loaded. Third-party runners may override the selection process by including a copy of the engine in their installation directory and specifying that it must be used.
-<li>The V2 framework driver now uses the event listener and test listener passed to it by the runner. This which corrects several outstanding issues  caused by events not being received and allows selecting V2 tests to  be run from the command-line, in the same way that V3 tests are selected.
+<li>The V2 framework driver now uses the event listener and test listener passed to it by the runner. This corrects several outstanding issues  caused by events not being received and allows selecting V2 tests to  be run from the command-line, in the same way that V3 tests are selected.
 </ul>
 
 <h4>Console</h4>
 
 <ul>
-<li>The console now defaults to not using shadowcopy and the --noshadow option has been removed. There is a new option --shadowcopy to turn it on if needed.
+<li>The console now defaults to not using shadowcopy. There is a new option
+<b>--shadowcopy</b> to turn it on if needed.
 </ul>
 
 <h4>Issues Resolved</h4>
