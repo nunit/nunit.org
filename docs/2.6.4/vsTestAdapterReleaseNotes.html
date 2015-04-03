@@ -1,18 +1,38 @@
 <style><!--
-li { padding-bottom: .5em; }
-ul ul li { padding-bottom: 0; }
-dt { font-weight: bold }
+    li { padding-bottom: .5em; }
+    ul ul li { padding-bottom: 0; }
+    dt { font-weight: bold }
 --></style>
 
-<h3>NUnit Test Adapter for Visual Studio (2012, RTM - Update 4, 2013, RTM - Update 3) : Version 1.2 - September 17, 2014</h3>
+<h3>NUnit Test Adapter for Visual Studio  - Version 2.0 - April 1, 2015</h3>
 
-(Note:  Issue numbers now refers to our new home on <a href="https://github.com/nunit/nunit-vs-adapter">Github</a>.)
+(Note:  Issue numbers now refers to our new home on Github.)
+
+<h4>Features</h4>
+
+<ul>
+    <li>Tested for up to VS2015 Pre-release CTP 6</li>
+    <li>Updated to use NUnit 2.6.4</li>
+    <li>Adapter does not try to discover tests if the nunit.framework version is 3.0 or greater</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+    <li>#61  Confusing NUnit version message made clearer</li>
+    <li>#62  Adapter uses shadowcopy setting in discoverer but not in the executor</li>
+</ul>
+
+
+<h3>NUnit Test Adapter for Visual Studio (RTM) - Version 1.2 - September 17, 2014</h3>
+
+(Note:  Issue numbers now refers to our new home on Github.)
 
 <h4>Features</h4>
 
 <ul>
     <li>Tested for up to VS2013 Update 3</li>
-    <li>Bugs 39 and 40 : The adapter was unable to run under VS2012. This is now fixed.</li>
+    <li>Bugs 39 and 40 was inability to run under VS2012. This is now fixed.</li>
 </ul>
 
 <h4>Bug Fixes</h4>
@@ -25,6 +45,8 @@ dt { font-weight: bold }
     <li>#39  VSTest unable to find NUnit tests since 1.1.0.0</li>
     <li>#40  NUnit version 1.1.0.0 is broken with test class which ran under 1.0.0.0</li>
 </ul>
+
+
 
 <h3>NUnit Test Adapter for Visual Studio (RTM) - Version 1.1 - April 26, 2014</h3>
 
