@@ -1,0 +1,61 @@
+NUnit 2.5.2 - Version 2.5.2.9222 - August 10, 2009
+
+Note: This is the last release of NUnit using source code maintained on Sourceforge. 
+      The CVS repository there will be kept, but no longer updated. After this 
+      release, the source is being maintained on Launchpad at 
+      http://launchpad.net/nunit-2.5.
+
+New Features
+
+Framework
+
+* The new SetUICultureAttribute allows setting CurrentUICulture for the duration 
+  of a test method, fixture or assembly.
+
+* The TestFixture, TestCase and TestCaseData attributes have been enhanced to 
+  allow ignoring an individual fixture instance or test case. Two new named 
+  parameters are provided:
+    o Ignore may be set to true to ignore an item.
+    o IgnoreReason may be set to specify the reason for ignoring the item. If       IgnoreReason is set to a non-empty string, then setting Ignore is optional. 
+
+* Assert.Catch has been added with several overloads. It differs from Assert.Throws 
+  in accepting exceptions derived from the one that is specified. Like Assert.Throws, 
+  it returns the exception thrown when it succeeds so that further tests can be 
+  made on it.
+
+* The Throws syntax has a number of new additions:
+    o Throws.TargetInvocationException, Throws.ArgumentException and
+      Throws.InvalidOperationException provide a shorter syntax for testing for 
+      these common exception types.
+    o Throws.InnerException applies any constraints to the InnerException of the
+      exception that was thrown rather than to the exception itself.
+    o InnerException can also be used in constraint expressions - see the 
+      documentation for an example. 
+
+Bug Fixes
+
+* Data from a TestCaseSource in a separate class from the tests is now 
+  handled correctly.
+
+* Arguments specified using TestCaseData are now used correctly.
+
+* Comparing the a stream to itself no longer causes an error.
+
+* TimeoutAttribute is now permitted on an assembly as documented.
+
+* Clear All and Clear Failures buttons are now displayed correctly depending 
+  on whether Checkboxes are displayed in the Gui.
+
+* The console runner option descriptions have been revised to more clearly 
+  indicate what each option does.
+
+* Running special tests that do not use the nunit.framework assembly no 
+  longer causes a null reference exception.
+
+* Console Runner option descriptions have been edited for accuracy.
+
+* Gui TreeView now updates correctly when the order of tests has changed.
+
+* An exception in TearDown now displays the actual exception at the top 
+  of the stack rather than a TargetInvocationException. 
+
