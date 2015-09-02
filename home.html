@@ -74,19 +74,52 @@
 	
 <div id="news">
     <h4>Recent News</h4>
+
+	  <p><b>NUnit 3.0 Beta 4 Released</b><br>
+	  This is the forth beta release of NUnit 3.0. We hope this will be the last beta before the final release, 
+	  but will make the decision after reviewing the outstanding issues.
+      
+      <p>Please be aware that most 3rd Party runners
+      like Resharper do not run NUnit 3.0 tests correctly yet. For now, use the
+      3.0 console runner which will run 3.0 and 2.6 tests.
 	  
-	  <p><b>NUnit 3.0 Visual Studio Test Adapter 3.0 CTP</b><br>
-	  This is the first release of the Test Adapter to support NUnit 3.0. It will not
-	  attempt to run tests created for pre-3.0 releases of NUnit. This release may be
-	  installed side-by-side with the 2.0 release of the test adapter, which runs tests
-	  built against NUnit 2.x.<br/>
-	  <p>You may download it from  
-	  <a href="https://github.com/nunit/nunit3-vs-adapter/releases">Github project site</a>,
-          or from the <a href="http://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d">Visual Studio Gallery</a>,
-          or as a <a href="http://www.nuget.org/packages/NUnit3TestAdapter/">NuGet package</a> [UPDATE LINKS] 
-          <br/>See the 
-          <a href="http://nunit.org/index.php?p=vsTestAdapterReleaseNotes&r=3.0">release notes</a>
-          for more information.</p>
+	  <p>You may download NUnit 3.0 Beta 4 from
+	  <a href="https://github.com/nunit/nunit/releases">Github</a>.
+	  See the 
+	  <a href="https://github.com/nunit/nunit/wiki/Release-Notes">release notes</a>
+	  for more information.</p>
+
+	  <p><b>NUnit 3.0 Beta 3 Released</b><br>
+	  This is the third beta release of NUnit 3.0. We are planning one more beta next 
+      month before the final release. This is an beta release, but is ready for production use for people
+      with prior NUnit experience.
+
+      <p>This release changes the Engine API, <b>so if you have a previous 3.0 release installed, you must 
+      uninstall it before installing this release.</b>
+      
+      <p>Please be aware that most 3rd Party runners
+      like Resharper do not run NUnit 3.0 tests correctly yet. For now, use the
+      3.0 console runner which will run 3.0 and 2.6 tests. An second update for
+      the Visual Studio adapter that has been updated for beta 2 will be released soon.
+	  
+	  <p>You may download NUnit 3.0 Beta 3 from
+	  <a href="https://github.com/nunit/nunit/releases">Github</a>.
+	  See the 
+	  <a href="https://github.com/nunit/nunit/wiki/Release-Notes">release notes</a>
+	  for more information.</p>
+    
+    <p><b>Visual Studio Test Adapter for NUnit 3.0 CTP 3 Released</b></p>
+    
+    <p>We have released an update to the Visual Studio adapter that fixes the bug where the 
+    adapter was locking files and preventing you from rebuilding projects.</p>
+
+    <p>If you are using NUnit 3.0 Beta 2, you should be using this version of the test adapter.</p>
+
+    <p>The Visual Studio extension is available from within Visual Studio, or from the 
+    <a href="https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d">Visual Studio Gallery</a>.
+
+    <p>If you are using the NuGet package, it is available as a pre-release from 
+    <a href="https://www.nuget.org/packages/NUnit3TestAdapter/3.0.2-ctp-3">NuGet</a>.</p>
 
 	  <p><b>NUnit Visual Studio Test Adapter 2.0 Released</b><br>
 	  This release has been tested up to VS2015 CTP 6. It uses NUnit 2.6.4 and will not attempt
@@ -100,29 +133,13 @@
           <a href="http://nunit.org/index.php?p=vsTestAdapterReleaseNotes&r=2.6.4">release notes</a>
           for more information.</p>
 
-	  <p><b>NUnit 3.0 Beta 1 Released</b><br>
-	  This is the long-awaited beta release of NUnit 3.0. It includes
-	  the framework itself, the new NUnit test engine and the nunit-console
-	  runner. This is an beta release, but is ready for production use for people
-      with prior NUnit experience.
-
-      <p>Please be aware that most 3rd Party runners
-      like Resharper do not run NUnit 3.0 tests correctly yet. For now, use the
-      3.0 console runner which will run 3.0 and 2.6 tests. We will release a
-      version of the Visual Studio adapter that runs 3.0 tests in the next few days.
-	  
-	  <p>You may download NUnit 3.0 Beta 1 from
-	  <a href="https://github.com/nunit/nunit/releases">Github</a>.
-	  See the 
-	  <a href="http://nunit.org/index.php?p=releaseNotes&r=3.0">release notes</a>
-	  for more information.</p>
-
 	  <p><b>NUnit 2.6.4 Released</b><br>
 	  This fixes a few bugs in NUnit 2.6.3 and adds checks to ensure that tests
 	  written for NUnit 3.0 are not erroneously executed. See the 
 	  <a href="http://nunit.org/?p=releaseNotes&r=2.6.4">release notes</a>
 	  for details of changes or 
   	  <a href="http://nunit.org/?p=download">Download&nbsp;it...</a>
+	  <!--
 
 	  <p><b>NUnitLite 1.0 Released</b><br>
 	  This is the first production release of the NUnitLite test framework.
@@ -138,7 +155,7 @@
 	  for more information.</p>
 
     <h4>New Site</h4>
-	  <!--
+    
     <h4>Sponsors</h4>
 
 	  <p><b>NUnit Sponsorship</b><br>
