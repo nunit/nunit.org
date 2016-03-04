@@ -3,7 +3,7 @@
 <!-- Standard Head Part -->
 <head>
 <title>NUnit - <?php echo currentPageName(true); ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="en-US">
 <meta name="norton-safeweb-site-verification" content="tb6xj01p4hgo5x-8wscsmq633y11-e6nhk-bnb5d987bseanyp6p0uew-pec8j963qlzj32k5x9h3r2q7wh-vmy8bbhek5lnpp5w4p8hocouuq39e09jrkihdtaeknua" />
 <link rel="stylesheet" type="text/css" href="nunit.css">

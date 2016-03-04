@@ -3,7 +3,7 @@
 <!-- Standard Head Part -->
 <head>
 <title>NUnit - <?php echo currentPageName(true); ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="en-US">
 <link rel="stylesheet" type="text/css" href="nunit.css">
 <link rel="shortcut icon" href="favicon.ico">
