@@ -17,7 +17,7 @@
 <div id="header">
   <a id="logo" href="index.php?p=home"><img src="img/logo.gif" alt="NUnit.org" title="NUnit.org"></a>
   <div id="nav">
-  
+
 <?php
   drawNavButton( "home" );
   drawNavButton( "download" );
@@ -27,11 +27,11 @@
   drawNavButton( "resources" );
 
   drawNavButton( "community", "Development" );
- */
   if (isWikiOffline())
     drawNavButton( "wiki", "Wiki", "#", "disabled" );
   else
-    drawNavButton( "wiki", "Wiki", "./wiki" );
+ */
+    drawNavButton( "wiki", "Wiki", "https://github.com/nunit/docs/wiki" );
 
   if (file_exists("./blogs"))
     drawNavButton( "blog", "Blog", "./blogs" );
