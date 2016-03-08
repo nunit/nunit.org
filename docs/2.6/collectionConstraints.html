@@ -107,7 +107,6 @@ NoItemConstraint(Constraint itemConstraint)
 <h4>Syntax</h4>
 <div class="code"><pre class="prettyprint">
 Has.None...
-Has.No...
 </pre></div>
 
 <h4>Examples of Use</h4>
@@ -116,7 +115,6 @@ int[] iarray = new int[] { 1, 2, 3 };
 string[] sarray = new string[] { "a", "b", "c" };
 
 Assert.That( iarray, Has.None.Null );
-Assert.That( iarray, Has.No.Null );
 Assert.That( sarray, Has.None.EqualTo("d") );
 Assert.That( iarray, Has.None.LessThan(0) );
 </pre></div>
