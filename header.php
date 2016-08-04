@@ -43,4 +43,11 @@
 
   </div>
 </div>
+
+<?php
+  global $NUnitRelease;
+  if ($NUnitRelease != "")
+    echo "<div class='notice'>NUnit $NUnitRelease Legacy Documentation. View <a href='https://github.com/nunit/docs/wiki/NUnit-Documentation'>NUnit 3 Documentation</a></div>";
+?>
+
 <!-- End of Header -->

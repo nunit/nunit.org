@@ -105,11 +105,16 @@ div.dropdown { position: absolute; top: 0; left: 14px; padding: 0 10px; width: 2
 div.lang div.dropdown { position: absolute; left: 14px; top: 0; padding: 0 10px; width: 20px;
 	text-align: left; border: 1px solid #888; background-color: #ffd; }
 div.notice { 
-  margin-left: 2em;
-  margin-right: 2em; 
-  text-align: center; 
-  font-style: italic; 
-  font-weight: bold; 
+    text-align: center; 
+    font-style: italic; 
+    font-weight: bold; 
+    border: 1px solid goldenrod;
+    margin: 38px 0 0 50px;
+    padding: 12px;
+    background-color: #FEEFB3;
+    color: #9F6000;
+    width: 60%;
+    max-width: 660px;
 }
 pre.prettyprint {
  padding: 10px; 
