@@ -162,8 +162,8 @@ public class ConsoleActionAttribute : Attribute, ITestAction
             eventMessage,
             details.IsSuite ? "Suite" : "Case",
             _Message,
-            fixture != null ? fixture.GetType().Name : "{no fixture}",
-            method != null ? method.Name : "{no method}");
+            details.Fixture != null ? details.Fixture.GetType().Name : "{no fixture}",
+            details.Method != null ? details.Method.Name : "{no method}");
     }
 }
 </pre></div>
