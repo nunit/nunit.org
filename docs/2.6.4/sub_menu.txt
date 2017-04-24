@@ -114,8 +114,5 @@ docHome,NUnit 2.6.4
   releaseBreakdown,Release&nbsp;Breakdown
  samples
  license
-vsTestAdapter,NUnit&nbsp;Test&nbsp;Adapter
- vsTestAdapterLicense,License
- vsTestAdapterReleaseNotes,Release&nbsp;Notes
 
 
