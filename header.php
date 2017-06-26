@@ -22,22 +22,7 @@
   drawNavButton( "home" );
   drawNavButton( "download" );
   drawNavButton( "documentation" );
-/*
-  drawNavButton( "extensions" );
-  drawNavButton( "resources" );
-
-  drawNavButton( "community", "Development" );
-  if (isWikiOffline())
-    drawNavButton( "wiki", "Wiki", "#", "disabled" );
-  else
- */
-    drawNavButton( "wiki", "Wiki", "https://github.com/nunit/docs/wiki" );
-
-  if (file_exists("./blogs"))
-    drawNavButton( "blog", "Blog", "./blogs" );
-  else
-    drawNavButton( "blog", "Blog", "./blogs", "disabled" );
-
+  drawNavButton( "wiki", "Wiki", "https://github.com/nunit/docs/wiki" );
   drawNavButton( "contactUs", "Contact&nbsp;Us" );
 ?>
 
