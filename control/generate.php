@@ -201,29 +201,7 @@
                 SavePageAsHtml( $pagename, TARGET_DIR . $filename, $mode );
             }
      }
-	 
-	 $dir = opendir( HOME_DIR . "resources/" );
-	 while( $filename = readdir( $dir ) )
-        if ( is_file( HOME_DIR . "resources/$filename" ) )
-          if ( eregi( '\.html', $filename ) )
-          {
-            $pagename = eregi_replace( '\.html', '', $filename );
-
-            echo "creating $filename<br>\n";
-            SavePageAsHtml( $pagename, TARGET_DIR . $filename, $mode );
-          }
-	  
-	 $dir = opendir( HOME_DIR . "develop/" );
-	 while( $filename = readdir( $dir ) )
-        if ( is_file( HOME_DIR . "develop/$filename" ) )
-          if ( eregi( '\.html', $filename ) )
-          {
-            $pagename = eregi_replace( '\.html', '', $filename );
-
-            echo "creating $filename<br>\n";
-            SavePageAsHtml( $pagename, TARGET_DIR . $filename, $mode );
-          }
-	  
+	   
       CopyFile ( HOME_DIR, TARGET_DIR, "nunit.css" );
       echo "</blockquote>\n";
   }

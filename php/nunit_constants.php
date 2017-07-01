@@ -18,13 +18,13 @@
   define( "CURRENT_DOCS_PATH", NUNIT_DOCS_PATH . CURRENT_NUNIT_RELEASE . '/' );
   
   // NUnit directories, for use in accessing file system
+  define( "TARGET_DIR", NUNIT_DIR . "static/" );
   define( "NUNIT_FILES_DIR", NUNIT_DIR . "files/" );
   define( "NUNIT_IMAGE_DIR", NUNIT_DIR . "img/" );
   define( "NUNIT_DOCS_DIR", NUNIT_DIR . "docs/" );
   define( "CURRENT_DOCS_DIR", NUNIT_DOCS_DIR . CURRENT_NUNIT_RELEASE . '/' );
 
   // Target directory for Generating Static content
-  define( "TARGET_DIR", NUNIT_DIR . "static/" );
   define( "TARGET_FILES_DIR", TARGET_DIR . "files/" );
   define( "TARGET_IMAGE_DIR", TARGET_DIR . "img/" );
   define( "TARGET_DOCS_DIR", TARGET_DIR . "docs/" );
